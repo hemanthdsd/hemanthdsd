@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 180" width="1400" height="180">
+    <style>
+        text { font-family: Arial, Helvetica, sans-serif; }
+        .num { font-size: 14px; font-weight: 700; fill: #0071E3; }
+        .stage { font-size: 13px; font-weight: 700; fill: #0B0B0F; letter-spacing: 1px; }
+        .sub { font-size: 14px; fill: #6E6E73; }
+    </style>
+    <rect x="1" y="1" width="1398" height="178" rx="20" fill="#F5F5F7" stroke="#D2D2D7" stroke-width="1" />
+    
+    <line x1="475" y1="75" x2="625" y2="75" stroke="#D2D2D7" stroke-width="1"/>
+    <line x1="625" y1="75" x2="775" y2="75" stroke="#D2D2D7" stroke-width="1"/>
+    <line x1="775" y1="75" x2="925" y2="75" stroke="#D2D2D7" stroke-width="1"/>
+    
+    <circle cx="475" cy="75" r="28" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+    <text x="475" y="80" class="num" text-anchor="middle">01</text>
+    <text x="475" y="125" class="stage" text-anchor="middle">UNDERSTAND</text>
+    
+    <circle cx="625" cy="75" r="28" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+    <text x="625" y="80" class="num" text-anchor="middle">02</text>
+    <text x="625" y="125" class="stage" text-anchor="middle">DESIGN</text>
+
+    <circle cx="775" cy="75" r="28" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+    <text x="775" y="80" class="num" text-anchor="middle">03</text>
+    <text x="775" y="125" class="stage" text-anchor="middle">BUILD</text>
+
+    <circle cx="925" cy="75" r="28" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1.5"/>
+    <text x="925" y="80" class="num" text-anchor="middle">04</text>
+    <text x="925" y="125" class="stage" text-anchor="middle">VALIDATE</text>
+    
+    <text x="700" y="160" class="sub" text-anchor="middle">Start with the decision, build the smallest useful product, and improve it through evidence.</text>
+</svg>

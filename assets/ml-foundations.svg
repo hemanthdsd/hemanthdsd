@@ -1,95 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420">
   <defs>
     <style>
-      .bg { fill: #0F1923; stroke: #2a3a4a; stroke-width: 1; }
-      .accent { fill: #22D3EE; }
-      .text-code { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #22D3EE; font-weight: bold; letter-spacing: 1px; }
-      .text-title { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; fill: #ECE8E1; }
-      .text-subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #768079; letter-spacing: 2px; }
-      .text-brief { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #768079; }
-      .badge-bg { fill: #1a2332; stroke: #2a3a4a; stroke-width: 1; }
-      .badge-text { font-family: Arial, Helvetica, sans-serif; font-size: 11px; fill: #ECE8E1; font-weight: bold; }
-      .label-bottom { font-family: Arial, Helvetica, sans-serif; font-size: 10px; fill: #768079; letter-spacing: 1px; text-anchor: end; }
-      
-      .node { fill: #1a2332; stroke: #22D3EE; stroke-width: 2; }
-      .node-core { fill: #FF4655; stroke: none; }
-      .edge { fill: none; stroke: #768079; stroke-width: 1; opacity: 0.6; }
-      .boundary { fill: none; stroke: #FF4655; stroke-width: 2; stroke-dasharray: 6,4; }
+      .text-label { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 600; fill: #86868B; letter-spacing: 2px; text-anchor: middle; text-transform: uppercase; }
+      .text-headline { font-family: Arial, Helvetica, sans-serif; font-size: 32px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+      .text-desc { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #86868B; text-anchor: middle; }
+      .text-tech { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #86868B; text-anchor: middle; }
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect x="0.5" y="0.5" width="579" height="279" class="bg" />
-  <rect x="0" y="0" width="4" height="280" class="accent" />
-
-  <!-- Top-left Code -->
-  <rect x="30" y="27" width="8" height="8" class="accent" />
-  <text x="45" y="35" class="text-code">MLF-004</text>
-
-  <!-- Texts -->
-  <text x="30" y="85" class="text-title">ML FOUNDATIONS</text>
-  <text x="30" y="105" class="text-subtitle">NLP CLASSIFICATION</text>
+  <rect width="680" height="420" fill="#0B0B0F" rx="20" />
   
-  <text x="30" y="140" class="text-brief">End-to-end NLP text classification with TF-IDF</text>
-  <text x="30" y="158" class="text-brief">vectorization, cross-validation, and scikit-learn</text>
-  <text x="30" y="176" class="text-brief">model optimization.</text>
-
-  <!-- Tech Badges -->
-  <g transform="translate(30, 205)">
-    <rect x="0" y="0" width="55" height="24" rx="3" class="badge-bg" />
-    <text x="27.5" y="16" class="badge-text" text-anchor="middle">Python</text>
-    
-    <rect x="65" y="0" width="75" height="24" rx="3" class="badge-bg" />
-    <text x="102.5" y="16" class="badge-text" text-anchor="middle">Scikit-learn</text>
-    
-    <rect x="150" y="0" width="45" height="24" rx="3" class="badge-bg" />
-    <text x="172.5" y="16" class="badge-text" text-anchor="middle">NLTK</text>
-    
-    <rect x="205" y="0" width="80" height="24" rx="3" class="badge-bg" />
-    <text x="245" y="16" class="badge-text" text-anchor="middle">TensorFlow</text>
-  </g>
-
-  <!-- Right side illustration (Neural Network Nodes) -->
-  <g transform="translate(430, 140)">
-    <!-- Edges -->
-    <line x1="-50" y1="-50" x2="-10" y2="-20" class="edge" />
-    <line x1="-50" y1="10" x2="-10" y2="-20" class="edge" />
-    <line x1="-50" y1="10" x2="-10" y2="30" class="edge" />
-    <line x1="-50" y1="60" x2="-10" y2="30" class="edge" />
-    <line x1="-10" y1="-20" x2="30" y2="5" class="edge" />
-    <line x1="-10" y1="30" x2="30" y2="5" class="edge" />
-    <line x1="30" y1="5" x2="70" y2="-30" class="edge" />
-    <line x1="30" y1="5" x2="70" y2="40" class="edge" />
-
-    <!-- Boundary line -->
-    <path d="M10,-80 L10,90" class="boundary" />
-
-    <!-- Nodes -->
-    <!-- Input layer -->
-    <circle cx="-50" cy="-50" r="6" class="node" />
-    <circle cx="-50" cy="10" r="6" class="node" />
-    <circle cx="-50" cy="60" r="6" class="node" />
-    
-    <!-- Hidden layer 1 -->
-    <circle cx="-10" cy="-20" r="8" class="node" />
-    <circle cx="-10" cy="30" r="8" class="node" />
-    
-    <!-- Hidden layer 2 -->
-    <circle cx="30" cy="5" r="10" class="node" />
-    <circle cx="30" cy="5" r="4" class="node-core" />
-    
-    <!-- Output layer -->
-    <circle cx="70" cy="-30" r="6" class="node" stroke="#FF4655" />
-    <circle cx="70" cy="40" r="6" class="node" />
-    
-    <!-- Extra decorative elements -->
-    <rect x="65" y="-35" width="10" height="10" fill="none" stroke="#22D3EE" stroke-width="1" />
-  </g>
-
-  <!-- Bottom Right Label -->
-  <text x="550" y="255" class="label-bottom">TACTICAL // ML</text>
+  <text x="340" y="55" class="text-label">MACHINE LEARNING</text>
+  <text x="340" y="100" class="text-headline">From raw data</text>
+  <text x="340" y="140" class="text-headline">to validated models.</text>
   
-  <!-- Decorative corner elements -->
-  <path d="M 570 10 L 570 20 M 570 10 L 560 10" fill="none" stroke="#2a3a4a" stroke-width="1" />
-  <path d="M 570 270 L 570 260 M 570 270 L 560 270" fill="none" stroke="#2a3a4a" stroke-width="1" />
+  <text x="340" y="175" class="text-desc">EDA, NLP classification, model evaluation</text>
+  <text x="340" y="195" class="text-desc">and hyperparameter optimization.</text>
+  
+  <!-- Illustration -->
+  <g transform="translate(0, 10)">
+    <!-- Floating Rectangles -->
+    <rect x="250" y="220" width="80" height="50" rx="6" fill="#1a1a1f" stroke="#2a2a2f" stroke-width="1.5" />
+    <rect x="370" y="280" width="90" height="60" rx="6" fill="#1a1a1f" stroke="#2a2a2f" stroke-width="1.5" />
+    <rect x="200" y="290" width="60" height="40" rx="6" fill="#1a1a1f" stroke="#2a2a2f" stroke-width="1.5" />
+    
+    <!-- Dashed boundary line -->
+    <line x1="220" y1="340" x2="460" y2="230" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="4,4" />
+    
+    <!-- Sigmoid curve -->
+    <path d="M 230 330 C 300 330, 310 240, 450 240" fill="none" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round" />
+    
+    <!-- Scattered dots -->
+    <circle cx="260" cy="320" r="2.5" fill="#7D5CFF" opacity="0.8" />
+    <circle cx="280" cy="315" r="2.5" fill="#7D5CFF" opacity="0.6" />
+    <circle cx="340" cy="285" r="3.5" fill="#7D5CFF" />
+    <circle cx="320" cy="295" r="2.5" fill="#7D5CFF" opacity="0.5" />
+    <circle cx="370" cy="265" r="2.5" fill="#7D5CFF" opacity="0.7" />
+    <circle cx="410" cy="250" r="2.5" fill="#7D5CFF" opacity="0.9" />
+    <circle cx="430" cy="245" r="2.5" fill="#7D5CFF" opacity="0.6" />
+  </g>
+  
+  <text x="340" y="395" class="text-tech">Python · Scikit-learn · NLTK · TensorFlow</text>
 </svg>

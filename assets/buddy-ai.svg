@@ -1,132 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 520" width="100%" height="100%">
   <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#768079" stroke-width="0.5" stroke-opacity="0.15"/>
-    </pattern>
-    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#768079" opacity="0.3"/>
-    </pattern>
+    <!-- Gradient for Assistant Icon -->
+    <linearGradient id="grad-icon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0071E3"/>
+      <stop offset="100%" stop-color="#7D5CFF"/>
+    </linearGradient>
+
+    <!-- Gradient for Floating Bubble -->
+    <linearGradient id="grad-bubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA"/>
+      <stop offset="100%" stop-color="#7D5CFF"/>
+    </linearGradient>
+
+    <!-- Shadows -->
+    <filter id="shadow-main" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#000000" flood-opacity="0.04" />
+    </filter>
+    <filter id="shadow-panel" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="15" stdDeviation="25" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+    <filter id="shadow-bubble" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="340" fill="#0F1923" stroke="#2a3a4a" stroke-width="2"/>
+  <rect width="1400" height="520" fill="#F5F5F7" />
+
+  <!-- TOP SECTION -->
+  <text x="700" y="55" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#6E6E73" letter-spacing="2" text-anchor="middle">FEATURED PROJECT</text>
   
-  <!-- Grid -->
-  <rect width="1200" height="340" fill="url(#grid)" />
+  <text x="700" y="100" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#0B0B0F" text-anchor="middle">Private AI assistance,</text>
+  <text x="700" y="145" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#0B0B0F" text-anchor="middle">wherever you work.</text>
+  
+  <text x="700" y="185" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#6E6E73" text-anchor="middle">A local-first Windows writing and vision assistant</text>
+  <text x="700" y="210" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#6E6E73" text-anchor="middle">powered by private Ollama inference.</text>
 
-  <!-- Left edge line -->
-  <rect x="0" y="0" width="4" height="340" fill="#22D3EE"/>
+  <!-- MIDDLE SECTION: ILLUSTRATION -->
+  <!-- Main Window -->
+  <g transform="translate(360, 250)">
+    <rect x="0" y="0" width="560" height="180" rx="16" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1" filter="url(#shadow-main)" />
+    
+    <!-- Window Chrome -->
+    <circle cx="20" cy="20" r="4.5" fill="#FF5F57" opacity="0.7" />
+    <circle cx="36" cy="20" r="4.5" fill="#FEBC2E" opacity="0.7" />
+    <circle cx="52" cy="20" r="4.5" fill="#28C840" opacity="0.7" />
 
-  <!-- Left Section (0 to 720) -->
-  <g transform="translate(40, 40)">
-    <!-- Top left indicator -->
-    <rect x="0" y="0" width="8" height="8" fill="#22D3EE" />
-    <text x="16" y="8" fill="#22D3EE" font-family="monospace, Arial, sans-serif" font-size="12" font-weight="bold" letter-spacing="1">BUD-002</text>
+    <!-- Content area: highlighted text -->
+    <rect x="16" y="44" width="480" height="32" rx="6" fill="#0071E3" opacity="0.08" />
+    <rect x="32" y="56" width="360" height="8" rx="4" fill="#0071E3" opacity="0.6" />
     
-    <!-- Title -->
-    <text x="0" y="65" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" letter-spacing="2">BUDDY AI</text>
-    
-    <!-- Subtitle -->
-    <text x="0" y="95" fill="#768079" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="3">LOCAL-FIRST WINDOWS AI ASSISTANT</text>
-    
-    <!-- Description -->
-    <text x="0" y="140" fill="#768079" font-family="Arial, Helvetica, sans-serif" font-size="14" line-height="1.5">
-      <tspan x="0" dy="0">Screen understanding, streaming responses,</tspan>
-      <tspan x="0" dy="22">selection actions, and private Ollama inference.</tspan>
-      <tspan x="0" dy="22">Zero cloud dependency for complete data privacy.</tspan>
-    </text>
-
-    <!-- Tech Stack -->
-    <g transform="translate(0, 220)">
-      <!-- Badge 1: Electron -->
-      <g transform="translate(0, 0)">
-        <polygon points="0,0 70,0 76,6 76,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
-        <text x="38" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Electron</text>
-      </g>
-      <!-- Badge 2: React -->
-      <g transform="translate(86, 0)">
-        <polygon points="0,0 60,0 66,6 66,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
-        <text x="33" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">React</text>
-      </g>
-      <!-- Badge 3: TypeScript -->
-      <g transform="translate(162, 0)">
-        <polygon points="0,0 80,0 86,6 86,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
-        <text x="43" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">TypeScript</text>
-      </g>
-      <!-- Badge 4: Ollama -->
-      <g transform="translate(258, 0)">
-        <polygon points="0,0 60,0 66,6 66,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
-        <text x="33" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Ollama</text>
-      </g>
-    </g>
-    
-    <!-- Classification Label -->
-    <text x="0" y="280" fill="#768079" font-family="monospace, Arial, sans-serif" font-size="10" letter-spacing="1">FLAGSHIP // DESKTOP</text>
+    <!-- Other text lines -->
+    <rect x="24" y="94" width="460" height="8" rx="4" fill="#E5E5EA" />
+    <rect x="24" y="118" width="420" height="8" rx="4" fill="#E5E5EA" />
+    <rect x="24" y="142" width="300" height="8" rx="4" fill="#E5E5EA" />
   </g>
 
-  <!-- Dashed Separator -->
-  <line x1="720" y1="40" x2="720" y2="300" stroke="#768079" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
-
-  <!-- Right Section (720 to 1200) -->
-  <g transform="translate(750, 40)">
+  <!-- Floating Assistant Panel -->
+  <g transform="translate(800, 210)">
+    <rect x="0" y="0" width="220" height="230" rx="12" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="1" filter="url(#shadow-panel)" />
     
-    <!-- Screen Capture Frame -->
-    <rect x="50" y="30" width="300" height="200" fill="none" stroke="#768079" stroke-width="1" stroke-dasharray="2,2"/>
+    <!-- Icon area -->
+    <circle cx="36" cy="36" r="16" fill="url(#grad-icon)" />
+    <!-- Title skeleton -->
+    <rect x="64" y="32" width="100" height="8" rx="4" fill="#D2D2D7" />
+    <rect x="64" y="48" width="60" height="6" rx="3" fill="#E5E5EA" />
     
-    <!-- Crosshairs for capture -->
-    <path d="M 40 30 L 60 30 M 50 20 L 50 40" stroke="#22D3EE" stroke-width="1"/>
-    <path d="M 340 230 L 360 230 M 350 220 L 350 240" stroke="#22D3EE" stroke-width="1"/>
+    <!-- Fake text lines -->
+    <rect x="20" y="80" width="180" height="8" rx="4" fill="#E5E5EA" />
+    <rect x="20" y="100" width="160" height="8" rx="4" fill="#E5E5EA" />
+    <rect x="20" y="120" width="170" height="8" rx="4" fill="#E5E5EA" />
+    <rect x="20" y="140" width="130" height="8" rx="4" fill="#E5E5EA" />
     
-    <!-- Capture content (Abstract) -->
-    <rect x="70" y="50" width="120" height="80" fill="url(#dotGrid)" stroke="#768079" stroke-width="1" opacity="0.5"/>
-    <rect x="210" y="50" width="120" height="40" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
-    
-    <!-- Highlight in capture -->
-    <rect x="70" y="100" width="60" height="30" fill="#FF4655" fill-opacity="0.2" stroke="#FF4655" stroke-width="1" stroke-dasharray="2,2"/>
-
-    <!-- Floating Chat Panel -->
-    <g transform="translate(180, 110)">
-      <!-- Panel background with shadow/glow -->
-      <rect x="0" y="0" width="180" height="140" rx="4" fill="#1a2332" stroke="#22D3EE" stroke-width="1.5"/>
-      <rect x="0" y="0" width="180" height="10" fill="#22D3EE" opacity="0.1"/>
-      
-      <!-- Panel header -->
-      <rect x="10" y="8" width="40" height="4" fill="#22D3EE" opacity="0.5"/>
-      <circle cx="165" cy="10" r="3" fill="#FF4655"/>
-
-      <!-- Chat Bubbles -->
-      <rect x="15" y="30" width="120" height="20" rx="2" fill="#768079" fill-opacity="0.2"/>
-      
-      <rect x="45" y="60" width="120" height="20" rx="2" fill="#22D3EE" fill-opacity="0.15"/>
-      <!-- Streaming text lines inside user bubble -->
-      <rect x="55" y="66" width="100" height="2" fill="#22D3EE"/>
-      <rect x="55" y="72" width="70" height="2" fill="#22D3EE"/>
-      
-      <rect x="15" y="90" width="150" height="40" rx="2" fill="#768079" fill-opacity="0.2"/>
-      <rect x="25" y="100" width="130" height="2" fill="#ECE8E1" opacity="0.5"/>
-      <rect x="25" y="108" width="110" height="2" fill="#ECE8E1" opacity="0.5"/>
-      <rect x="25" y="116" width="90" height="2" fill="#ECE8E1" opacity="0.5"/>
-      <circle cx="125" cy="117" r="2" fill="#22D3EE"/>
-    </g>
-
-    <!-- Floating Bubble/Widget -->
-    <g transform="translate(120, 220)">
-      <circle cx="20" cy="20" r="20" fill="#0F1923" stroke="#22D3EE" stroke-width="2"/>
-      <circle cx="20" cy="20" r="10" fill="none" stroke="#FF4655" stroke-width="1"/>
-      <path d="M 20 5 L 20 10 M 20 30 L 20 35 M 5 20 L 10 20 M 30 20 L 35 20" stroke="#ECE8E1" stroke-width="1.5"/>
-    </g>
-    
-    <!-- Accent line -->
-    <path d="M 380 40 L 400 40 L 400 60" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
+    <!-- Action buttons skeleton -->
+    <rect x="20" y="180" width="80" height="24" rx="12" fill="#0071E3" opacity="0.1" />
+    <rect x="110" y="180" width="80" height="24" rx="12" fill="#F5F5F7" />
   </g>
 
-  <!-- Top Right Brackets -->
-  <path d="M 1180 20 L 1190 20 L 1190 30" fill="none" stroke="#768079" stroke-width="2"/>
-  
-  <!-- Bottom Right Brackets -->
-  <path d="M 1190 310 L 1190 320 L 1180 320" fill="none" stroke="#768079" stroke-width="2"/>
-  
-  <!-- Coordinate Text -->
-  <text x="1175" y="32" fill="#768079" font-family="monospace, Arial, sans-serif" font-size="10" text-anchor="end" letter-spacing="1">DSK.APP</text>
+  <!-- Floating Bubble/Widget -->
+  <circle cx="1060" cy="380" r="18" fill="url(#grad-bubble)" filter="url(#shadow-bubble)" />
+
+  <!-- BOTTOM SECTION -->
+  <!-- Capability Pills -->
+  <g transform="translate(362.5, 455)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="185" height="30" rx="15" fill="transparent" stroke="#D2D2D7" stroke-width="1" />
+    <text x="92.5" y="19" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6E6E73" text-anchor="middle">Floating desktop assistant</text>
+
+    <!-- Pill 2 -->
+    <rect x="195" y="0" width="150" height="30" rx="15" fill="transparent" stroke="#D2D2D7" stroke-width="1" />
+    <text x="270" y="19" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6E6E73" text-anchor="middle">Screen understanding</text>
+
+    <!-- Pill 3 -->
+    <rect x="355" y="0" width="150" height="30" rx="15" fill="transparent" stroke="#D2D2D7" stroke-width="1" />
+    <text x="430" y="19" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6E6E73" text-anchor="middle">Selected-text actions</text>
+
+    <!-- Pill 4 -->
+    <rect x="515" y="0" width="160" height="30" rx="15" fill="transparent" stroke="#D2D2D7" stroke-width="1" />
+    <text x="595" y="19" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6E6E73" text-anchor="middle">Local, private inference</text>
+  </g>
+
+  <!-- Tech Stack Line -->
+  <text x="700" y="505" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#6E6E73" text-anchor="middle">Electron · React · TypeScript · Ollama</text>
 
 </svg>
