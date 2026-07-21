@@ -1,59 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="900" height="350">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
 <style>
   .bg { fill: transparent; }
-  .bg-solid { fill: #ffffff; }
+  .bg-panel { fill: #ffffff; }
   .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .border-dashed { stroke: #d0d7de; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
+  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
+  .text-bold { font-weight: 600; }
   .accent-blue { stroke: #0969da; fill: none; }
+  .accent-blue-dashed { stroke: #0969da; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
   .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.1; }
-  .fill-purple { fill: #8250df; opacity: 0.1; }
+  .fill-blue { fill: #0969da; opacity: 0.15; }
+  .fill-purple { fill: #8250df; opacity: 0.15; }
+  .accent-red { stroke: #cf222e; fill: none; }
+  .fill-red { fill: #cf222e; opacity: 0.15; }
   
   @media (prefers-color-scheme: dark) {
-    .bg-solid { fill: #0d1117; }
+    .bg-panel { fill: #0d1117; }
     .border { stroke: #30363d; }
+    .border-dashed { stroke: #30363d; }
     .text-primary { fill: #c9d1d9; }
     .text-secondary { fill: #8b949e; }
     .accent-blue { stroke: #58a6ff; }
+    .accent-blue-dashed { stroke: #58a6ff; }
     .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.15; }
-    .fill-purple { fill: #bc8cff; opacity: 0.15; }
+    .fill-blue { fill: #58a6ff; opacity: 0.2; }
+    .fill-purple { fill: #bc8cff; opacity: 0.2; }
+    .accent-red { stroke: #ff7b72; }
+    .fill-red { fill: #ff7b72; opacity: 0.2; }
   }
 </style>
-<rect width="900" height="350" class="bg"/>
 
-<defs>
-  <filter id="shadow" x="-5%" y="-5%" width="120%" height="120%">
-    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1" />
-  </filter>
-</defs>
+<!-- Background IDE/Browser window (dashed/lower opacity) -->
+<rect x="50" y="20" width="800" height="310" rx="8" class="border-dashed" />
+<line x1="50" y1="60" x2="850" y2="60" class="border-dashed" />
+<!-- Fake code lines in IDE -->
+<rect x="80" y="90" width="300" height="8" rx="4" class="border-dashed" />
+<rect x="100" y="115" width="250" height="8" rx="4" class="border-dashed" />
+<rect x="100" y="140" width="350" height="8" rx="4" class="border-dashed" />
+<rect x="100" y="165" width="200" height="8" rx="4" class="border-dashed" />
+<rect x="80" y="190" width="150" height="8" rx="4" class="border-dashed" />
 
-<!-- Background Editor Window -->
-<rect x="150" y="40" width="600" height="270" rx="8" class="bg-solid border"/>
-<!-- Editor Header -->
-<path d="M 150 70 L 750 70" class="border"/>
-<!-- Mac Buttons -->
-<circle cx="170" cy="55" r="4" class="border"/>
-<circle cx="185" cy="55" r="4" class="border"/>
-<circle cx="200" cy="55" r="4" class="border"/>
-<!-- Editor Content (Mock Code Lines) -->
-<rect x="180" y="90" width="300" height="8" rx="4" class="border"/>
-<rect x="180" y="110" width="450" height="8" rx="4" class="fill-blue"/>
-<rect x="180" y="130" width="200" height="8" rx="4" class="border"/>
-<rect x="210" y="150" width="250" height="8" rx="4" class="border"/>
-<rect x="210" y="170" width="350" height="8" rx="4" class="border"/>
-<rect x="240" y="190" width="180" height="8" rx="4" class="border"/>
+<!-- Screen Capture Overlay (distinct dashed selection over part of the IDE) -->
+<rect x="70" y="80" width="400" height="130" class="accent-blue-dashed fill-blue" />
+<text x="80" y="230" class="text-secondary accent-blue" style="stroke: none;">Captured Area</text>
 
 <!-- Floating Assistant Panel -->
-<rect x="520" y="110" width="220" height="180" rx="12" class="bg-solid border" filter="url(#shadow)"/>
-<!-- Inside Floating Panel -->
-<circle cx="630" cy="170" r="30" class="fill-purple border"/>
-<path d="M 605 170 Q 615 155, 630 170 T 655 170" class="accent-purple" stroke-width="3" stroke-linecap="round"/>
-<path d="M 605 170 Q 615 185, 630 170 T 655 170" class="accent-blue" stroke-width="2" stroke-linecap="round"/>
+<rect x="550" y="50" width="270" height="260" rx="8" class="border bg-panel" style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));" />
 
-<rect x="550" y="220" width="160" height="6" rx="3" class="fill-purple"/>
-<rect x="560" y="240" width="140" height="6" rx="3" class="border"/>
-<rect x="570" y="260" width="100" height="6" rx="3" class="border"/>
+<!-- Assistant Header -->
+<text x="570" y="85" class="text-primary text-bold" font-size="16">Buddy AI (Ollama Local)</text>
+<line x1="550" y1="100" x2="820" y2="100" class="border" />
+
+<!-- Chat Bubble -->
+<rect x="570" y="120" width="220" height="80" rx="8" class="border" />
+
+<text x="585" y="145" class="text-secondary">Analyzing selection...</text>
+<text x="585" y="170" class="text-primary">"Improving grammar..."</text>
+<rect x="585" y="180" width="150" height="4" rx="2" class="fill-blue" />
+<rect x="585" y="180" width="80" height="4" rx="2" class="accent-blue" style="fill: #0969da;" />
+
+<!-- Action Buttons -->
+<rect x="570" y="260" width="105" height="30" rx="4" class="border" />
+<text x="590" y="280" class="text-secondary">Regenerate</text>
+
+<rect x="685" y="260" width="105" height="30" rx="4" class="border" />
+<text x="710" y="280" class="text-secondary">Apply</text>
 
 </svg>

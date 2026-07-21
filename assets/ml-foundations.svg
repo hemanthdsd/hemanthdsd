@@ -1,13 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
 <style>
   .bg { fill: transparent; }
   .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
+  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
+  .text-bold { font-weight: 600; }
   .accent-blue { stroke: #0969da; fill: none; }
   .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.1; }
-  .fill-purple { fill: #8250df; opacity: 0.1; }
+  .fill-blue { fill: #0969da; opacity: 0.15; }
+  .fill-purple { fill: #8250df; opacity: 0.15; }
+  .accent-green { stroke: #1a7f37; }
   
   @media (prefers-color-scheme: dark) {
     .border { stroke: #30363d; }
@@ -15,40 +17,52 @@
     .text-secondary { fill: #8b949e; }
     .accent-blue { stroke: #58a6ff; }
     .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.15; }
-    .fill-purple { fill: #bc8cff; opacity: 0.15; }
+    .fill-blue { fill: #58a6ff; opacity: 0.2; }
+    .fill-purple { fill: #bc8cff; opacity: 0.2; }
+    .accent-green { stroke: #2ea043; }
   }
 </style>
 <rect width="100%" height="100%" class="bg" />
 
-<!-- Grid -->
-<g class="border" stroke-opacity="0.3">
-  <line x1="0" y1="50" x2="900" y2="50" />
-  <line x1="0" y1="100" x2="900" y2="100" />
-  <line x1="0" y1="150" x2="900" y2="150" />
-  
-  <line x1="150" y1="0" x2="150" y2="200" />
-  <line x1="300" y1="0" x2="300" y2="200" />
-  <line x1="450" y1="0" x2="450" y2="200" />
-  <line x1="600" y1="0" x2="600" y2="200" />
-  <line x1="750" y1="0" x2="750" y2="200" />
-</g>
+<!-- Confusion Matrix -->
+<text x="150" y="50" text-anchor="middle" class="text-primary text-bold">Confusion Matrix</text>
+<rect x="50" y="70" width="200" height="200" class="border" />
+<line x1="150" y1="70" x2="150" y2="270" class="border" />
+<line x1="50" y1="170" x2="250" y2="170" class="border" />
+<!-- TP -->
+<rect x="50" y="70" width="100" height="100" class="fill-blue" />
+<text x="100" y="125" text-anchor="middle" class="text-primary text-bold">TP</text>
+<!-- FP -->
+<text x="200" y="125" text-anchor="middle" class="text-primary text-bold">FP</text>
+<!-- FN -->
+<text x="100" y="225" text-anchor="middle" class="text-primary text-bold">FN</text>
+<!-- TN -->
+<rect x="150" y="170" width="100" height="100" class="fill-blue" />
+<text x="200" y="225" text-anchor="middle" class="text-primary text-bold">TN</text>
 
-<!-- Data points (scattered) -->
-<g class="accent-purple" stroke-width="1.5">
-  <circle cx="100" cy="180" r="3" />
-  <circle cx="200" cy="170" r="3" />
-  <circle cx="250" cy="185" r="3" />
-  <circle cx="350" cy="160" r="3" />
-  <circle cx="400" cy="130" r="3" />
-  
-  <circle cx="500" cy="70" r="3" />
-  <circle cx="550" cy="40" r="3" />
-  <circle cx="650" cy="15" r="3" />
-  <circle cx="700" cy="30" r="3" />
-  <circle cx="800" cy="20" r="3" />
-</g>
+<!-- ROC Curve -->
+<text x="450" y="50" text-anchor="middle" class="text-primary text-bold">ROC Curve</text>
+<polyline points="350,270 350,70" class="border" />
+<polyline points="350,270 550,270" class="border" />
+<line x1="350" y1="270" x2="550" y2="70" class="border" stroke-dasharray="5,5" />
+<path d="M 350 270 Q 370 120 450 90 T 550 70" class="accent-purple" stroke-width="2" />
+<text x="450" y="290" text-anchor="middle" class="text-secondary">False Positive Rate</text>
+<text x="330" y="170" text-anchor="middle" class="text-secondary" transform="rotate(-90 330 170)">True Positive Rate</text>
 
-<!-- S-curve (Logistic Regression) -->
-<path d="M 0 190 C 350 190, 350 10, 900 10" class="accent-blue" stroke-width="2" />
+<!-- NLP Tokens -->
+<text x="750" y="50" text-anchor="middle" class="text-primary text-bold">NLP Tokens</text>
+
+<rect x="610" y="100" width="80" height="40" rx="4" class="border" />
+<text x="650" y="125" text-anchor="middle" class="text-primary">"analyzing"</text>
+
+<line x1="690" y1="120" x2="710" y2="120" class="border" />
+
+<rect x="710" y="100" width="80" height="40" rx="4" class="border" />
+<text x="750" y="125" text-anchor="middle" class="text-primary">"model"</text>
+
+<line x1="790" y1="120" x2="810" y2="120" class="border" />
+
+<rect x="810" y="100" width="90" height="40" rx="4" class="border" />
+<text x="855" y="125" text-anchor="middle" class="text-primary">"performance"</text>
+
 </svg>

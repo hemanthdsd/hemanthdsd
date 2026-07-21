@@ -1,13 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
 <style>
   .bg { fill: transparent; }
   .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
+  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
+  .text-bold { font-weight: 600; }
   .accent-blue { stroke: #0969da; fill: none; }
   .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.1; }
-  .fill-purple { fill: #8250df; opacity: 0.1; }
+  .fill-blue { fill: #0969da; opacity: 0.15; }
+  .fill-purple { fill: #8250df; opacity: 0.15; }
+  .accent-green { stroke: #1a7f37; }
   
   @media (prefers-color-scheme: dark) {
     .border { stroke: #30363d; }
@@ -15,36 +17,42 @@
     .text-secondary { fill: #8b949e; }
     .accent-blue { stroke: #58a6ff; }
     .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.15; }
-    .fill-purple { fill: #bc8cff; opacity: 0.15; }
+    .fill-blue { fill: #58a6ff; opacity: 0.2; }
+    .fill-purple { fill: #bc8cff; opacity: 0.2; }
+    .accent-green { stroke: #2ea043; }
   }
 </style>
 <rect width="100%" height="100%" class="bg" />
 
-<!-- Radiating lines -->
-<line x1="450" y1="100" x2="250" y2="50" class="border" />
-<line x1="450" y1="100" x2="300" y2="150" class="border" />
-<line x1="450" y1="100" x2="650" y2="50" class="border" />
-<line x1="450" y1="100" x2="600" y2="150" class="border" />
-<line x1="450" y1="100" x2="150" y2="100" class="border" />
-<line x1="450" y1="100" x2="750" y2="100" class="border" />
+<!-- Central Box -->
+<rect x="350" y="20" width="200" height="50" rx="4" class="border" />
+<text x="450" y="50" text-anchor="middle" class="text-primary text-bold">Autonomous Decision Engine</text>
 
-<!-- Central Node -->
-<polygon points="450,70 480,100 450,130 420,100" class="border" fill="#fff" />
-<polygon points="450,70 480,100 450,130 420,100" class="fill-purple" />
+<!-- Marker for arrows -->
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" class="border" fill="#d0d7de"/>
+  </marker>
+</defs>
 
-<!-- Smaller Nodes -->
-<circle cx="250" cy="50" r="15" class="border" />
-<circle cx="250" cy="50" r="15" class="fill-blue" />
+<!-- Arrows -->
+<path d="M 450 70 L 250 120" class="border" marker-end="url(#arrow)" />
+<path d="M 450 70 L 650 120" class="border" marker-end="url(#arrow)" />
 
-<circle cx="300" cy="150" r="12" class="border" />
+<!-- Option A -->
+<rect x="150" y="120" width="200" height="50" rx="4" class="border" />
+<text x="250" y="150" text-anchor="middle" class="text-primary">Option A: Veer Left (Pedestrians)</text>
 
-<circle cx="650" cy="50" r="18" class="border" />
-<circle cx="650" cy="50" r="18" class="fill-purple" />
+<!-- Option B -->
+<rect x="550" y="120" width="200" height="50" rx="4" class="border" />
+<text x="650" y="150" text-anchor="middle" class="text-primary">Option B: Veer Right (Barrier)</text>
 
-<circle cx="600" cy="150" r="15" class="border" />
-<circle cx="600" cy="150" r="15" class="fill-blue" />
+<!-- Scorecard Table -->
+<rect x="250" y="200" width="400" height="80" rx="4" class="border" />
+<line x1="250" y1="230" x2="650" y2="230" class="border" />
+<line x1="450" y1="230" x2="450" y2="280" class="border" />
+<text x="450" y="220" text-anchor="middle" class="text-primary text-bold">Fairness &amp; Risk Scorecard</text>
+<text x="350" y="260" text-anchor="middle" class="text-primary">Risk Score: 0.85</text>
+<text x="550" y="260" text-anchor="middle" class="text-primary">Bias Penalty: 12%</text>
 
-<circle cx="150" cy="100" r="10" class="border" />
-<circle cx="750" cy="100" r="10" class="border" />
 </svg>

@@ -9,8 +9,9 @@
 ## Featured projects
 
 <table width="100%">
+  <!-- ROW 1 -->
   <tr>
-    <td>
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/hemanthdsd/opsinsight-ai">OpsInsight AI</a></h3>
       <p>An AI-assisted manufacturing deviation and yield-intelligence platform for controlled and regulated environments.</p>
       <a href="https://github.com/hemanthdsd/opsinsight-ai">
@@ -19,34 +20,25 @@
         </picture>
       </a>
       <p><code>Angular 18</code> · <code>NestJS</code> · <code>PostgreSQL</code> · <code>Gemini</code> · <code>pgvector</code></p>
-      <p><strong>Focus:</strong> Evidence-cited AI investigations · Human-in-the-loop review · Deterministic fallback · Manufacturing KPI analysis</p>
+      <p><strong>Focus:</strong> Evidence-cited AI investigations · Human-in-the-loop review</p>
     </td>
-  </tr>
-</table>
-
-<br>
-
-<table width="100%">
-  <tr>
-    <td>
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/hemanthdsd/buddy-ai">Buddy AI</a></h3>
       <p>A local-first Windows writing and vision assistant powered by private Ollama inference.</p>
+      <br>
       <a href="https://github.com/hemanthdsd/buddy-ai">
         <picture>
           <img src="assets/buddy-ai.svg" alt="Buddy AI Visualization" width="100%">
         </picture>
       </a>
       <p><code>Electron</code> · <code>React</code> · <code>TypeScript</code> · <code>Ollama</code></p>
-      <p><strong>Focus:</strong> Floating desktop assistant · Screen understanding · Selected-text actions · Local inference</p>
+      <p><strong>Focus:</strong> Floating desktop assistant · Screen understanding</p>
     </td>
   </tr>
-</table>
-
-<br>
-
-<table width="100%">
+  
+  <!-- ROW 2 -->
   <tr>
-    <td>
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">AI Ethics Auditing Simulation</a></h3>
       <p>An applied simulation exploring responsible-AI auditing, governance, fairness and risk.</p>
       <a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">
@@ -56,14 +48,7 @@
       </a>
       <p><strong>Focus:</strong> Responsible-AI auditing · Governance · Fairness · Risk</p>
     </td>
-  </tr>
-</table>
-
-<br>
-
-<table width="100%">
-  <tr>
-    <td>
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/hemanthdsd/machine-learning-foundations-project">Machine Learning Foundations</a></h3>
       <p>A machine-learning workflow covering exploratory analysis, logistic regression, NLP and model evaluation.</p>
       <a href="https://github.com/hemanthdsd/machine-learning-foundations-project">
@@ -72,25 +57,24 @@
         </picture>
       </a>
       <p><code>Python</code> · <code>pandas</code> · <code>scikit-learn</code> · <code>NLTK</code></p>
-      <p><strong>Focus:</strong> Exploratory analysis · Logistic regression · NLP · Model evaluation</p>
+      <p><strong>Focus:</strong> Exploratory analysis · Logistic regression · NLP</p>
     </td>
   </tr>
-</table>
 
-<br>
-
-<table width="100%">
+  <!-- ROW 3 -->
   <tr>
-    <td>
-      <h3><a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">Quantitative Data Analytics</a></h3>
-      <p>Statistical research and visual analysis covering usability, workload and advertising effectiveness.</p>
-      <a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">
-        <picture>
-          <img src="assets/data-analytics.svg" alt="Quantitative Data Analytics Visualization" width="100%">
-        </picture>
-      </a>
-      <p><code>R</code> · <code>RStudio</code> · <code>Regression</code> · <code>Hypothesis testing</code></p>
-      <p><strong>Focus:</strong> Usability · Workload analysis · Advertising effectiveness</p>
+    <td colspan="2" valign="top" align="center">
+      <div align="center">
+        <h3><a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">Quantitative Data Analytics</a></h3>
+        <p>Statistical research and visual analysis covering usability, workload and advertising effectiveness.</p>
+        <a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">
+          <picture>
+            <img src="assets/data-analytics.svg" alt="Quantitative Data Analytics Visualization" width="50%">
+          </picture>
+        </a>
+        <p><code>R</code> · <code>RStudio</code> · <code>Regression</code> · <code>Hypothesis testing</code></p>
+        <p><strong>Focus:</strong> Usability · Workload analysis · Advertising effectiveness</p>
+      </div>
     </td>
   </tr>
 </table>

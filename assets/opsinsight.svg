@@ -1,68 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="900" height="350">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
 <style>
   .bg { fill: transparent; }
-  .bg-solid { fill: #ffffff; }
   .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
+  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
+  .text-bold { font-weight: 600; }
   .accent-blue { stroke: #0969da; fill: none; }
   .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.1; }
-  .fill-purple { fill: #8250df; opacity: 0.1; }
+  .fill-blue { fill: #0969da; opacity: 0.15; }
+  .fill-purple { fill: #8250df; opacity: 0.15; }
+  .accent-red { stroke: #cf222e; fill: none; }
+  .fill-red { fill: #cf222e; opacity: 0.15; }
   
   @media (prefers-color-scheme: dark) {
-    .bg-solid { fill: #0d1117; }
     .border { stroke: #30363d; }
     .text-primary { fill: #c9d1d9; }
     .text-secondary { fill: #8b949e; }
     .accent-blue { stroke: #58a6ff; }
     .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.15; }
-    .fill-purple { fill: #bc8cff; opacity: 0.15; }
+    .fill-blue { fill: #58a6ff; opacity: 0.2; }
+    .fill-purple { fill: #bc8cff; opacity: 0.2; }
+    .accent-red { stroke: #ff7b72; }
+    .fill-red { fill: #ff7b72; opacity: 0.2; }
   }
 </style>
-<rect width="900" height="350" class="bg"/>
 
-<!-- Main Dashboard Window -->
-<rect x="100" y="30" width="700" height="290" rx="8" class="bg-solid border"/>
-<!-- Header bar -->
-<path d="M 100 70 L 800 70" class="border"/>
-<!-- Mac buttons -->
-<circle cx="125" cy="50" r="5" class="border"/>
-<circle cx="145" cy="50" r="5" class="border"/>
-<circle cx="165" cy="50" r="5" class="border"/>
+<!-- Main application window -->
+<rect x="50" y="20" width="800" height="310" rx="8" class="border" />
 
 <!-- Sidebar -->
-<rect x="100" y="70" width="150" height="250" class="fill-blue"/>
-<path d="M 250 70 L 250 320" class="border"/>
+<rect x="50" y="20" width="60" height="310" rx="8" class="border" />
+<line x1="60" y1="50" x2="100" y2="50" class="border" />
+<line x1="60" y1="70" x2="100" y2="70" class="border" />
+<line x1="60" y1="90" x2="100" y2="90" class="border" />
+<line x1="60" y1="110" x2="100" y2="110" class="border" />
 
-<!-- Sidebar Items -->
-<rect x="110" y="85" width="120" height="20" rx="4" class="fill-blue"/>
-<rect x="110" y="115" width="80" height="10" rx="2" class="border"/>
-<rect x="110" y="135" width="100" height="10" rx="2" class="border"/>
-<rect x="110" y="155" width="90" height="10" rx="2" class="border"/>
+<!-- Top header -->
+<text x="130" y="50" class="text-primary text-bold" font-size="18">OpsInsight AI</text>
+<line x1="110" y1="70" x2="850" y2="70" class="border" />
 
-<!-- Main Content Area -->
-<text x="270" y="100" font-size="16" class="text-primary" font-weight="bold">Yield Analytics</text>
+<!-- Main area - Chart -->
+<rect x="130" y="90" width="450" height="220" rx="4" class="border" />
+<text x="140" y="115" class="text-secondary">Yield Trend</text>
 
-<!-- Data Cards -->
-<rect x="270" y="120" width="150" height="70" rx="6" class="border bg-solid"/>
-<text x="285" y="145" font-size="12" class="text-secondary">Process Deviations</text>
-<text x="285" y="170" font-size="20" class="text-primary">12.4%</text>
+<!-- Chart axes -->
+<line x1="150" y1="280" x2="560" y2="280" class="border" />
+<line x1="150" y1="130" x2="150" y2="280" class="border" />
 
-<rect x="440" y="120" width="150" height="70" rx="6" class="border bg-solid"/>
-<text x="455" y="145" font-size="12" class="text-secondary">Production Yield</text>
-<text x="455" y="170" font-size="20" class="text-primary">98.2%</text>
+<!-- Line chart with dip -->
+<path d="M 150 180 L 220 170 L 290 190 L 360 160 L 410 260 L 460 170 L 530 150" class="accent-blue" stroke-width="2" fill="none" />
 
-<rect x="610" y="120" width="150" height="70" rx="6" class="border bg-solid"/>
-<text x="625" y="145" font-size="12" class="text-secondary">Active Sensors</text>
-<text x="625" y="170" font-size="20" class="text-primary">4,092</text>
+<!-- Red circle on dip -->
+<circle cx="410" cy="260" r="16" class="accent-red" stroke-width="2" />
+<text x="435" y="265" class="text-secondary accent-red" style="stroke: none;">Deviation Detected</text>
 
-<!-- Line Chart -->
-<rect x="270" y="210" width="490" height="90" rx="6" class="border bg-solid"/>
-<path d="M 280 280 Q 320 220, 380 250 T 480 230 T 580 270 T 740 220" class="accent-blue" stroke-width="2"/>
-<path d="M 280 280 Q 320 220, 380 250 T 480 230 T 580 270 T 740 220 L 740 300 L 280 300 Z" class="fill-blue" stroke="none"/>
+<!-- Side panel -->
+<rect x="600" y="90" width="230" height="220" rx="4" class="border fill-purple" />
+<text x="615" y="115" class="text-primary text-bold">Gemini AI Root Cause Analysis</text>
+<line x1="615" y1="130" x2="815" y2="130" class="border" />
 
-<!-- Secondary Line -->
-<path d="M 280 290 Q 350 260, 420 280 T 560 260 T 740 250" class="accent-purple" stroke-width="1.5" stroke-dasharray="4,4"/>
+<!-- Mock text lines -->
+<rect x="615" y="145" width="200" height="6" rx="3" class="text-secondary" style="fill: #8b949e; opacity: 0.5;" />
+<rect x="615" y="160" width="180" height="6" rx="3" class="text-secondary" style="fill: #8b949e; opacity: 0.5;" />
+<rect x="615" y="175" width="190" height="6" rx="3" class="text-secondary" style="fill: #8b949e; opacity: 0.5;" />
+
+<rect x="615" y="195" width="160" height="6" rx="3" class="text-secondary" style="fill: #8b949e; opacity: 0.5;" />
+<rect x="615" y="210" width="175" height="6" rx="3" class="text-secondary" style="fill: #8b949e; opacity: 0.5;" />
+
+<!-- KPI box -->
+<rect x="615" y="240" width="120" height="30" rx="4" class="border accent-red fill-red" />
+<text x="625" y="260" class="text-primary text-bold">Yield Risk: High</text>
+
 </svg>

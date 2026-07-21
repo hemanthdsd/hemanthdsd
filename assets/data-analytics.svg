@@ -1,13 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
 <style>
   .bg { fill: transparent; }
   .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
+  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
+  .text-bold { font-weight: 600; }
   .accent-blue { stroke: #0969da; fill: none; }
   .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.1; }
-  .fill-purple { fill: #8250df; opacity: 0.1; }
+  .fill-blue { fill: #0969da; opacity: 0.15; }
+  .fill-purple { fill: #8250df; opacity: 0.15; }
+  .accent-green { stroke: #1a7f37; }
   
   @media (prefers-color-scheme: dark) {
     .border { stroke: #30363d; }
@@ -15,42 +17,54 @@
     .text-secondary { fill: #8b949e; }
     .accent-blue { stroke: #58a6ff; }
     .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.15; }
-    .fill-purple { fill: #bc8cff; opacity: 0.15; }
+    .fill-blue { fill: #58a6ff; opacity: 0.2; }
+    .fill-purple { fill: #bc8cff; opacity: 0.2; }
+    .accent-green { stroke: #2ea043; }
   }
 </style>
 <rect width="100%" height="100%" class="bg" />
 
-<!-- Bars -->
-<g class="border">
-  <rect x="150" y="140" width="60" height="40" />
-  <rect x="250" y="110" width="60" height="70" />
-  <rect x="350" y="60" width="60" height="120" />
-  <rect x="450" y="30" width="60" height="150" />
-  <rect x="550" y="80" width="60" height="100" />
-  <rect x="650" y="120" width="60" height="60" />
-  <rect x="750" y="160" width="60" height="20" />
-</g>
+<!-- Scatter Plot -->
+<polyline points="50,250 50,50" class="border" />
+<polyline points="50,250 450,250" class="border" />
+<text x="250" y="280" text-anchor="middle" class="text-secondary">X Variable</text>
+<text x="30" y="150" text-anchor="middle" class="text-secondary" transform="rotate(-90 30 150)">Y Variable</text>
 
-<g class="fill-blue">
-  <rect x="150" y="140" width="60" height="40" />
-  <rect x="250" y="110" width="60" height="70" />
-  <rect x="350" y="60" width="60" height="120" />
-  <rect x="450" y="30" width="60" height="150" />
-  <rect x="550" y="80" width="60" height="100" />
-  <rect x="650" y="120" width="60" height="60" />
-  <rect x="750" y="160" width="60" height="20" />
-</g>
+<!-- Confidence Interval -->
+<polygon points="50,220 250,150 450,40 450,100 250,190 50,250" class="fill-blue" />
+<!-- Regression Line -->
+<line x1="50" y1="230" x2="450" y2="70" class="accent-blue" stroke-width="2" />
 
-<!-- Trend line -->
-<path d="M 180 140 L 280 100 L 380 50 L 480 30 L 580 70 L 680 120 L 780 160" class="accent-purple" stroke-width="2" />
-<g class="accent-purple" stroke-width="2" fill="#fff">
-  <circle cx="180" cy="140" r="4" />
-  <circle cx="280" cy="100" r="4" />
-  <circle cx="380" cy="50" r="4" />
-  <circle cx="480" cy="30" r="4" />
-  <circle cx="580" cy="70" r="4" />
-  <circle cx="680" cy="120" r="4" />
-  <circle cx="780" cy="160" r="4" />
-</g>
+<!-- Scatter points -->
+<circle cx="100" cy="200" r="4" class="accent-purple" fill="#8250df" />
+<circle cx="150" cy="180" r="4" class="accent-purple" fill="#8250df" />
+<circle cx="200" cy="190" r="4" class="accent-purple" fill="#8250df" />
+<circle cx="250" cy="140" r="4" class="accent-purple" fill="#8250df" />
+<circle cx="300" cy="150" r="4" class="accent-purple" fill="#8250df" />
+<circle cx="350" cy="100" r="4" class="accent-purple" fill="#8250df" />
+<circle cx="400" cy="110" r="4" class="accent-purple" fill="#8250df" />
+
+<!-- Side Panel - Stats -->
+<rect x="500" y="50" width="180" height="120" rx="4" class="border" />
+<text x="590" y="75" text-anchor="middle" class="text-primary text-bold">Hypothesis Test</text>
+<line x1="500" y1="90" x2="680" y2="90" class="border" />
+<text x="510" y="115" class="text-primary">p-value &lt; 0.05</text>
+<text x="510" y="145" class="text-primary">t-statistic: 3.42</text>
+
+<!-- Small Bar Chart -->
+<rect x="710" y="50" width="160" height="150" rx="4" class="border" />
+<text x="790" y="75" text-anchor="middle" class="text-primary text-bold">Metrics</text>
+<line x1="710" y1="90" x2="870" y2="90" class="border" />
+
+<line x1="730" y1="180" x2="850" y2="180" class="border" />
+<line x1="730" y1="180" x2="730" y2="100" class="border" />
+
+<!-- Bar 1 (Usability) -->
+<rect x="745" y="110" width="30" height="70" class="fill-purple" stroke="#8250df" stroke-width="1" />
+<text x="760" y="195" text-anchor="middle" class="text-secondary" style="font-size: 10px;">Usability</text>
+
+<!-- Bar 2 (Workload) -->
+<rect x="795" y="140" width="30" height="40" class="fill-blue" stroke="#0969da" stroke-width="1" />
+<text x="810" y="195" text-anchor="middle" class="text-secondary" style="font-size: 10px;">Workload</text>
+
 </svg>
