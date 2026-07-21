@@ -1,192 +1,93 @@
-<picture>
-  <img src="assets/hero.svg" alt="Sai Durga Hemanth Davuloori — AI systems. Full-stack products. Useful intelligence." width="100%">
-</picture>
+# Sai Durga Hemanth Davuloori
 
-<!-- ─── Navigation ─── -->
+**AI Systems · Full-Stack Engineering · Data Products**
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/hemanthdavuloori/">
-    <img src="https://img.shields.io/badge/LinkedIn-111111?style=flat-square&logo=linkedin&logoColor=2997ff" alt="LinkedIn" height="28">
-  </a>&nbsp;&nbsp;&nbsp;
-  <a href="mailto:saidurgahemanthdavuloori@gmail.com">
-    <img src="https://img.shields.io/badge/Email-111111?style=flat-square&logo=gmail&logoColor=FFFFFF" alt="Email" height="28">
-  </a>&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/hemanthdsd?tab=repositories">
-    <img src="https://img.shields.io/badge/All_Repositories-111111?style=flat-square&logo=github&logoColor=FFFFFF" alt="Repositories" height="28">
-  </a>
-</p>
+I build responsible AI systems and full-stack products that turn complex operational problems into clear, deployable solutions. My work includes AI-assisted manufacturing intelligence, local-first desktop AI, machine learning and quantitative analysis.
 
-<br><br>
+[Featured work](#featured-projects) &nbsp;·&nbsp; [All repositories](https://github.com/hemanthdsd?tab=repositories) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/hemanthdavuloori/) &nbsp;·&nbsp; [Email](mailto:saidurgahemanthdavuloori@gmail.com)
 
-<!-- ─── Introduction ─── -->
+---
 
-<p align="center">
-  <em>I design and build responsible AI systems, data products and full-stack applications —<br>from early problem definition to deployable software.</em>
-</p>
+## Featured projects
+
+### [OpsInsight AI](https://github.com/hemanthdsd/opsinsight-ai)
+An AI-assisted manufacturing deviation and yield-intelligence platform for controlled and regulated environments.
+
+`Angular 18` · `NestJS` · `PostgreSQL` · `Gemini` · `pgvector`
+
+**Focus:** Evidence-cited AI investigations · Human-in-the-loop review · Deterministic fallback · Manufacturing KPI analysis
 
 <br>
 
-<!-- ─── Capability Cards ─── -->
+### [Buddy AI](https://github.com/hemanthdsd/buddy-ai)
+A local-first Windows writing and vision assistant powered by private Ollama inference.
 
-<table>
-<tr>
-<td width="33%" align="center">
-<br>
+`Electron` · `React` · `TypeScript` · `Ollama`
 
-**AI Systems**
-
-Evidence-aware agents, local inference<br>and responsible automation.
-
-<br>
-</td>
-<td width="33%" align="center">
-<br>
-
-**Product Engineering**
-
-Thoughtful interfaces, scalable APIs<br>and deployable applications.
-
-<br>
-</td>
-<td width="33%" align="center">
-<br>
-
-**Decision Intelligence**
-
-Machine learning and analytics<br>transformed into practical decisions.
-
-<br>
-</td>
-</tr>
-</table>
-
-<br><br>
-
-<!-- ─── Selected Work ─── -->
-
-<h2 align="center">Selected Work</h2>
+**Focus:** Floating desktop assistant · Screen understanding · Selected-text actions · Local inference
 
 <br>
 
-<!-- ─── OpsInsight AI ─── -->
+### [AI Ethics Auditing Simulation](https://github.com/hemanthdsd/AI-ethics-auditing-simulation)
+An applied simulation exploring responsible-AI auditing, governance, fairness and risk.
 
-<a href="https://github.com/hemanthdsd/opsinsight-ai">
-  <picture>
-    <img src="assets/opsinsight.svg" alt="OpsInsight AI — Manufacturing intelligence with evidence built in. Angular 18, NestJS, PostgreSQL, Gemini, pgvector." width="100%">
-  </picture>
-</a>
-
-<p align="center">
-  <a href="https://github.com/hemanthdsd/opsinsight-ai">View project →</a>
-</p>
-
-<br><br>
-
-<!-- ─── Buddy AI ─── -->
-
-<a href="https://github.com/hemanthdsd/buddy-ai">
-  <picture>
-    <img src="assets/buddy-ai.svg" alt="Buddy AI — Private AI assistance, wherever you work. Electron, React, TypeScript, Ollama." width="100%">
-  </picture>
-</a>
-
-<p align="center">
-  <a href="https://github.com/hemanthdsd/buddy-ai">View project →</a>
-</p>
-
-<br><br>
-
-<!-- ─── AI Ethics + ML Foundations (side by side) ─── -->
-
-<table>
-<tr>
-<td width="50%">
-
-<a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">
-  <picture>
-    <img src="assets/ai-ethics.svg" alt="AI Ethics Auditing — Making responsible AI measurable. Python, CARLA, Pygame." width="100%">
-  </picture>
-</a>
-
-<p align="center">
-  <a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">View project →</a>
-</p>
-
-</td>
-<td width="50%">
-
-<a href="https://github.com/hemanthdsd/machine-learning-foundations-project">
-  <picture>
-    <img src="assets/ml-foundations.svg" alt="Machine Learning Foundations — From raw data to validated models. Python, Scikit-learn, NLTK, TensorFlow." width="100%">
-  </picture>
-</a>
-
-<p align="center">
-  <a href="https://github.com/hemanthdsd/machine-learning-foundations-project">View project →</a>
-</p>
-
-</td>
-</tr>
-</table>
+**Focus:** Responsible-AI auditing · Governance · Fairness · Risk
 
 <br>
 
-<!-- ─── Data Analytics ─── -->
+### [Machine Learning Foundations](https://github.com/hemanthdsd/machine-learning-foundations-project)
+A machine-learning workflow covering exploratory analysis, logistic regression, NLP and model evaluation.
 
-<a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">
-  <picture>
-    <img src="assets/data-analytics.svg" alt="Quantitative Data Analytics — Statistical analysis with a clear story. R, ggplot2, RStudio." width="100%">
-  </picture>
-</a>
+`Python` · `pandas` · `scikit-learn` · `NLTK`
 
-<p align="center">
-  <a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">View project →</a>
-</p>
-
-<br><br>
-
-<!-- ─── Technology ─── -->
-
-<picture>
-  <img src="assets/technology.svg" alt="Tools chosen for the problem — Angular, React, TypeScript, NestJS, Electron, PostgreSQL, Python, R, Ollama, Docker" width="100%">
-</picture>
-
-<br><br>
-
-<!-- ─── Process ─── -->
-
-<picture>
-  <img src="assets/process.svg" alt="Working approach — Understand, Design, Build, Validate" width="100%">
-</picture>
-
-<br><br>
-
-<!-- ─── GitHub Activity ─── -->
-
-<details>
-<summary align="center"><strong>GitHub Activity</strong></summary>
+**Focus:** Exploratory analysis · Logistic regression · NLP · Model evaluation
 
 <br>
 
-<p align="center">
-  <picture>
-    <img src="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&hide_border=true&bg_color=000000&title_color=FFFFFF&icon_color=2997ff&text_color=86868B&ring_color=2997ff" alt="GitHub Stats" height="165">
-  </picture>
-  &nbsp;&nbsp;
-  <picture>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&hide_border=true&bg_color=000000&title_color=FFFFFF&text_color=86868B" alt="Top Languages" height="165">
-  </picture>
-</p>
+### [Quantitative Data Analytics](https://github.com/hemanthdsd/Qantitative-Data-Analytics-)
+Statistical research and visual analysis covering usability, workload and advertising effectiveness.
 
-<br>
-</details>
+`R` · `RStudio` · `Regression` · `Hypothesis testing`
 
-<br>
+**Focus:** Usability · Workload analysis · Advertising effectiveness
 
-<!-- ─── Contact ─── -->
+---
 
-<a href="https://www.linkedin.com/in/hemanthdavuloori/">
-  <picture>
-    <img src="assets/contact.svg" alt="Let's build something useful — Connect on LinkedIn or send an email to saidurgahemanthdavuloori@gmail.com" width="100%">
-  </picture>
-</a>
+## What I work with
+
+**Product engineering**<br>
+Angular · React · TypeScript · NestJS · Electron
+
+**AI and data**<br>
+Gemini · Ollama · Python · scikit-learn · R
+
+**Platforms and storage**<br>
+PostgreSQL · pgvector · Docker · GitHub
+
+---
+
+## How I approach problems
+
+1. Understand the decision and the people affected.
+2. Map the evidence, constraints and risks.
+3. Build the smallest useful product.
+4. Validate the outcome and improve iteratively.
+
+---
+
+## Currently interested in
+
+- Responsible and explainable AI
+- AI operations and business analysis
+- Local-first intelligent applications
+- Full-stack data products
+- Human-in-the-loop automation
+
+---
+
+## Let’s connect
+
+I'm interested in AI, business analysis, full-stack engineering and data-product opportunities.
+
+- **LinkedIn:** [linkedin.com/in/hemanthdavuloori](https://www.linkedin.com/in/hemanthdavuloori/)
+- **Email:** [saidurgahemanthdavuloori@gmail.com](mailto:saidurgahemanthdavuloori@gmail.com)
