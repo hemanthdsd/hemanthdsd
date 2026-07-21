@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120">
+  <rect width="1200" height="120" fill="#0F1923"/>
+  <defs>
+    <polygon id="step-box" points="-60,-20 60,-20 70,-10 70,10 60,20 -60,20 -70,10 -70,-10" fill="#1a2332" stroke="#2a3a4a" stroke-width="2"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,2 L10,5 L0,8 Z" fill="#FF4655"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- Top label -->
+    <text x="600" y="25" fill="#768079" font-size="10" font-weight="bold" letter-spacing="3" text-anchor="middle">OPERATING PROTOCOL</text>
+    
+    <!-- Arrows -->
+    <line x1="230" y1="70" x2="295" y2="70" stroke="#FF4655" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="455" y1="70" x2="520" y2="70" stroke="#FF4655" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="680" y1="70" x2="745" y2="70" stroke="#FF4655" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="905" y1="70" x2="970" y2="70" stroke="#FF4655" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Box 1 -->
+    <g transform="translate(150, 70)">
+      <use href="#step-box"/>
+      <text x="0" y="4" fill="#ECE8E1" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">DISCOVER</text>
+      <text x="-70" y="-25" fill="#FF4655" font-size="9" font-weight="bold">01</text>
+    </g>
+
+    <!-- Box 2 -->
+    <g transform="translate(375, 70)">
+      <use href="#step-box"/>
+      <text x="0" y="4" fill="#ECE8E1" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">PROTOTYPE</text>
+      <text x="-70" y="-25" fill="#FF4655" font-size="9" font-weight="bold">02</text>
+    </g>
+
+    <!-- Box 3 -->
+    <g transform="translate(600, 70)">
+      <use href="#step-box"/>
+      <text x="0" y="4" fill="#ECE8E1" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">VALIDATE</text>
+      <text x="-70" y="-25" fill="#FF4655" font-size="9" font-weight="bold">03</text>
+    </g>
+
+    <!-- Box 4 -->
+    <g transform="translate(825, 70)">
+      <use href="#step-box"/>
+      <text x="0" y="4" fill="#ECE8E1" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">DEPLOY</text>
+      <text x="-70" y="-25" fill="#FF4655" font-size="9" font-weight="bold">04</text>
+    </g>
+
+    <!-- Box 5 -->
+    <g transform="translate(1050, 70)">
+      <use href="#step-box"/>
+      <text x="0" y="4" fill="#ECE8E1" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">MONITOR</text>
+      <text x="-70" y="-25" fill="#FF4655" font-size="9" font-weight="bold">05</text>
+    </g>
+  </g>
+</svg>

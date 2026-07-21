@@ -1,121 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f0c29"/>
-      <stop offset="50%" stop-color="#302b63"/>
-      <stop offset="100%" stop-color="#24243e"/>
-    </linearGradient>
-    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#667eea"/>
-      <stop offset="100%" stop-color="#764ba2"/>
-    </linearGradient>
-    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f093fb"/>
-      <stop offset="100%" stop-color="#f5576c"/>
-    </linearGradient>
-    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4facfe"/>
-      <stop offset="100%" stop-color="#00f2fe"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
-    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#768079" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+    <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#768079" opacity="0.3"/>
+    </pattern>
+    <clipPath id="panel-clip">
+      <polygon points="700,0 1200,0 1200,460 550,460"/>
+    </clipPath>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="320" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="460" fill="#0F1923"/>
+  <rect width="1200" height="460" fill="url(#grid)"/>
 
-  <!-- Decorative grid dots -->
-  <g opacity="0.06">
-    <circle cx="30" cy="30" r="1.5" fill="#fff"/>
-    <circle cx="60" cy="30" r="1.5" fill="#fff"/>
-    <circle cx="90" cy="30" r="1.5" fill="#fff"/>
-    <circle cx="120" cy="30" r="1.5" fill="#fff"/>
-    <circle cx="150" cy="30" r="1.5" fill="#fff"/>
-    <circle cx="30" cy="60" r="1.5" fill="#fff"/>
-    <circle cx="60" cy="60" r="1.5" fill="#fff"/>
-    <circle cx="90" cy="60" r="1.5" fill="#fff"/>
-    <circle cx="120" cy="60" r="1.5" fill="#fff"/>
-    <circle cx="150" cy="60" r="1.5" fill="#fff"/>
-    <circle cx="30" cy="90" r="1.5" fill="#fff"/>
-    <circle cx="60" cy="90" r="1.5" fill="#fff"/>
-    <circle cx="90" cy="90" r="1.5" fill="#fff"/>
-    <circle cx="120" cy="90" r="1.5" fill="#fff"/>
-    <circle cx="150" cy="90" r="1.5" fill="#fff"/>
-  </g>
+  <!-- Diagonal Divisions -->
+  <polygon points="650,-20 1250,-20 1250,480 500,480" fill="#14212D"/>
+  
+  <!-- Diagonal Slash -->
+  <polygon points="500,460 650,0 670,0 520,460" fill="#FF4655" opacity="0.9"/>
+  <polygon points="490,460 640,0 645,0 495,460" fill="#BD3944" opacity="0.5"/>
+  <polygon points="475,460 625,0 627,0 477,460" fill="#22D3EE" opacity="0.2"/>
 
-  <!-- Decorative circles -->
-  <circle cx="780" cy="60" r="80" fill="url(#accent1)" opacity="0.08"/>
-  <circle cx="820" cy="200" r="120" fill="url(#accent2)" opacity="0.05"/>
-  <circle cx="100" cy="260" r="90" fill="url(#accent3)" opacity="0.06"/>
-
-  <!-- Neural network decoration (right side) -->
-  <g opacity="0.12" transform="translate(650, 40)">
+  <!-- Technical elements / Art -->
+  <g clip-path="url(#panel-clip)">
+    <!-- Right side artwork -->
+    <rect x="700" y="50" width="450" height="360" fill="url(#dot-grid)"/>
+    
+    <!-- Node network -->
+    <path d="M 800 150 L 950 100 L 1050 200 L 900 300 Z" fill="none" stroke="#FF4655" stroke-width="2" opacity="0.5"/>
+    <path d="M 950 100 L 1000 50 L 1150 150 L 1050 200" fill="none" stroke="#768079" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <path d="M 900 300 L 950 400 L 1100 350 L 1050 200" fill="none" stroke="#BD3944" stroke-width="2"/>
+    
     <!-- Nodes -->
-    <circle cx="30" cy="40" r="5" fill="#667eea"/>
-    <circle cx="30" cy="90" r="5" fill="#667eea"/>
-    <circle cx="30" cy="140" r="5" fill="#667eea"/>
-    <circle cx="30" cy="190" r="5" fill="#667eea"/>
-    <circle cx="100" cy="60" r="6" fill="#f093fb"/>
-    <circle cx="100" cy="115" r="6" fill="#f093fb"/>
-    <circle cx="100" cy="170" r="6" fill="#f093fb"/>
-    <circle cx="170" cy="90" r="7" fill="#4facfe"/>
-    <circle cx="170" cy="145" r="7" fill="#4facfe"/>
-    <circle cx="220" cy="115" r="8" fill="#00f2fe"/>
-    <!-- Connections -->
-    <line x1="35" y1="40" x2="94" y2="60" stroke="#667eea" stroke-width="1"/>
-    <line x1="35" y1="40" x2="94" y2="115" stroke="#667eea" stroke-width="0.7"/>
-    <line x1="35" y1="90" x2="94" y2="60" stroke="#667eea" stroke-width="0.7"/>
-    <line x1="35" y1="90" x2="94" y2="115" stroke="#667eea" stroke-width="1"/>
-    <line x1="35" y1="140" x2="94" y2="115" stroke="#667eea" stroke-width="1"/>
-    <line x1="35" y1="140" x2="94" y2="170" stroke="#667eea" stroke-width="0.7"/>
-    <line x1="35" y1="190" x2="94" y2="170" stroke="#667eea" stroke-width="1"/>
-    <line x1="106" y1="60" x2="163" y2="90" stroke="#f093fb" stroke-width="1"/>
-    <line x1="106" y1="115" x2="163" y2="90" stroke="#f093fb" stroke-width="0.7"/>
-    <line x1="106" y1="115" x2="163" y2="145" stroke="#f093fb" stroke-width="1"/>
-    <line x1="106" y1="170" x2="163" y2="145" stroke="#f093fb" stroke-width="0.7"/>
-    <line x1="177" y1="90" x2="212" y2="115" stroke="#4facfe" stroke-width="1"/>
-    <line x1="177" y1="145" x2="212" y2="115" stroke="#4facfe" stroke-width="1"/>
+    <circle cx="800" cy="150" r="6" fill="#0F1923" stroke="#22D3EE" stroke-width="2"/>
+    <circle cx="950" cy="100" r="8" fill="#FF4655"/>
+    <circle cx="1050" cy="200" r="10" fill="#0F1923" stroke="#FF4655" stroke-width="3"/>
+    <circle cx="900" cy="300" r="7" fill="#BD3944"/>
+    <circle cx="1000" cy="50" r="4" fill="#768079"/>
+    <circle cx="1150" cy="150" r="6" fill="#0F1923" stroke="#768079" stroke-width="2"/>
+    <circle cx="950" cy="400" r="5" fill="#FF4655"/>
+    <circle cx="1100" cy="350" r="8" fill="#22D3EE"/>
+    
+    <!-- Hexagons -->
+    <polygon points="760,240 780,250 780,270 760,280 740,270 740,250" fill="none" stroke="#768079" stroke-width="1.5"/>
+    <polygon points="790,260 810,270 810,290 790,300 770,290 770,270" fill="none" stroke="#BD3944" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="1050,280 1070,290 1070,310 1050,320 1030,310 1030,290" fill="#0F1923" stroke="#22D3EE" stroke-width="1.5"/>
+
+    <!-- Data flow arrows -->
+    <path d="M 1000 230 L 1080 230 L 1090 240" fill="none" stroke="#FF4655" stroke-width="2" stroke-dasharray="8,4"/>
+    <polygon points="1090,240 1085,235 1095,240 1085,245" fill="#FF4655"/>
+
+    <!-- Circuit lines -->
+    <path d="M 750 350 L 850 350 L 880 320" fill="none" stroke="#768079" stroke-width="2"/>
+    <path d="M 850 80 L 880 80 L 910 110" fill="none" stroke="#22D3EE" stroke-width="1"/>
   </g>
 
-  <!-- Main text content -->
-  <text x="60" y="95" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="400" fill="#a5b4fc" letter-spacing="4">
-    HELLO, I'M
-  </text>
+  <!-- Corner Brackets (Targeting Reticle) -->
+  <path d="M 20 50 L 20 20 L 50 20" fill="none" stroke="#FF4655" stroke-width="3"/>
+  <path d="M 1180 50 L 1180 20 L 1150 20" fill="none" stroke="#FF4655" stroke-width="3"/>
+  <path d="M 20 410 L 20 440 L 50 440" fill="none" stroke="#FF4655" stroke-width="3"/>
+  <path d="M 1180 410 L 1180 440 L 1150 440" fill="none" stroke="#FF4655" stroke-width="3"/>
 
-  <text x="60" y="152" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" filter="url(#shadow)">
-    Hemanth Davuloori
-  </text>
-
-  <!-- Role tags -->
-  <g transform="translate(60, 180)">
-    <rect x="0" y="0" width="100" height="28" rx="14" fill="url(#accent1)" opacity="0.25"/>
-    <text x="50" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle">AI / ML</text>
-
-    <rect x="112" y="0" width="120" height="28" rx="14" fill="url(#accent2)" opacity="0.25"/>
-    <text x="172" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#f0abfc" text-anchor="middle">Full-Stack</text>
-
-    <rect x="244" y="0" width="140" height="28" rx="14" fill="url(#accent3)" opacity="0.25"/>
-    <text x="314" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#67e8f9" text-anchor="middle">Data Analytics</text>
-
-    <rect x="396" y="0" width="150" height="28" rx="14" fill="url(#accent1)" opacity="0.25"/>
-    <text x="471" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle">Desktop Apps</text>
+  <!-- Crosshairs (+) -->
+  <g stroke="#768079" stroke-width="1" opacity="0.7">
+    <path d="M 200 100 L 210 100 M 205 95 L 205 105"/>
+    <path d="M 400 350 L 410 350 M 405 345 L 405 355"/>
+    <path d="M 900 80 L 910 80 M 905 75 L 905 85"/>
+    <path d="M 1100 400 L 1110 400 M 1105 395 L 1105 405"/>
   </g>
 
-  <!-- Subtitle -->
-  <text x="60" y="248" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#94a3b8" font-weight="400">
-    Building intelligent systems &amp; data-driven solutions
-  </text>
+  <!-- Coordinate Markers -->
+  <text x="25" y="40" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#768079" letter-spacing="1">X:0.00 Y:0.00</text>
+  <text x="1105" y="40" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#768079" letter-spacing="1">X:12.00 Y:0.00</text>
+  <text x="25" y="430" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#768079" letter-spacing="1">X:0.00 Y:4.60</text>
+  <text x="1105" y="430" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#768079" letter-spacing="1">X:12.00 Y:4.60</text>
 
-  <!-- Bottom accent line -->
-  <rect x="60" y="275" width="200" height="3" rx="1.5" fill="url(#accent1)" opacity="0.6"/>
-  <rect x="270" y="275" width="80" height="3" rx="1.5" fill="url(#accent2)" opacity="0.4"/>
-  <rect x="360" y="275" width="40" height="3" rx="1.5" fill="url(#accent3)" opacity="0.3"/>
+  <!-- Small labels -->
+  <!-- Top Left -->
+  <text x="80" y="70" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#FF4655" letter-spacing="2">OPERATOR: HEMANTH</text>
+  <rect x="60" y="62" width="10" height="10" fill="#0F1923" stroke="#FF4655" stroke-width="1"/>
+  <rect x="63" y="65" width="4" height="4" fill="#FF4655"/>
+
+  <!-- Top Right -->
+  <text x="960" y="70" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#ECE8E1" letter-spacing="2">LOCATION: IRELAND</text>
+
+  <!-- Status -->
+  <circle cx="80" cy="110" r="4" fill="#22D3EE"/>
+  <text x="95" y="114" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#768079" letter-spacing="1">STATUS: OPEN TO OPPORTUNITIES</text>
+
+  <!-- Bottom -->
+  <text x="80" y="390" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#ECE8E1" letter-spacing="3">BUILD // VALIDATE // IMPROVE</text>
+
+  <!-- Classification Labels -->
+  <text x="60" y="420" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#BD3944" letter-spacing="2">CLASSIFIED DOC. TACTICAL-01</text>
+  <text x="1050" y="420" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#768079" letter-spacing="2">SYS.INIT_v2.4.9</text>
+
+  <!-- Main Text -->
+  <g transform="translate(80, 210)">
+    <!-- Name -->
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#ECE8E1" letter-spacing="1">SAI DURGA HEMANTH DAVULOORI</text>
+    
+    <!-- Title -->
+    <text x="0" y="45" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#FF4655" letter-spacing="1">AI SYSTEMS // FULL-STACK PRODUCTS</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="80" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#768079">Turning operational complexity into explainable, deployable intelligence.</text>
+  </g>
+  
+  <!-- UI decorative boxes -->
+  <rect x="80" y="310" width="50" height="4" fill="#FF4655"/>
+  <rect x="135" y="310" width="10" height="4" fill="#BD3944"/>
+  <rect x="150" y="310" width="10" height="4" fill="#768079"/>
+  <rect x="165" y="310" width="4" height="4" fill="#22D3EE"/>
 </svg>

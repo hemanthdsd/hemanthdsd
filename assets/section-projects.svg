@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" width="1200" height="80">
+  <rect width="1200" height="80" fill="#0F1923"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- Left text -->
+    <text x="30" y="45" fill="#768079" font-size="9" font-weight="bold" letter-spacing="1">MISSION.LOG</text>
+    
+    <!-- Right text -->
+    <text x="1170" y="45" fill="#768079" font-size="9" font-weight="bold" letter-spacing="1" text-anchor="end">PRIORITY: HIGH</text>
+    
+    <!-- Left line -->
+    <line x1="120" y1="40" x2="400" y2="40" stroke="#2a3a4a" stroke-width="1"/>
+    <!-- Right line -->
+    <line x1="800" y1="40" x2="1080" y2="40" stroke="#2a3a4a" stroke-width="1"/>
+    
+    <!-- Ticks -->
+    <path d="M120 37v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6 
+             M800 37v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6 m40 -6v6" stroke="#2a3a4a" stroke-width="1"/>
+             
+    <!-- Thin red line below text -->
+    <line x1="420" y1="56" x2="780" y2="56" stroke="#FF4655" stroke-width="2"/>
+    
+    <!-- Center text -->
+    <text x="600" y="46" fill="#ECE8E1" font-size="28" font-weight="bold" letter-spacing="4" text-anchor="middle">SELECTED MISSIONS <tspan fill="#FF4655">// 01</tspan></text>
+    
+    <!-- Corner crosshairs left -->
+    <path d="M15 35v10 M10 40h10" stroke="#768079" stroke-width="1" fill="none"/>
+    <!-- Corner crosshairs right -->
+    <path d="M1185 35v10 M1180 40h10" stroke="#768079" stroke-width="1" fill="none"/>
+  </g>
+</svg>

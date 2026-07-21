@@ -1,115 +1,60 @@
 <picture>
-  <img src="assets/hero.svg" alt="Hemanth Davuloori — AI / ML · Full-Stack · Data Analytics · Desktop Apps" width="100%">
+  <img src="assets/hero.svg" alt="Sai Durga Hemanth Davuloori — AI Systems // Full-Stack Products — Turning operational complexity into explainable, deployable intelligence" width="100%">
 </picture>
 
-<br>
+<!-- ─── CONTACT BAR ─── -->
 
 <p align="center">
   <a href="https://www.linkedin.com/in/hemanthdavuloori/">
-    <img src="https://img.shields.io/badge/LinkedIn-hemanthdavuloori-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>&nbsp;
+    <img src="https://img.shields.io/badge/LINKEDIN-%E2%96%B8_hemanthdavuloori-0F1923?style=flat-square&logo=linkedin&logoColor=ECE8E1&labelColor=FF4655" alt="LinkedIn">
+  </a>&nbsp;&nbsp;
   <a href="mailto:saidurgahemanthdavuloori@gmail.com">
-    <img src="https://img.shields.io/badge/Email-saidurgahemanthdavuloori-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>&nbsp;
-  <a href="https://github.com/hemanthdsd">
-    <img src="https://img.shields.io/badge/GitHub-hemanthdsd-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    <img src="https://img.shields.io/badge/EMAIL-%E2%96%B8_saidurgahemanthdavuloori-0F1923?style=flat-square&logo=gmail&logoColor=ECE8E1&labelColor=BD3944" alt="Email">
+  </a>&nbsp;&nbsp;
+  <a href="https://github.com/hemanthdsd?tab=repositories">
+    <img src="https://img.shields.io/badge/REPOS-%E2%96%B8_all_repositories-0F1923?style=flat-square&logo=github&logoColor=ECE8E1&labelColor=768079" alt="Repositories">
   </a>
 </p>
 
 <br>
 
-## 🧠 About Me
+<!-- ─── POSITIONING STATEMENT ─── -->
 
-I'm an **AI & Full-Stack Developer** passionate about building intelligent, production-grade systems. My work spans **AI/ML engineering**, **full-stack web applications**, **desktop software**, and **data analytics** — with a focus on solving real-world problems through technology.
-
-I bring experience across the entire development lifecycle: from training ML models and building AI pipelines, to designing polished UIs and deploying scalable architectures.
+<p align="center">
+  <strong>AI engineer and full-stack developer building production systems that turn messy operational data<br>into explainable, auditable, and deployable intelligence — from model to UI to infrastructure.</strong>
+</p>
 
 <br>
 
-## 🚀 Featured Projects
+<!-- ─── CAPABILITY PANELS ─── -->
 
 <table>
 <tr>
-<td width="50%">
+<td width="33%" align="center">
 
-<a href="https://github.com/hemanthdsd/opsinsight-ai">
-  <picture>
-    <img src="assets/opsinsight.svg" alt="OpsInsight AI" width="100%">
-  </picture>
-</a>
+### `// AI SYSTEMS`
 
-**AI-powered manufacturing deviation & yield intelligence platform.** Built with Angular 18, NestJS, PostgreSQL/pgvector, and Gemini 2.0 Flash. Features executive dashboards, deviation workbench, and responsible AI controls with human-in-the-loop validation.
-
-<sub>🔗 <a href="https://github.com/hemanthdsd/opsinsight-ai">View Repository →</a></sub>
+Machine learning pipelines, NLP classification,<br>
+responsible AI controls, and LLM-powered<br>
+investigation agents with evidence tracking.
 
 </td>
-<td width="50%">
+<td width="33%" align="center">
 
-<a href="https://github.com/hemanthdsd/buddy-ai">
-  <picture>
-    <img src="assets/buddy-ai.svg" alt="Buddy AI" width="100%">
-  </picture>
-</a>
+### `// PRODUCT ENGINEERING`
 
-**Local-first floating AI writing & vision assistant for Windows.** Electron + React desktop app powered by Ollama. 9 built-in writing modes, screen capture & vision analysis, global hotkey access, and zero cloud dependency for complete privacy.
-
-<sub>🔗 <a href="https://github.com/hemanthdsd/buddy-ai">View Repository →</a></sub>
+Full-stack web applications and desktop<br>
+software with Angular, React, NestJS,<br>
+Electron, and modern TypeScript.
 
 </td>
-</tr>
-<tr>
-<td width="50%">
+<td width="33%" align="center">
 
-<a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">
-  <picture>
-    <img src="assets/ai-ethics.svg" alt="AI Ethics Auditing Simulation" width="100%">
-  </picture>
-</a>
+### `// DECISION INTELLIGENCE`
 
-**CARLA-based autonomous vehicle simulation for ethical AI auditing.** Simulates critical crash-avoidance scenarios involving pedestrians and cyclists to evaluate moral decision-making algorithms. Captures collision telemetry for ethical compliance audits.
-
-<sub>🔗 <a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">View Repository →</a></sub>
-
-</td>
-<td width="50%">
-
-<a href="https://github.com/hemanthdsd/machine-learning-foundations-project">
-  <picture>
-    <img src="assets/ml-foundations.svg" alt="ML Foundations Project" width="100%">
-  </picture>
-</a>
-
-**End-to-end NLP text classification pipeline.** Multi-class news categorization using TF-IDF vectorization, scikit-learn classifiers, NLTK preprocessing, and TensorFlow. Includes EDA visualizations, cross-validation, and hyperparameter tuning.
-
-<sub>🔗 <a href="https://github.com/hemanthdsd/machine-learning-foundations-project">View Repository →</a></sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-<a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">
-  <picture>
-    <img src="assets/data-analytics.svg" alt="Quantitative Data Analytics" width="100%">
-  </picture>
-</a>
-
-**Applied statistical analysis & data visualization in R.** Evaluates human performance, driver distractions, and task interruptions using inferential statistics, ggplot2 visualizations, and data wrangling in RStudio.
-
-<sub>🔗 <a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">View Repository →</a></sub>
-
-</td>
-<td width="50%">
-
-### 🔭 More Coming Soon
-
-I'm constantly building new projects at the intersection of **AI**, **software engineering**, and **data science**. Star my repos to stay updated!
-
-<br>
-
-<a href="https://github.com/hemanthdsd?tab=repositories">
-  <img src="https://img.shields.io/badge/View_All_Repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="All Repositories">
-</a>
+Statistical analysis, data visualization,<br>
+hypothesis testing, and quantitative<br>
+methods for actionable insights.
 
 </td>
 </tr>
@@ -117,69 +62,194 @@ I'm constantly building new projects at the intersection of **AI**, **software e
 
 <br>
 
-## 🛠️ Tech Stack
+<!-- ─── SELECTED MISSIONS DIVIDER ─── -->
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">&nbsp;
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">&nbsp;
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">&nbsp;
-  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R">&nbsp;
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" alt="Angular">&nbsp;
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">&nbsp;
-  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white" alt="NestJS">&nbsp;
-  <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron">&nbsp;
-  <img src="https://img.shields.io/badge/Flask-000?style=flat-square&logo=flask&logoColor=white" alt="Flask">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow">&nbsp;
-  <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn">&nbsp;
-  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas">&nbsp;
-  <img src="https://img.shields.io/badge/NLTK-154f5b?style=flat-square&logo=python&logoColor=white" alt="NLTK">&nbsp;
-  <img src="https://img.shields.io/badge/Ollama-000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">&nbsp;
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">&nbsp;
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">&nbsp;
-  <img src="https://img.shields.io/badge/CARLA_Simulator-1a1a2e?style=flat-square&logo=unrealengine&logoColor=white" alt="CARLA">&nbsp;
-  <img src="https://img.shields.io/badge/Gemini_AI-4285F4?style=flat-square&logo=google&logoColor=white" alt="Gemini">
-</p>
+<picture>
+  <img src="assets/section-projects.svg" alt="Selected Missions // 01" width="100%">
+</picture>
 
 <br>
 
-## 📊 GitHub Stats
+<!-- ─── FLAGSHIP: OPSINSIGHT AI ─── -->
 
-<p align="center">
+<a href="https://github.com/hemanthdsd/opsinsight-ai">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a5b4fc&icon_color=f093fb&text_color=94a3b8">
-    <img src="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" height="170">
+    <img src="assets/opsinsight.svg" alt="OPS-001 — OpsInsight AI: Regulated Manufacturing Intelligence — Angular 18, NestJS, PostgreSQL, Gemini, pgvector" width="100%">
   </picture>
-  &nbsp;
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a5b4fc&text_color=94a3b8">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="170">
-  </picture>
-</p>
+</a>
 
-<br>
-
----
-
-<p align="center">
-  <sub>💬 Open to collaboration on AI, ML, and full-stack projects. Let's build something remarkable together.</sub>
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/hemanthdavuloori/">
-    <img src="https://img.shields.io/badge/Let's_Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn">
-  </a>&nbsp;
-  <a href="mailto:saidurgahemanthdavuloori@gmail.com">
-    <img src="https://img.shields.io/badge/Get_In_Touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Me">
+<p align="right">
+  <a href="https://github.com/hemanthdsd/opsinsight-ai">
+    <img src="https://img.shields.io/badge/%E2%96%B8_VIEW_MISSION-FF4655?style=flat-square&logoColor=white" alt="View OpsInsight AI">
   </a>
+</p>
+
+<br>
+
+<!-- ─── FLAGSHIP: BUDDY AI ─── -->
+
+<a href="https://github.com/hemanthdsd/buddy-ai">
+  <picture>
+    <img src="assets/buddy-ai.svg" alt="BUD-002 — Buddy AI: Local-First Windows AI Assistant — Electron, React, TypeScript, Ollama" width="100%">
+  </picture>
+</a>
+
+<p align="right">
+  <a href="https://github.com/hemanthdsd/buddy-ai">
+    <img src="https://img.shields.io/badge/%E2%96%B8_VIEW_MISSION-22D3EE?style=flat-square&logoColor=0F1923" alt="View Buddy AI">
+  </a>
+</p>
+
+<br>
+
+<!-- ─── TWO-COLUMN: AI ETHICS + ML FOUNDATIONS ─── -->
+
+<table>
+<tr>
+<td width="50%">
+
+<a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">
+  <picture>
+    <img src="assets/ai-ethics.svg" alt="ETH-003 — AI Ethics Auditing Simulation — CARLA autonomous vehicle ethical dilemma simulation" width="100%">
+  </picture>
+</a>
+
+<p align="right">
+  <a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">
+    <img src="https://img.shields.io/badge/%E2%96%B8_VIEW_MISSION-FF4655?style=flat-square&logoColor=white" alt="View AI Ethics">
+  </a>
+</p>
+
+</td>
+<td width="50%">
+
+<a href="https://github.com/hemanthdsd/machine-learning-foundations-project">
+  <picture>
+    <img src="assets/ml-foundations.svg" alt="MLF-004 — ML Foundations: NLP text classification pipeline with TF-IDF and scikit-learn" width="100%">
+  </picture>
+</a>
+
+<p align="right">
+  <a href="https://github.com/hemanthdsd/machine-learning-foundations-project">
+    <img src="https://img.shields.io/badge/%E2%96%B8_VIEW_MISSION-22D3EE?style=flat-square&logoColor=0F1923" alt="View ML Foundations">
+  </a>
+</p>
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<!-- ─── WIDE: QUANTITATIVE DATA ANALYTICS ─── -->
+
+<a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">
+  <picture>
+    <img src="assets/data-analytics.svg" alt="QDA-005 — Quantitative Data Analytics: Statistical analysis and visualization in R with ggplot2" width="100%">
+  </picture>
+</a>
+
+<p align="right">
+  <a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">
+    <img src="https://img.shields.io/badge/%E2%96%B8_VIEW_MISSION-FF4655?style=flat-square&logoColor=white" alt="View Data Analytics">
+  </a>
+</p>
+
+<br>
+
+<!-- ─── SYSTEM LOADOUT DIVIDER ─── -->
+
+<picture>
+  <img src="assets/section-stack.svg" alt="System Loadout // 02" width="100%">
+</picture>
+
+<br>
+
+<!-- ─── TECH STACK BADGES ─── -->
+
+<h3 align="center"><code>LANGUAGES</code></h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-0F1923?style=flat-square&logo=python&logoColor=ECE8E1" alt="Python">&nbsp;
+  <img src="https://img.shields.io/badge/TypeScript-0F1923?style=flat-square&logo=typescript&logoColor=ECE8E1" alt="TypeScript">&nbsp;
+  <img src="https://img.shields.io/badge/JavaScript-0F1923?style=flat-square&logo=javascript&logoColor=ECE8E1" alt="JavaScript">&nbsp;
+  <img src="https://img.shields.io/badge/R-0F1923?style=flat-square&logo=r&logoColor=ECE8E1" alt="R">&nbsp;
+  <img src="https://img.shields.io/badge/SQL-0F1923?style=flat-square&logo=postgresql&logoColor=ECE8E1" alt="SQL">&nbsp;
+  <img src="https://img.shields.io/badge/HTML-0F1923?style=flat-square&logo=html5&logoColor=ECE8E1" alt="HTML">&nbsp;
+  <img src="https://img.shields.io/badge/CSS-0F1923?style=flat-square&logo=css3&logoColor=ECE8E1" alt="CSS">
+</p>
+
+<h3 align="center"><code>FRAMEWORKS & PLATFORMS</code></h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Angular_18-FF4655?style=flat-square&logo=angular&logoColor=ECE8E1" alt="Angular">&nbsp;
+  <img src="https://img.shields.io/badge/React-0F1923?style=flat-square&logo=react&logoColor=22D3EE" alt="React">&nbsp;
+  <img src="https://img.shields.io/badge/NestJS-FF4655?style=flat-square&logo=nestjs&logoColor=ECE8E1" alt="NestJS">&nbsp;
+  <img src="https://img.shields.io/badge/Electron-0F1923?style=flat-square&logo=electron&logoColor=ECE8E1" alt="Electron">&nbsp;
+  <img src="https://img.shields.io/badge/Flask-0F1923?style=flat-square&logo=flask&logoColor=ECE8E1" alt="Flask">&nbsp;
+  <img src="https://img.shields.io/badge/Node.js-0F1923?style=flat-square&logo=node.js&logoColor=ECE8E1" alt="Node.js">
+</p>
+
+<h3 align="center"><code>AI / ML / DATA</code></h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Gemini_AI-FF4655?style=flat-square&logo=google&logoColor=ECE8E1" alt="Gemini">&nbsp;
+  <img src="https://img.shields.io/badge/Ollama-0F1923?style=flat-square&logo=ollama&logoColor=ECE8E1" alt="Ollama">&nbsp;
+  <img src="https://img.shields.io/badge/TensorFlow-0F1923?style=flat-square&logo=tensorflow&logoColor=ECE8E1" alt="TensorFlow">&nbsp;
+  <img src="https://img.shields.io/badge/Scikit--learn-0F1923?style=flat-square&logo=scikit-learn&logoColor=ECE8E1" alt="Scikit-learn">&nbsp;
+  <img src="https://img.shields.io/badge/Pandas-0F1923?style=flat-square&logo=pandas&logoColor=ECE8E1" alt="Pandas">&nbsp;
+  <img src="https://img.shields.io/badge/NLTK-0F1923?style=flat-square&logo=python&logoColor=ECE8E1" alt="NLTK">&nbsp;
+  <img src="https://img.shields.io/badge/ggplot2-0F1923?style=flat-square&logo=r&logoColor=ECE8E1" alt="ggplot2">
+</p>
+
+<h3 align="center"><code>INFRASTRUCTURE</code></h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PostgreSQL-0F1923?style=flat-square&logo=postgresql&logoColor=ECE8E1" alt="PostgreSQL">&nbsp;
+  <img src="https://img.shields.io/badge/pgvector-FF4655?style=flat-square&logoColor=ECE8E1" alt="pgvector">&nbsp;
+  <img src="https://img.shields.io/badge/Docker-0F1923?style=flat-square&logo=docker&logoColor=22D3EE" alt="Docker">&nbsp;
+  <img src="https://img.shields.io/badge/Git-0F1923?style=flat-square&logo=git&logoColor=ECE8E1" alt="Git">&nbsp;
+  <img src="https://img.shields.io/badge/CARLA_Sim-0F1923?style=flat-square&logo=unrealengine&logoColor=ECE8E1" alt="CARLA">
+</p>
+
+<br>
+
+<!-- ─── OPERATING PROTOCOL ─── -->
+
+<picture>
+  <img src="assets/workflow.svg" alt="Operating Protocol — Discover, Prototype, Validate, Deploy, Monitor" width="100%">
+</picture>
+
+<br>
+
+<!-- ─── GITHUB STATS ─── -->
+
+<h3 align="center"><code>PERFORMANCE METRICS</code></h3>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&hide_border=true&bg_color=0F1923&title_color=FF4655&icon_color=22D3EE&text_color=ECE8E1&ring_color=FF4655">
+    <img src="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&hide_border=true&bg_color=0F1923&title_color=FF4655&icon_color=22D3EE&text_color=ECE8E1&ring_color=FF4655" alt="GitHub Stats" height="170">
+  </picture>
+  &nbsp;&nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&hide_border=true&bg_color=0F1923&title_color=FF4655&text_color=ECE8E1">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&hide_border=true&bg_color=0F1923&title_color=FF4655&text_color=ECE8E1" alt="Top Languages" height="170">
+  </picture>
+</p>
+
+<br>
+
+<!-- ─── CTA FOOTER ─── -->
+
+<picture>
+  <img src="assets/footer.svg" alt="Let's build something useful — Connect on LinkedIn or email saidurgahemanthdavuloori@gmail.com" width="100%">
+</picture>
+
+<br>
+
+<!-- ─── END ─── -->
+
+<p align="center">
+  <sub><code>// PROFILE v2.0 — LAST UPDATED JULY 2026</code></sub>
 </p>

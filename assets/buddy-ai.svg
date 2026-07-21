@@ -1,79 +1,132 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">
   <defs>
-    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#16213e"/>
-    </linearGradient>
-    <linearGradient id="buddy-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f093fb"/>
-      <stop offset="100%" stop-color="#f5576c"/>
-    </linearGradient>
-    <filter id="card-shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
-    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#768079" stroke-width="0.5" stroke-opacity="0.15"/>
+    </pattern>
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#768079" opacity="0.3"/>
+    </pattern>
   </defs>
 
-  <!-- Card background -->
-  <rect width="420" height="200" rx="12" fill="url(#card-bg)" stroke="#2d2d5e" stroke-width="1" filter="url(#card-shadow)"/>
+  <!-- Background -->
+  <rect width="1200" height="340" fill="#0F1923" stroke="#2a3a4a" stroke-width="2"/>
+  
+  <!-- Grid -->
+  <rect width="1200" height="340" fill="url(#grid)" />
 
-  <!-- Accent bar -->
-  <rect x="0" y="0" width="420" height="4" rx="2" fill="url(#buddy-accent)"/>
+  <!-- Left edge line -->
+  <rect x="0" y="0" width="4" height="340" fill="#22D3EE"/>
 
-  <!-- Icon area -->
-  <g transform="translate(28, 30)">
-    <rect width="44" height="44" rx="10" fill="#f093fb" opacity="0.15"/>
-    <!-- Chat/Bot icon -->
-    <g transform="translate(10, 9)" fill="none" stroke="#f093fb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21,12 C21,7 16.9,3 12,3 C7.1,3 3,7 3,12 C3,17 7.1,21 12,21 L21,21 Z"/>
-      <circle cx="8" cy="12" r="1.5" fill="#f093fb" stroke="none"/>
-      <circle cx="12" cy="12" r="1.5" fill="#f093fb" stroke="none"/>
-      <circle cx="16" cy="12" r="1.5" fill="#f093fb" stroke="none"/>
+  <!-- Left Section (0 to 720) -->
+  <g transform="translate(40, 40)">
+    <!-- Top left indicator -->
+    <rect x="0" y="0" width="8" height="8" fill="#22D3EE" />
+    <text x="16" y="8" fill="#22D3EE" font-family="monospace, Arial, sans-serif" font-size="12" font-weight="bold" letter-spacing="1">BUD-002</text>
+    
+    <!-- Title -->
+    <text x="0" y="65" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" letter-spacing="2">BUDDY AI</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="95" fill="#768079" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="3">LOCAL-FIRST WINDOWS AI ASSISTANT</text>
+    
+    <!-- Description -->
+    <text x="0" y="140" fill="#768079" font-family="Arial, Helvetica, sans-serif" font-size="14" line-height="1.5">
+      <tspan x="0" dy="0">Screen understanding, streaming responses,</tspan>
+      <tspan x="0" dy="22">selection actions, and private Ollama inference.</tspan>
+      <tspan x="0" dy="22">Zero cloud dependency for complete data privacy.</tspan>
+    </text>
+
+    <!-- Tech Stack -->
+    <g transform="translate(0, 220)">
+      <!-- Badge 1: Electron -->
+      <g transform="translate(0, 0)">
+        <polygon points="0,0 70,0 76,6 76,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
+        <text x="38" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Electron</text>
+      </g>
+      <!-- Badge 2: React -->
+      <g transform="translate(86, 0)">
+        <polygon points="0,0 60,0 66,6 66,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
+        <text x="33" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">React</text>
+      </g>
+      <!-- Badge 3: TypeScript -->
+      <g transform="translate(162, 0)">
+        <polygon points="0,0 80,0 86,6 86,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
+        <text x="43" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">TypeScript</text>
+      </g>
+      <!-- Badge 4: Ollama -->
+      <g transform="translate(258, 0)">
+        <polygon points="0,0 60,0 66,6 66,26 6,26 0,20" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
+        <text x="33" y="17" fill="#ECE8E1" font-family="Arial, Helvetica, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Ollama</text>
+      </g>
     </g>
+    
+    <!-- Classification Label -->
+    <text x="0" y="280" fill="#768079" font-family="monospace, Arial, sans-serif" font-size="10" letter-spacing="1">FLAGSHIP // DESKTOP</text>
   </g>
 
-  <!-- Project title -->
-  <text x="84" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
-    Buddy AI
-  </text>
+  <!-- Dashed Separator -->
+  <line x1="720" y1="40" x2="720" y2="300" stroke="#768079" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
 
-  <!-- Category badge -->
-  <rect x="84" y="58" width="150" height="20" rx="10" fill="#f093fb" opacity="0.2"/>
-  <text x="159" y="72" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#f0abfc" text-anchor="middle">
-    AI / DESKTOP / VISION
-  </text>
+  <!-- Right Section (720 to 1200) -->
+  <g transform="translate(750, 40)">
+    
+    <!-- Screen Capture Frame -->
+    <rect x="50" y="30" width="300" height="200" fill="none" stroke="#768079" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <!-- Crosshairs for capture -->
+    <path d="M 40 30 L 60 30 M 50 20 L 50 40" stroke="#22D3EE" stroke-width="1"/>
+    <path d="M 340 230 L 360 230 M 350 220 L 350 240" stroke="#22D3EE" stroke-width="1"/>
+    
+    <!-- Capture content (Abstract) -->
+    <rect x="70" y="50" width="120" height="80" fill="url(#dotGrid)" stroke="#768079" stroke-width="1" opacity="0.5"/>
+    <rect x="210" y="50" width="120" height="40" fill="#1a2332" stroke="#2a3a4a" stroke-width="1"/>
+    
+    <!-- Highlight in capture -->
+    <rect x="70" y="100" width="60" height="30" fill="#FF4655" fill-opacity="0.2" stroke="#FF4655" stroke-width="1" stroke-dasharray="2,2"/>
 
-  <!-- Description -->
-  <text x="28" y="110" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
-    Local-first floating AI writing and vision assistant
-  </text>
-  <text x="28" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
-    for Windows powered by Ollama. 9 writing modes,
-  </text>
-  <text x="28" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
-    screen capture analysis, and zero cloud dependency.
-  </text>
+    <!-- Floating Chat Panel -->
+    <g transform="translate(180, 110)">
+      <!-- Panel background with shadow/glow -->
+      <rect x="0" y="0" width="180" height="140" rx="4" fill="#1a2332" stroke="#22D3EE" stroke-width="1.5"/>
+      <rect x="0" y="0" width="180" height="10" fill="#22D3EE" opacity="0.1"/>
+      
+      <!-- Panel header -->
+      <rect x="10" y="8" width="40" height="4" fill="#22D3EE" opacity="0.5"/>
+      <circle cx="165" cy="10" r="3" fill="#FF4655"/>
 
-  <!-- Tech stack chips -->
-  <g transform="translate(28, 160)">
-    <rect x="0" y="0" width="66" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="33" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Electron</text>
+      <!-- Chat Bubbles -->
+      <rect x="15" y="30" width="120" height="20" rx="2" fill="#768079" fill-opacity="0.2"/>
+      
+      <rect x="45" y="60" width="120" height="20" rx="2" fill="#22D3EE" fill-opacity="0.15"/>
+      <!-- Streaming text lines inside user bubble -->
+      <rect x="55" y="66" width="100" height="2" fill="#22D3EE"/>
+      <rect x="55" y="72" width="70" height="2" fill="#22D3EE"/>
+      
+      <rect x="15" y="90" width="150" height="40" rx="2" fill="#768079" fill-opacity="0.2"/>
+      <rect x="25" y="100" width="130" height="2" fill="#ECE8E1" opacity="0.5"/>
+      <rect x="25" y="108" width="110" height="2" fill="#ECE8E1" opacity="0.5"/>
+      <rect x="25" y="116" width="90" height="2" fill="#ECE8E1" opacity="0.5"/>
+      <circle cx="125" cy="117" r="2" fill="#22D3EE"/>
+    </g>
 
-    <rect x="74" y="0" width="52" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="100" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">React</text>
-
-    <rect x="134" y="0" width="60" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="164" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Ollama</text>
-
-    <rect x="202" y="0" width="86" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="245" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">TypeScript</text>
-
-    <rect x="296" y="0" width="56" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="324" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Vision</text>
+    <!-- Floating Bubble/Widget -->
+    <g transform="translate(120, 220)">
+      <circle cx="20" cy="20" r="20" fill="#0F1923" stroke="#22D3EE" stroke-width="2"/>
+      <circle cx="20" cy="20" r="10" fill="none" stroke="#FF4655" stroke-width="1"/>
+      <path d="M 20 5 L 20 10 M 20 30 L 20 35 M 5 20 L 10 20 M 30 20 L 35 20" stroke="#ECE8E1" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Accent line -->
+    <path d="M 380 40 L 400 40 L 400 60" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
   </g>
 
-  <!-- Arrow icon (top right) -->
-  <g transform="translate(378, 28)" opacity="0.3">
-    <line x1="0" y1="16" x2="16" y2="0" stroke="#f093fb" stroke-width="2" stroke-linecap="round"/>
-    <polyline points="6,0 16,0 16,10" fill="none" stroke="#f093fb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <!-- Top Right Brackets -->
+  <path d="M 1180 20 L 1190 20 L 1190 30" fill="none" stroke="#768079" stroke-width="2"/>
+  
+  <!-- Bottom Right Brackets -->
+  <path d="M 1190 310 L 1190 320 L 1180 320" fill="none" stroke="#768079" stroke-width="2"/>
+  
+  <!-- Coordinate Text -->
+  <text x="1175" y="32" fill="#768079" font-family="monospace, Arial, sans-serif" font-size="10" text-anchor="end" letter-spacing="1">DSK.APP</text>
+
 </svg>

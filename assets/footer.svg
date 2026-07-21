@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260">
+  <defs>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#ECE8E1" opacity="0.04" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="260" fill="#0F1923"/>
+  <rect width="1200" height="260" fill="url(#dots)"/>
+  
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- Target reticle -->
+    <g opacity="0.08" stroke="#FF4655" fill="none">
+      <circle cx="600" cy="130" r="80" stroke-width="2"/>
+      <circle cx="600" cy="130" r="120" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="450" y1="130" x2="510" y2="130" stroke-width="2"/>
+      <line x1="690" y1="130" x2="750" y2="130" stroke-width="2"/>
+      <line x1="600" y1="10" x2="600" y2="40" stroke-width="2"/>
+      <line x1="600" y1="220" x2="600" y2="250" stroke-width="2"/>
+    </g>
+
+    <!-- Corner coordinates/marks -->
+    <path d="M20 20 L40 20 M20 20 L20 40 M1180 20 L1160 20 M1180 20 L1180 40 M20 240 L40 240 M20 240 L20 220 M1180 240 L1160 240 M1180 240 L1180 220" stroke="#768079" stroke-width="2" fill="none"/>
+    <text x="45" y="25" fill="#768079" font-size="8">POS: 001.24</text>
+    <text x="1155" y="25" fill="#768079" font-size="8" text-anchor="end">POS: 088.19</text>
+
+    <!-- Top and Bottom accent lines for text block -->
+    <line x1="450" y1="80" x2="750" y2="80" stroke="#FF4655" stroke-width="1"/>
+    <line x1="450" y1="180" x2="750" y2="180" stroke="#FF4655" stroke-width="1"/>
+    
+    <!-- Brackets -->
+    <path d="M250 110 L230 130 L250 150 M260 110 L240 130 L260 150" stroke="#2a3a4a" stroke-width="3" fill="none"/>
+    <path d="M950 110 L970 130 L950 150 M940 110 L960 130 L940 150" stroke="#2a3a4a" stroke-width="3" fill="none"/>
+
+    <!-- Main Text -->
+    <text x="600" y="115" fill="#ECE8E1" font-size="40" font-weight="900" letter-spacing="2" text-anchor="middle">LET'S BUILD SOMETHING USEFUL.</text>
+    
+    <!-- CTA Text -->
+    <text x="600" y="145" fill="#FF4655" font-size="16" font-weight="bold" letter-spacing="1" text-anchor="middle">CONNECT // LinkedIn</text>
+    <text x="600" y="165" fill="#768079" font-size="14" letter-spacing="1" text-anchor="middle">CONTACT // saidurgahemanthdavuloori@gmail.com</text>
+
+    <!-- Bottom text -->
+    <text x="600" y="250" fill="#768079" font-size="10" letter-spacing="2" text-anchor="middle">// END TRANSMISSION</text>
+  </g>
+</svg>

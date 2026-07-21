@@ -1,78 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 280">
   <defs>
-    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#16213e"/>
-    </linearGradient>
-    <linearGradient id="ml-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fa709a"/>
-      <stop offset="100%" stop-color="#fee140"/>
-    </linearGradient>
-    <filter id="card-shadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
-    </filter>
+    <style>
+      .bg { fill: #0F1923; stroke: #2a3a4a; stroke-width: 1; }
+      .accent { fill: #22D3EE; }
+      .text-code { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #22D3EE; font-weight: bold; letter-spacing: 1px; }
+      .text-title { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; fill: #ECE8E1; }
+      .text-subtitle { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #768079; letter-spacing: 2px; }
+      .text-brief { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #768079; }
+      .badge-bg { fill: #1a2332; stroke: #2a3a4a; stroke-width: 1; }
+      .badge-text { font-family: Arial, Helvetica, sans-serif; font-size: 11px; fill: #ECE8E1; font-weight: bold; }
+      .label-bottom { font-family: Arial, Helvetica, sans-serif; font-size: 10px; fill: #768079; letter-spacing: 1px; text-anchor: end; }
+      
+      .node { fill: #1a2332; stroke: #22D3EE; stroke-width: 2; }
+      .node-core { fill: #FF4655; stroke: none; }
+      .edge { fill: none; stroke: #768079; stroke-width: 1; opacity: 0.6; }
+      .boundary { fill: none; stroke: #FF4655; stroke-width: 2; stroke-dasharray: 6,4; }
+    </style>
   </defs>
 
-  <!-- Card background -->
-  <rect width="420" height="200" rx="12" fill="url(#card-bg)" stroke="#2d2d5e" stroke-width="1" filter="url(#card-shadow)"/>
+  <!-- Background -->
+  <rect x="0.5" y="0.5" width="579" height="279" class="bg" />
+  <rect x="0" y="0" width="4" height="280" class="accent" />
 
-  <!-- Accent bar -->
-  <rect x="0" y="0" width="420" height="4" rx="2" fill="url(#ml-accent)"/>
+  <!-- Top-left Code -->
+  <rect x="30" y="27" width="8" height="8" class="accent" />
+  <text x="45" y="35" class="text-code">MLF-004</text>
 
-  <!-- Icon area -->
-  <g transform="translate(28, 30)">
-    <rect width="44" height="44" rx="10" fill="#fa709a" opacity="0.15"/>
-    <!-- Brain/ML icon -->
-    <g transform="translate(10, 8)" fill="none" stroke="#fa709a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12,2 C8,2 5,5 5,8 C3,8.5 2,10 2,12 C2,14 3.5,15.5 5,16 C5,19 8,22 12,22 C16,22 19,19 19,16 C20.5,15.5 22,14 22,12 C22,10 21,8.5 19,8 C19,5 16,2 12,2Z"/>
-      <line x1="12" y1="8" x2="12" y2="16"/>
-      <line x1="8" y1="12" x2="16" y2="12"/>
-    </g>
+  <!-- Texts -->
+  <text x="30" y="85" class="text-title">ML FOUNDATIONS</text>
+  <text x="30" y="105" class="text-subtitle">NLP CLASSIFICATION</text>
+  
+  <text x="30" y="140" class="text-brief">End-to-end NLP text classification with TF-IDF</text>
+  <text x="30" y="158" class="text-brief">vectorization, cross-validation, and scikit-learn</text>
+  <text x="30" y="176" class="text-brief">model optimization.</text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(30, 205)">
+    <rect x="0" y="0" width="55" height="24" rx="3" class="badge-bg" />
+    <text x="27.5" y="16" class="badge-text" text-anchor="middle">Python</text>
+    
+    <rect x="65" y="0" width="75" height="24" rx="3" class="badge-bg" />
+    <text x="102.5" y="16" class="badge-text" text-anchor="middle">Scikit-learn</text>
+    
+    <rect x="150" y="0" width="45" height="24" rx="3" class="badge-bg" />
+    <text x="172.5" y="16" class="badge-text" text-anchor="middle">NLTK</text>
+    
+    <rect x="205" y="0" width="80" height="24" rx="3" class="badge-bg" />
+    <text x="245" y="16" class="badge-text" text-anchor="middle">TensorFlow</text>
   </g>
 
-  <!-- Project title -->
-  <text x="84" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
-    ML Foundations
-  </text>
+  <!-- Right side illustration (Neural Network Nodes) -->
+  <g transform="translate(430, 140)">
+    <!-- Edges -->
+    <line x1="-50" y1="-50" x2="-10" y2="-20" class="edge" />
+    <line x1="-50" y1="10" x2="-10" y2="-20" class="edge" />
+    <line x1="-50" y1="10" x2="-10" y2="30" class="edge" />
+    <line x1="-50" y1="60" x2="-10" y2="30" class="edge" />
+    <line x1="-10" y1="-20" x2="30" y2="5" class="edge" />
+    <line x1="-10" y1="30" x2="30" y2="5" class="edge" />
+    <line x1="30" y1="5" x2="70" y2="-30" class="edge" />
+    <line x1="30" y1="5" x2="70" y2="40" class="edge" />
 
-  <!-- Category badge -->
-  <rect x="84" y="58" width="100" height="20" rx="10" fill="#fa709a" opacity="0.2"/>
-  <text x="134" y="72" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#fda4af" text-anchor="middle">
-    ML / NLP
-  </text>
+    <!-- Boundary line -->
+    <path d="M10,-80 L10,90" class="boundary" />
 
-  <!-- Description -->
-  <text x="28" y="110" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
-    End-to-end NLP text classification pipeline for
-  </text>
-  <text x="28" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
-    categorizing news articles with TF-IDF vectorization,
-  </text>
-  <text x="28" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
-    cross-validation, and hyperparameter tuning.
-  </text>
-
-  <!-- Tech stack chips -->
-  <g transform="translate(28, 160)">
-    <rect x="0" y="0" width="56" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="28" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Python</text>
-
-    <rect x="64" y="0" width="70" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="99" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Scikit-learn</text>
-
-    <rect x="142" y="0" width="44" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="164" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">NLTK</text>
-
-    <rect x="194" y="0" width="82" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="235" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">TensorFlow</text>
-
-    <rect x="284" y="0" width="68" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="318" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Jupyter</text>
+    <!-- Nodes -->
+    <!-- Input layer -->
+    <circle cx="-50" cy="-50" r="6" class="node" />
+    <circle cx="-50" cy="10" r="6" class="node" />
+    <circle cx="-50" cy="60" r="6" class="node" />
+    
+    <!-- Hidden layer 1 -->
+    <circle cx="-10" cy="-20" r="8" class="node" />
+    <circle cx="-10" cy="30" r="8" class="node" />
+    
+    <!-- Hidden layer 2 -->
+    <circle cx="30" cy="5" r="10" class="node" />
+    <circle cx="30" cy="5" r="4" class="node-core" />
+    
+    <!-- Output layer -->
+    <circle cx="70" cy="-30" r="6" class="node" stroke="#FF4655" />
+    <circle cx="70" cy="40" r="6" class="node" />
+    
+    <!-- Extra decorative elements -->
+    <rect x="65" y="-35" width="10" height="10" fill="none" stroke="#22D3EE" stroke-width="1" />
   </g>
 
-  <!-- Arrow icon (top right) -->
-  <g transform="translate(378, 28)" opacity="0.3">
-    <line x1="0" y1="16" x2="16" y2="0" stroke="#fa709a" stroke-width="2" stroke-linecap="round"/>
-    <polyline points="6,0 16,0 16,10" fill="none" stroke="#fa709a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <!-- Bottom Right Label -->
+  <text x="550" y="255" class="label-bottom">TACTICAL // ML</text>
+  
+  <!-- Decorative corner elements -->
+  <path d="M 570 10 L 570 20 M 570 10 L 560 10" fill="none" stroke="#2a3a4a" stroke-width="1" />
+  <path d="M 570 270 L 570 260 M 570 270 L 560 270" fill="none" stroke="#2a3a4a" stroke-width="1" />
 </svg>
