@@ -1,43 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420">
-  <defs>
-    <style>
-      .text-label { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 600; fill: #86868B; letter-spacing: 2px; text-anchor: middle; text-transform: uppercase; }
-      .text-headline { font-family: Arial, Helvetica, sans-serif; font-size: 32px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
-      .text-desc { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #86868B; text-anchor: middle; }
-      .text-tech { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #86868B; text-anchor: middle; }
-    </style>
-  </defs>
-  <rect width="680" height="420" fill="#0B0B0F" rx="20" />
-  
-  <text x="340" y="55" class="text-label">MACHINE LEARNING</text>
-  <text x="340" y="100" class="text-headline">From raw data</text>
-  <text x="340" y="140" class="text-headline">to validated models.</text>
-  
-  <text x="340" y="175" class="text-desc">EDA, NLP classification, model evaluation</text>
-  <text x="340" y="195" class="text-desc">and hyperparameter optimization.</text>
-  
-  <!-- Illustration -->
-  <g transform="translate(0, 10)">
-    <!-- Floating Rectangles -->
-    <rect x="250" y="220" width="80" height="50" rx="6" fill="#1a1a1f" stroke="#2a2a2f" stroke-width="1.5" />
-    <rect x="370" y="280" width="90" height="60" rx="6" fill="#1a1a1f" stroke="#2a2a2f" stroke-width="1.5" />
-    <rect x="200" y="290" width="60" height="40" rx="6" fill="#1a1a1f" stroke="#2a2a2f" stroke-width="1.5" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420">
+    <defs>
+        <filter id="glow-indigo" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="678" height="418" x="1" y="1" rx="24" fill="#111111" stroke="#333336" stroke-width="2"/>
+    <text x="340" y="60" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#86868B" font-weight="600" letter-spacing="2" text-anchor="middle">MACHINE LEARNING</text>
+    <text x="340" y="105" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle">From raw data</text>
+    <text x="340" y="145" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle">to validated models.</text>
+    <text x="340" y="185" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#86868B" text-anchor="middle">EDA, NLP classification, model evaluation</text>
+    <text x="340" y="205" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#86868B" text-anchor="middle">and hyperparameter optimization.</text>
     
-    <!-- Dashed boundary line -->
-    <line x1="220" y1="340" x2="460" y2="230" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="4,4" />
+    <!-- S-curve and boundary -->
+    <g transform="translate(340, 280)">
+        <path d="M -120 40 C -60 40, -30 -40, 30 -40 C 90 -40, 110 20, 130 -20" fill="none" stroke="#2997ff" stroke-width="2.5" filter="url(#glow-blue)"/>
+        <path d="M -120 50 C -60 50, -30 -30, 30 -30 C 90 -30, 110 30, 130 -10" fill="none" stroke="#5e5ce6" stroke-width="2" stroke-dasharray="6,4" filter="url(#glow-indigo)"/>
+        
+        <circle cx="-120" cy="40" r="4" fill="#2997ff"/>
+        <circle cx="30" cy="-40" r="4" fill="#2997ff"/>
+        <circle cx="130" cy="-20" r="4" fill="#2997ff"/>
+    </g>
     
-    <!-- Sigmoid curve -->
-    <path d="M 230 330 C 300 330, 310 240, 450 240" fill="none" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round" />
-    
-    <!-- Scattered dots -->
-    <circle cx="260" cy="320" r="2.5" fill="#7D5CFF" opacity="0.8" />
-    <circle cx="280" cy="315" r="2.5" fill="#7D5CFF" opacity="0.6" />
-    <circle cx="340" cy="285" r="3.5" fill="#7D5CFF" />
-    <circle cx="320" cy="295" r="2.5" fill="#7D5CFF" opacity="0.5" />
-    <circle cx="370" cy="265" r="2.5" fill="#7D5CFF" opacity="0.7" />
-    <circle cx="410" cy="250" r="2.5" fill="#7D5CFF" opacity="0.9" />
-    <circle cx="430" cy="245" r="2.5" fill="#7D5CFF" opacity="0.6" />
-  </g>
-  
-  <text x="340" y="395" class="text-tech">Python · Scikit-learn · NLTK · TensorFlow</text>
+    <text x="340" y="380" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#86868B" text-anchor="middle">Python · Scikit-learn · NLTK · TensorFlow</text>
 </svg>

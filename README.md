@@ -1,18 +1,18 @@
 <picture>
-  <img src="assets/hero.svg" alt="Sai Durga Hemanth Davuloori — AI systems, full-stack products, useful intelligence" width="100%">
+  <img src="assets/hero.svg" alt="Sai Durga Hemanth Davuloori — AI systems. Full-stack products. Useful intelligence." width="100%">
 </picture>
 
 <!-- ─── Navigation ─── -->
 
 <p align="center">
   <a href="https://www.linkedin.com/in/hemanthdavuloori/">
-    <img src="https://img.shields.io/badge/LinkedIn-0071E3?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" height="28">
+    <img src="https://img.shields.io/badge/LinkedIn-111111?style=flat-square&logo=linkedin&logoColor=2997ff" alt="LinkedIn" height="28">
   </a>&nbsp;&nbsp;&nbsp;
   <a href="mailto:saidurgahemanthdavuloori@gmail.com">
-    <img src="https://img.shields.io/badge/Email-6E6E73?style=flat-square&logo=gmail&logoColor=white" alt="Email" height="28">
+    <img src="https://img.shields.io/badge/Email-111111?style=flat-square&logo=gmail&logoColor=FFFFFF" alt="Email" height="28">
   </a>&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/hemanthdsd?tab=repositories">
-    <img src="https://img.shields.io/badge/All_Repositories-0B0B0F?style=flat-square&logo=github&logoColor=white" alt="Repositories" height="28">
+    <img src="https://img.shields.io/badge/All_Repositories-111111?style=flat-square&logo=github&logoColor=FFFFFF" alt="Repositories" height="28">
   </a>
 </p>
 
@@ -170,13 +170,11 @@ Machine learning and analytics<br>transformed into practical decisions.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&hide_border=true&bg_color=0B0B0F&title_color=FFFFFF&icon_color=0071E3&text_color=86868B&ring_color=0071E3">
-    <img src="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&hide_border=true&bg_color=FFFFFF&title_color=0B0B0F&icon_color=0071E3&text_color=6E6E73&ring_color=0071E3" alt="GitHub Stats" height="165">
+    <img src="https://github-readme-stats.vercel.app/api?username=hemanthdsd&show_icons=true&hide_border=true&bg_color=000000&title_color=FFFFFF&icon_color=2997ff&text_color=86868B&ring_color=2997ff" alt="GitHub Stats" height="165">
   </picture>
   &nbsp;&nbsp;
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&hide_border=true&bg_color=0B0B0F&title_color=FFFFFF&text_color=86868B">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&hide_border=true&bg_color=FFFFFF&title_color=0B0B0F&text_color=6E6E73" alt="Top Languages" height="165">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemanthdsd&layout=compact&hide_border=true&bg_color=000000&title_color=FFFFFF&text_color=86868B" alt="Top Languages" height="165">
   </picture>
 </p>
 

@@ -1,40 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420">
-  <defs>
-    <style>
-      .text-label { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 600; fill: #6E6E73; letter-spacing: 2px; text-anchor: middle; text-transform: uppercase; }
-      .text-headline { font-family: Arial, Helvetica, sans-serif; font-size: 32px; font-weight: 700; fill: #0B0B0F; text-anchor: middle; }
-      .text-desc { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #6E6E73; text-anchor: middle; }
-      .text-tech { font-family: Arial, Helvetica, sans-serif; font-size: 12px; fill: #6E6E73; text-anchor: middle; }
-    </style>
-  </defs>
-  <rect width="680" height="420" fill="#F5F5F7" rx="20" />
-  
-  <text x="340" y="55" class="text-label">AI ETHICS</text>
-  <text x="340" y="100" class="text-headline">Making responsible AI</text>
-  <text x="340" y="140" class="text-headline">measurable.</text>
-  
-  <text x="340" y="175" class="text-desc">Governance, fairness, risk analysis and</text>
-  <text x="340" y="195" class="text-desc">auditability through simulation.</text>
-  
-  <!-- Illustration -->
-  <g transform="translate(0, 10)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420">
+    <defs>
+        <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="glow-indigo" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="678" height="418" x="1" y="1" rx="24" fill="#111111" stroke="#333336" stroke-width="2"/>
+    <text x="340" y="60" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#86868B" font-weight="600" letter-spacing="2" text-anchor="middle">AI ETHICS</text>
+    <text x="340" y="105" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle">Making responsible AI</text>
+    <text x="340" y="145" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#FFFFFF" font-weight="700" text-anchor="middle">measurable.</text>
+    <text x="340" y="185" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#86868B" text-anchor="middle">Governance, fairness, risk analysis and</text>
+    <text x="340" y="205" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#86868B" text-anchor="middle">auditability through simulation.</text>
+    
     <!-- Shield -->
-    <path d="M340 210 Q370 210 390 220 L390 280 Q390 330 340 350 Q290 330 290 280 L290 220 Q310 210 340 210 Z" fill="#FFFFFF" stroke="#D2D2D7" stroke-width="2" />
+    <g transform="translate(340, 280)">
+        <path d="M 0 -50 L 50 -30 L 40 30 C 20 50, 0 60, 0 60 C 0 60, -20 50, -40 30 L -50 -30 Z" fill="#1c1c1e" stroke="#333336" stroke-width="2"/>
+        <line x1="-15" y1="-5" x2="0" y2="20" stroke="#333336" stroke-width="1.5"/>
+        <line x1="15" y1="-10" x2="0" y2="20" stroke="#333336" stroke-width="1.5"/>
+        <line x1="-15" y1="-5" x2="15" y2="-10" stroke="#333336" stroke-width="1.5"/>
+        <circle cx="-15" cy="-5" r="5" fill="#2997ff" filter="url(#glow-blue)"/>
+        <circle cx="15" cy="-10" r="5" fill="#86868B"/>
+        <circle cx="0" cy="20" r="6" fill="#5e5ce6" filter="url(#glow-indigo)"/>
+    </g>
     
-    <!-- Audit Lines -->
-    <line x1="310" y1="240" x2="370" y2="240" stroke="#D2D2D7" stroke-width="2" stroke-linecap="round" opacity="0.4" />
-    <line x1="310" y1="260" x2="350" y2="260" stroke="#D2D2D7" stroke-width="2" stroke-linecap="round" opacity="0.6" />
-    <line x1="310" y1="280" x2="370" y2="280" stroke="#D2D2D7" stroke-width="2" stroke-linecap="round" opacity="0.8" />
-    <line x1="310" y1="300" x2="360" y2="300" stroke="#D2D2D7" stroke-width="2" stroke-linecap="round" opacity="1.0" />
-    
-    <!-- Colored Dots -->
-    <circle cx="375" cy="240" r="3" fill="#5AC8FA" />
-    <circle cx="360" cy="260" r="3" fill="#7D5CFF" />
-    <circle cx="370" cy="300" r="3" fill="#0071E3" />
-    
-    <!-- Checkmark -->
-    <path d="M330 320 L337 327 L352 312" fill="none" stroke="#0071E3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-  </g>
-  
-  <text x="340" y="395" class="text-tech">Python · CARLA · Pygame</text>
+    <text x="340" y="380" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#86868B" text-anchor="middle">Python · CARLA · Pygame</text>
 </svg>
