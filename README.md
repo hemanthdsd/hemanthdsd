@@ -1,8 +1,6 @@
-# Sai Durga Hemanth Davuloori
-
-**AI Systems · Full-Stack Engineering · Data Products**
-
-I build responsible AI systems and full-stack products that turn complex operational problems into clear, deployable solutions. My work includes AI-assisted manufacturing intelligence, local-first desktop AI, machine learning and quantitative analysis.
+<picture>
+  <img src="assets/hero.svg" alt="Sai Durga Hemanth Davuloori — AI Systems · Full-Stack Engineering · Data Products" width="100%">
+</picture>
 
 [Featured work](#featured-projects) &nbsp;·&nbsp; [All repositories](https://github.com/hemanthdsd?tab=repositories) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/hemanthdavuloori/) &nbsp;·&nbsp; [Email](mailto:saidurgahemanthdavuloori@gmail.com)
 
@@ -13,39 +11,59 @@ I build responsible AI systems and full-stack products that turn complex operati
 ### [OpsInsight AI](https://github.com/hemanthdsd/opsinsight-ai)
 An AI-assisted manufacturing deviation and yield-intelligence platform for controlled and regulated environments.
 
+<picture>
+  <img src="assets/opsinsight.svg" alt="OpsInsight AI Visualization" width="100%">
+</picture>
+
 `Angular 18` · `NestJS` · `PostgreSQL` · `Gemini` · `pgvector`
 
 **Focus:** Evidence-cited AI investigations · Human-in-the-loop review · Deterministic fallback · Manufacturing KPI analysis
 
-<br>
+---
 
 ### [Buddy AI](https://github.com/hemanthdsd/buddy-ai)
 A local-first Windows writing and vision assistant powered by private Ollama inference.
+
+<picture>
+  <img src="assets/buddy-ai.svg" alt="Buddy AI Visualization" width="100%">
+</picture>
 
 `Electron` · `React` · `TypeScript` · `Ollama`
 
 **Focus:** Floating desktop assistant · Screen understanding · Selected-text actions · Local inference
 
-<br>
+---
 
 ### [AI Ethics Auditing Simulation](https://github.com/hemanthdsd/AI-ethics-auditing-simulation)
 An applied simulation exploring responsible-AI auditing, governance, fairness and risk.
 
+<picture>
+  <img src="assets/ai-ethics.svg" alt="AI Ethics Auditing Visualization" width="100%">
+</picture>
+
 **Focus:** Responsible-AI auditing · Governance · Fairness · Risk
 
-<br>
+---
 
 ### [Machine Learning Foundations](https://github.com/hemanthdsd/machine-learning-foundations-project)
 A machine-learning workflow covering exploratory analysis, logistic regression, NLP and model evaluation.
+
+<picture>
+  <img src="assets/ml-foundations.svg" alt="Machine Learning Foundations Visualization" width="100%">
+</picture>
 
 `Python` · `pandas` · `scikit-learn` · `NLTK`
 
 **Focus:** Exploratory analysis · Logistic regression · NLP · Model evaluation
 
-<br>
+---
 
 ### [Quantitative Data Analytics](https://github.com/hemanthdsd/Qantitative-Data-Analytics-)
 Statistical research and visual analysis covering usability, workload and advertising effectiveness.
+
+<picture>
+  <img src="assets/data-analytics.svg" alt="Quantitative Data Analytics Visualization" width="100%">
+</picture>
 
 `R` · `RStudio` · `Regression` · `Hypothesis testing`
 
@@ -87,7 +105,7 @@ PostgreSQL · pgvector · Docker · GitHub
 
 ## Let’s connect
 
-I'm interested in AI, business analysis, full-stack engineering and data-product opportunities.
+I am always open to conversations about AI, business analysis, full-stack engineering and data-product opportunities.
 
-- **LinkedIn:** [linkedin.com/in/hemanthdavuloori](https://www.linkedin.com/in/hemanthdavuloori/)
+- **LinkedIn:** [https://www.linkedin.com/in/hemanthdavuloori/](https://www.linkedin.com/in/hemanthdavuloori/)
 - **Email:** [saidurgahemanthdavuloori@gmail.com](mailto:saidurgahemanthdavuloori@gmail.com)
