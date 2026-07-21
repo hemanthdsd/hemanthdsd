@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f093fb"/>
+      <stop offset="100%" stop-color="#f5576c"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="320" rx="16" fill="url(#bg)"/>
+
+  <!-- Decorative grid dots -->
+  <g opacity="0.06">
+    <circle cx="30" cy="30" r="1.5" fill="#fff"/>
+    <circle cx="60" cy="30" r="1.5" fill="#fff"/>
+    <circle cx="90" cy="30" r="1.5" fill="#fff"/>
+    <circle cx="120" cy="30" r="1.5" fill="#fff"/>
+    <circle cx="150" cy="30" r="1.5" fill="#fff"/>
+    <circle cx="30" cy="60" r="1.5" fill="#fff"/>
+    <circle cx="60" cy="60" r="1.5" fill="#fff"/>
+    <circle cx="90" cy="60" r="1.5" fill="#fff"/>
+    <circle cx="120" cy="60" r="1.5" fill="#fff"/>
+    <circle cx="150" cy="60" r="1.5" fill="#fff"/>
+    <circle cx="30" cy="90" r="1.5" fill="#fff"/>
+    <circle cx="60" cy="90" r="1.5" fill="#fff"/>
+    <circle cx="90" cy="90" r="1.5" fill="#fff"/>
+    <circle cx="120" cy="90" r="1.5" fill="#fff"/>
+    <circle cx="150" cy="90" r="1.5" fill="#fff"/>
+  </g>
+
+  <!-- Decorative circles -->
+  <circle cx="780" cy="60" r="80" fill="url(#accent1)" opacity="0.08"/>
+  <circle cx="820" cy="200" r="120" fill="url(#accent2)" opacity="0.05"/>
+  <circle cx="100" cy="260" r="90" fill="url(#accent3)" opacity="0.06"/>
+
+  <!-- Neural network decoration (right side) -->
+  <g opacity="0.12" transform="translate(650, 40)">
+    <!-- Nodes -->
+    <circle cx="30" cy="40" r="5" fill="#667eea"/>
+    <circle cx="30" cy="90" r="5" fill="#667eea"/>
+    <circle cx="30" cy="140" r="5" fill="#667eea"/>
+    <circle cx="30" cy="190" r="5" fill="#667eea"/>
+    <circle cx="100" cy="60" r="6" fill="#f093fb"/>
+    <circle cx="100" cy="115" r="6" fill="#f093fb"/>
+    <circle cx="100" cy="170" r="6" fill="#f093fb"/>
+    <circle cx="170" cy="90" r="7" fill="#4facfe"/>
+    <circle cx="170" cy="145" r="7" fill="#4facfe"/>
+    <circle cx="220" cy="115" r="8" fill="#00f2fe"/>
+    <!-- Connections -->
+    <line x1="35" y1="40" x2="94" y2="60" stroke="#667eea" stroke-width="1"/>
+    <line x1="35" y1="40" x2="94" y2="115" stroke="#667eea" stroke-width="0.7"/>
+    <line x1="35" y1="90" x2="94" y2="60" stroke="#667eea" stroke-width="0.7"/>
+    <line x1="35" y1="90" x2="94" y2="115" stroke="#667eea" stroke-width="1"/>
+    <line x1="35" y1="140" x2="94" y2="115" stroke="#667eea" stroke-width="1"/>
+    <line x1="35" y1="140" x2="94" y2="170" stroke="#667eea" stroke-width="0.7"/>
+    <line x1="35" y1="190" x2="94" y2="170" stroke="#667eea" stroke-width="1"/>
+    <line x1="106" y1="60" x2="163" y2="90" stroke="#f093fb" stroke-width="1"/>
+    <line x1="106" y1="115" x2="163" y2="90" stroke="#f093fb" stroke-width="0.7"/>
+    <line x1="106" y1="115" x2="163" y2="145" stroke="#f093fb" stroke-width="1"/>
+    <line x1="106" y1="170" x2="163" y2="145" stroke="#f093fb" stroke-width="0.7"/>
+    <line x1="177" y1="90" x2="212" y2="115" stroke="#4facfe" stroke-width="1"/>
+    <line x1="177" y1="145" x2="212" y2="115" stroke="#4facfe" stroke-width="1"/>
+  </g>
+
+  <!-- Main text content -->
+  <text x="60" y="95" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="400" fill="#a5b4fc" letter-spacing="4">
+    HELLO, I'M
+  </text>
+
+  <text x="60" y="152" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff" filter="url(#shadow)">
+    Hemanth Davuloori
+  </text>
+
+  <!-- Role tags -->
+  <g transform="translate(60, 180)">
+    <rect x="0" y="0" width="100" height="28" rx="14" fill="url(#accent1)" opacity="0.25"/>
+    <text x="50" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle">AI / ML</text>
+
+    <rect x="112" y="0" width="120" height="28" rx="14" fill="url(#accent2)" opacity="0.25"/>
+    <text x="172" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#f0abfc" text-anchor="middle">Full-Stack</text>
+
+    <rect x="244" y="0" width="140" height="28" rx="14" fill="url(#accent3)" opacity="0.25"/>
+    <text x="314" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#67e8f9" text-anchor="middle">Data Analytics</text>
+
+    <rect x="396" y="0" width="150" height="28" rx="14" fill="url(#accent1)" opacity="0.25"/>
+    <text x="471" y="19" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle">Desktop Apps</text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="60" y="248" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#94a3b8" font-weight="400">
+    Building intelligent systems &amp; data-driven solutions
+  </text>
+
+  <!-- Bottom accent line -->
+  <rect x="60" y="275" width="200" height="3" rx="1.5" fill="url(#accent1)" opacity="0.6"/>
+  <rect x="270" y="275" width="80" height="3" rx="1.5" fill="url(#accent2)" opacity="0.4"/>
+  <rect x="360" y="275" width="40" height="3" rx="1.5" fill="url(#accent3)" opacity="0.3"/>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" fill="none">
+  <defs>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="ethics-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#43e97b"/>
+      <stop offset="100%" stop-color="#38f9d7"/>
+    </linearGradient>
+    <filter id="card-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Card background -->
+  <rect width="420" height="200" rx="12" fill="url(#card-bg)" stroke="#2d2d5e" stroke-width="1" filter="url(#card-shadow)"/>
+
+  <!-- Accent bar -->
+  <rect x="0" y="0" width="420" height="4" rx="2" fill="url(#ethics-accent)"/>
+
+  <!-- Icon area -->
+  <g transform="translate(28, 30)">
+    <rect width="44" height="44" rx="10" fill="#43e97b" opacity="0.15"/>
+    <!-- Shield/Ethics icon -->
+    <g transform="translate(10, 8)" fill="none" stroke="#43e97b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12,2 L3,6 L3,12 C3,17.5 7,22 12,23 C17,22 21,17.5 21,12 L21,6 Z"/>
+      <polyline points="9,12 11,14 15,10"/>
+    </g>
+  </g>
+
+  <!-- Project title -->
+  <text x="84" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
+    AI Ethics Auditing
+  </text>
+
+  <!-- Category badge -->
+  <rect x="84" y="58" width="140" height="20" rx="10" fill="#43e97b" opacity="0.2"/>
+  <text x="154" y="72" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#6ee7b7" text-anchor="middle">
+    AI / SIMULATION / AV
+  </text>
+
+  <!-- Description -->
+  <text x="28" y="110" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
+    CARLA-based autonomous vehicle simulation for
+  </text>
+  <text x="28" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
+    auditing moral dilemmas and ethical decision-making
+  </text>
+  <text x="28" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
+    in self-driving cars with collision telemetry.
+  </text>
+
+  <!-- Tech stack chips -->
+  <g transform="translate(28, 160)">
+    <rect x="0" y="0" width="56" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Python</text>
+
+    <rect x="64" y="0" width="60" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="94" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">CARLA</text>
+
+    <rect x="132" y="0" width="58" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="161" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">UE4</text>
+
+    <rect x="198" y="0" width="68" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="232" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Pygame</text>
+
+    <rect x="274" y="0" width="62" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="305" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Ethics</text>
+  </g>
+
+  <!-- Arrow icon (top right) -->
+  <g transform="translate(378, 28)" opacity="0.3">
+    <line x1="0" y1="16" x2="16" y2="0" stroke="#43e97b" stroke-width="2" stroke-linecap="round"/>
+    <polyline points="6,0 16,0 16,10" fill="none" stroke="#43e97b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

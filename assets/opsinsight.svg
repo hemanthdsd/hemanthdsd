@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" fill="none">
+  <defs>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="opsinsight-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="card-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Card background -->
+  <rect width="420" height="200" rx="12" fill="url(#card-bg)" stroke="#2d2d5e" stroke-width="1" filter="url(#card-shadow)"/>
+
+  <!-- Accent bar -->
+  <rect x="0" y="0" width="420" height="4" rx="2" fill="url(#opsinsight-accent)"/>
+
+  <!-- Icon area -->
+  <g transform="translate(28, 30)">
+    <rect width="44" height="44" rx="10" fill="#667eea" opacity="0.15"/>
+    <!-- Monitor/Dashboard icon -->
+    <g transform="translate(10, 8)" fill="none" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="0" width="24" height="16" rx="2"/>
+      <line x1="8" y1="20" x2="16" y2="20"/>
+      <line x1="12" y1="16" x2="12" y2="20"/>
+      <polyline points="4,12 8,8 12,10 16,5 20,7" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- Project title -->
+  <text x="84" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">
+    OpsInsight AI
+  </text>
+
+  <!-- Category badge -->
+  <rect x="84" y="58" width="148" height="20" rx="10" fill="#667eea" opacity="0.2"/>
+  <text x="158" y="72" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#a5b4fc" text-anchor="middle">
+    AI / FULL-STACK / MFG
+  </text>
+
+  <!-- Description -->
+  <text x="28" y="110" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
+    AI-powered manufacturing deviation and yield
+  </text>
+  <text x="28" y="128" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
+    intelligence platform with Gemini 2.0 Flash, Angular
+  </text>
+  <text x="28" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#94a3b8">
+    dashboard, NestJS backend, and PostgreSQL/pgvector.
+  </text>
+
+  <!-- Tech stack chips -->
+  <g transform="translate(28, 160)">
+    <rect x="0" y="0" width="66" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="33" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Angular</text>
+
+    <rect x="74" y="0" width="58" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="103" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">NestJS</text>
+
+    <rect x="140" y="0" width="62" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="171" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Gemini</text>
+
+    <rect x="210" y="0" width="78" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="249" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">PostgreSQL</text>
+
+    <rect x="296" y="0" width="62" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="327" y="15" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Docker</text>
+  </g>
+
+  <!-- Arrow icon (top right) -->
+  <g transform="translate(378, 28)" opacity="0.3">
+    <line x1="0" y1="16" x2="16" y2="0" stroke="#667eea" stroke-width="2" stroke-linecap="round"/>
+    <polyline points="6,0 16,0 16,10" fill="none" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
