@@ -2,110 +2,117 @@
   <defs>
     <style>
       .bg { fill: #f8fafc; }
-      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 8; }
-      .text-dark { fill: #0f172a; font-family: -apple-system, sans-serif; }
-      .text-muted { fill: #64748b; font-family: -apple-system, sans-serif; }
-      .btn-primary { fill: #0f172a; rx: 6; }
-      .kpi-title { fill: #64748b; font-size: 13px; font-weight: 500; font-family: sans-serif; }
-      .kpi-val { fill: #0f172a; font-size: 28px; font-weight: 700; font-family: sans-serif; }
-      .badge-green { fill: #ecfdf5; stroke: #10b981; stroke-width: 1; rx: 4; }
-      .text-green { fill: #10b981; font-size: 11px; font-family: sans-serif; font-weight: bold; }
-      .badge-red { fill: #fef2f2; stroke: #ef4444; stroke-width: 1; rx: 4; }
-      .text-red { fill: #ef4444; font-size: 11px; font-family: sans-serif; font-weight: bold; }
-      .table-header { fill: #f1f5f9; }
+      .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 12; }
+      .text-dark { fill: #1a1a2e; font-family: 'Inter', -apple-system, sans-serif; }
+      .text-muted { fill: #64748b; font-family: 'Inter', -apple-system, sans-serif; }
+      .btn-primary { fill: #1565c0; rx: 12; }
+      .kpi-title { fill: #64748b; font-size: 12px; font-weight: 600; font-family: 'Inter', sans-serif; letter-spacing: 0.5px; text-transform: uppercase; }
+      .kpi-val { fill: #1a1a2e; font-size: 28px; font-weight: 700; font-family: 'Inter', sans-serif; }
+      .badge-green { fill: #e8f5e9; rx: 20; }
+      .text-green { fill: #2e7d32; font-size: 11px; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+      .badge-red { fill: #ffebee; rx: 20; }
+      .text-red { fill: #d32f2f; font-size: 11px; font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+      .table-header { fill: #fafafa; }
       .table-line { stroke: #e2e8f0; stroke-width: 1; }
+      .sidebar { fill: #0d1b2a; }
       
       @media (prefers-color-scheme: dark) {
         .bg { fill: #0d1117; }
         .card { fill: #161b22; stroke: #30363d; }
         .text-dark { fill: #e6edf3; }
         .text-muted { fill: #8b949e; }
-        .btn-primary { fill: #238636; }
+        .btn-primary { fill: #1565c0; }
         .kpi-val { fill: #e6edf3; }
         .table-header { fill: #21262d; }
         .table-line { stroke: #30363d; }
-        .badge-green { fill: rgba(46,160,67,0.1); stroke: #2ea043; }
-        .badge-red { fill: rgba(248,81,73,0.1); stroke: #f85149; }
-        .text-green { fill: #3fb950; }
-        .text-red { fill: #f85149; }
+        .badge-green { fill: rgba(46,125,50,0.1); }
+        .text-green { fill: #4caf50; }
+        .badge-red { fill: rgba(211,47,47,0.1); }
+        .text-red { fill: #f44336; }
       }
     </style>
   </defs>
 
-  <rect width="1000" height="600" class="bg"/>
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="180" height="600" class="sidebar"/>
+  <rect x="20" y="20" width="36" height="36" rx="8" fill="#42a5f5"/>
+  <text x="68" y="42" fill="#ffffff" font-family="'Inter', sans-serif" font-weight="700" font-size="16">OpsInsight</text>
+  <text x="68" y="55" fill="#9e9e9e" font-family="'Inter', sans-serif" font-weight="600" font-size="10" letter-spacing="1">AI METRICS</text>
+
+  <rect x="180" y="0" width="820" height="600" class="bg"/>
 
   <!-- Header -->
-  <text x="40" y="55" class="text-dark" font-size="24" font-weight="bold">Executive Dashboard</text>
+  <text x="220" y="55" class="text-dark" font-size="24" font-weight="bold">Executive Dashboard</text>
   <rect x="800" y="30" width="160" height="36" class="btn-primary"/>
   <text x="815" y="53" fill="#ffffff" font-size="14" font-weight="600" font-family="sans-serif">▶ Start Guided Demo</text>
 
   <!-- KPI Grid Row 1 -->
-  <rect x="40" y="90" width="215" height="100" class="card"/>
-  <text x="60" y="120" class="kpi-title">Overall Yield</text>
-  <text x="60" y="160" class="kpi-val">95.8%</text>
-  <rect x="180" y="105" width="55" height="20" class="badge-green"/>
-  <text x="185" y="119" class="text-green">Target Met</text>
+  <rect x="220" y="90" width="175" height="100" class="card"/>
+  <text x="240" y="120" class="kpi-title">Overall Yield</text>
+  <text x="240" y="160" class="kpi-val">95.8%</text>
+  <rect x="330" y="105" width="55" height="20" class="badge-green"/>
+  <text x="335" y="119" class="text-green">Target</text>
 
-  <rect x="275" y="90" width="215" height="100" class="card"/>
-  <text x="295" y="120" class="kpi-title">First Pass Yield</text>
-  <text x="295" y="160" class="kpi-val">92.1%</text>
+  <rect x="415" y="90" width="175" height="100" class="card"/>
+  <text x="435" y="120" class="kpi-title">First Pass Yield</text>
+  <text x="435" y="160" class="kpi-val">92.1%</text>
 
-  <rect x="510" y="90" width="215" height="100" class="card"/>
-  <text x="530" y="120" class="kpi-title">Scrap Rate</text>
-  <text x="530" y="160" class="kpi-val">2.8%</text>
-  <rect x="650" y="105" width="55" height="20" class="badge-green"/>
-  <text x="655" y="119" class="text-green">Below 3%</text>
+  <rect x="610" y="90" width="175" height="100" class="card"/>
+  <text x="630" y="120" class="kpi-title">Scrap Rate</text>
+  <text x="630" y="160" class="kpi-val">2.8%</text>
+  <rect x="710" y="105" width="65" height="20" class="badge-green"/>
+  <text x="715" y="119" class="text-green">Below 3%</text>
 
-  <rect x="745" y="90" width="215" height="100" class="card"/>
-  <text x="765" y="120" class="kpi-title">Avg Cycle Time</text>
-  <text x="765" y="160" class="kpi-val">42m</text>
+  <rect x="805" y="90" width="175" height="100" class="card"/>
+  <text x="825" y="120" class="kpi-title">Avg Cycle Time</text>
+  <text x="825" y="160" class="kpi-val">42m</text>
 
   <!-- KPI Grid Row 2 -->
-  <rect x="40" y="210" width="215" height="100" class="card"/>
-  <text x="60" y="240" class="kpi-title">Open Deviations</text>
-  <text x="60" y="280" class="kpi-val">4</text>
-  <rect x="180" y="225" width="55" height="20" class="badge-red"/>
-  <text x="185" y="239" class="text-red">1 Critical</text>
+  <rect x="220" y="210" width="175" height="100" class="card"/>
+  <text x="240" y="240" class="kpi-title">Open Deviations</text>
+  <text x="240" y="280" class="kpi-val">4</text>
+  <rect x="315" y="225" width="70" height="20" class="badge-red"/>
+  <text x="320" y="239" class="text-red">1 Critical</text>
 
-  <rect x="275" y="210" width="215" height="100" class="card"/>
-  <text x="295" y="240" class="kpi-title">Rework Rate</text>
-  <text x="295" y="280" class="kpi-val">1.2%</text>
+  <rect x="415" y="210" width="175" height="100" class="card"/>
+  <text x="435" y="240" class="kpi-title">Rework Rate</text>
+  <text x="435" y="280" class="kpi-val">1.2%</text>
 
-  <rect x="510" y="210" width="215" height="100" class="card"/>
-  <text x="530" y="240" class="kpi-title">Analyses Awaiting Review</text>
-  <text x="530" y="280" class="kpi-val">2</text>
-  <rect x="665" y="225" width="40" height="20" class="badge-red"/>
-  <text x="670" y="239" class="text-red">Action</text>
+  <rect x="610" y="210" width="175" height="100" class="card"/>
+  <text x="630" y="240" class="kpi-title">Awaiting Review</text>
+  <text x="630" y="280" class="kpi-val">2</text>
+  <rect x="735" y="225" width="40" height="20" class="badge-red"/>
+  <text x="740" y="239" class="text-red">Action</text>
 
-  <rect x="745" y="210" width="215" height="100" class="card"/>
-  <text x="765" y="240" class="kpi-title">Est. Opportunity Value</text>
-  <text x="765" y="280" class="kpi-val">€125K</text>
+  <rect x="805" y="210" width="175" height="100" class="card"/>
+  <text x="825" y="240" class="kpi-title">Est. Opportunity</text>
+  <text x="825" y="280" class="kpi-val">€125K</text>
 
   <!-- Table -->
-  <rect x="40" y="340" width="920" height="220" class="card"/>
-  <text x="60" y="375" class="text-dark" font-size="16" font-weight="600">Top Defect Categories</text>
+  <rect x="220" y="340" width="760" height="220" class="card"/>
+  <text x="240" y="375" class="text-dark" font-size="16" font-weight="600">Top Defect Categories</text>
   
-  <rect x="40" y="390" width="920" height="40" class="table-header"/>
-  <path d="M 40 390 L 960 390 M 40 430 L 960 430" class="table-line"/>
+  <rect x="220" y="390" width="760" height="40" class="table-header"/>
+  <path d="M 220 390 L 980 390 M 220 430 L 980 430" class="table-line"/>
   
-  <text x="60" y="415" class="text-muted" font-size="13" font-weight="600">Category</text>
-  <text x="300" y="415" class="text-muted" font-size="13" font-weight="600">Count</text>
-  <text x="450" y="415" class="text-muted" font-size="13" font-weight="600">% of Failures</text>
-  <text x="650" y="415" class="text-muted" font-size="13" font-weight="600">Distribution</text>
+  <text x="240" y="415" class="kpi-title">Category</text>
+  <text x="500" y="415" class="kpi-title">Count</text>
+  <text x="600" y="415" class="kpi-title">% of Failures</text>
+  <text x="750" y="415" class="kpi-title">Distribution</text>
 
   <!-- Row 1 -->
-  <text x="60" y="465" class="text-dark" font-size="14">Material Inconsistency</text>
-  <text x="300" y="465" class="text-dark" font-size="14">42</text>
-  <text x="450" y="465" class="text-dark" font-size="14">48%</text>
-  <rect x="650" y="455" width="200" height="8" rx="4" fill="#e2e8f0"/>
-  <rect x="650" y="455" width="96" height="8" rx="4" fill="#ef4444"/>
-  <path d="M 40 490 L 960 490" class="table-line"/>
+  <text x="240" y="465" class="text-dark" font-size="14">Material Inconsistency</text>
+  <text x="500" y="465" class="text-dark" font-size="14">42</text>
+  <text x="600" y="465" class="text-dark" font-size="14">48%</text>
+  <rect x="750" y="455" width="150" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="750" y="455" width="72" height="8" rx="4" fill="#d32f2f"/>
+  <path d="M 220 490 L 980 490" class="table-line"/>
 
   <!-- Row 2 -->
-  <text x="60" y="525" class="text-dark" font-size="14">Machine Calibration</text>
-  <text x="300" y="525" class="text-dark" font-size="14">18</text>
-  <text x="450" y="525" class="text-dark" font-size="14">21%</text>
-  <rect x="650" y="515" width="200" height="8" rx="4" fill="#e2e8f0"/>
-  <rect x="650" y="515" width="42" height="8" rx="4" fill="#f59e0b"/>
+  <text x="240" y="525" class="text-dark" font-size="14">Machine Calibration</text>
+  <text x="500" y="525" class="text-dark" font-size="14">18</text>
+  <text x="600" y="525" class="text-dark" font-size="14">21%</text>
+  <rect x="750" y="515" width="150" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="750" y="515" width="31" height="8" rx="4" fill="#f57c00"/>
 
 </svg>

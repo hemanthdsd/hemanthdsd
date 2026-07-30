@@ -29,77 +29,78 @@
   <!-- Toolbar -->
   <rect x="0" y="0" width="1000" height="40" fill="#e9ecef" stroke="#dee2e6"/>
   <text x="20" y="25" font-family="-apple-system, sans-serif" font-weight="bold" fill="#495057">Jupyter</text>
-  <text x="100" y="25" font-family="-apple-system, sans-serif" fill="#495057">machine_learning_pipeline.ipynb</text>
+  <text x="100" y="25" font-family="-apple-system, sans-serif" fill="#495057">23202425_Machine_learning_foundations_project.ipynb</text>
 
   <!-- Markdown Cell -->
   <g transform="translate(20, 60)">
     <rect width="960" height="40" class="cell" fill="transparent" stroke="none"/>
-    <text x="20" y="25" class="text-md"><b>Model Evaluation:</b> Logistic Regression vs. Random Forest Classifier</text>
+    <text x="20" y="25" class="text-md"><b>IS41070:</b> Training the Logistic Regression Model &amp; Saving Artifacts</text>
   </g>
 
   <!-- Code Cell 1 -->
   <g transform="translate(20, 110)">
-    <text x="5" y="20" class="text-code" fill="#0066cc">In [12]:</text>
+    <text x="5" y="20" class="text-code" fill="#0066cc">In [42]:</text>
     <rect x="70" y="0" width="890" height="120" class="cell code-bg"/>
     <rect x="70" y="0" width="890" height="120" class="cell" fill="transparent"/>
     
     <text x="90" y="25" class="text-code">
-      <tspan class="keyword">from</tspan> sklearn.metrics <tspan class="keyword">import</tspan> classification_report, confusion_matrix
+      <tspan class="keyword">import</tspan> pandas <tspan class="keyword">as</tspan> pd
     </text>
     <text x="90" y="45" class="text-code">
       <tspan class="keyword">from</tspan> sklearn.linear_model <tspan class="keyword">import</tspan> LogisticRegression
     </text>
     <text x="90" y="65" class="text-code">
-      <tspan class="comment"># Fit Logistic Regression on TF-IDF Vectors</tspan>
+      <tspan class="keyword">import</tspan> joblib
     </text>
     <text x="90" y="85" class="text-code">
-      lr = LogisticRegression(max_iter=1000)
+      <tspan class="comment"># Load datasets</tspan>
     </text>
     <text x="90" y="105" class="text-code">
-      lr.fit(X_train_tfidf, y_train)
+      df_train = pd.read_csv(<tspan class="string">'train.csv'</tspan>)
     </text>
   </g>
 
   <!-- Code Cell 2 -->
   <g transform="translate(20, 250)">
-    <text x="5" y="20" class="text-code" fill="#0066cc">In [13]:</text>
-    <rect x="70" y="0" width="890" height="60" class="cell code-bg"/>
-    <rect x="70" y="0" width="890" height="60" class="cell" fill="transparent"/>
+    <text x="5" y="20" class="text-code" fill="#0066cc">In [43]:</text>
+    <rect x="70" y="0" width="890" height="80" class="cell code-bg"/>
+    <rect x="70" y="0" width="890" height="80" class="cell" fill="transparent"/>
     
     <text x="90" y="25" class="text-code">
-      y_pred = lr.predict(X_test_tfidf)
+      lr_model = LogisticRegression(max_iter=1000)
     </text>
     <text x="90" y="45" class="text-code">
-      <tspan class="keyword">print</tspan>(classification_report(y_test, y_pred))
+      lr_model.fit(X_train_tfidf, y_train)
+    </text>
+    <text x="90" y="65" class="text-code">
+      joblib.dump(lr_model, <tspan class="string">'logreg_improved_model.pkl'</tspan>)
     </text>
 
     <!-- Output block -->
-    <rect x="70" y="70" width="890" height="150" fill="transparent"/>
-    <text x="90" y="90" class="text-output">              precision    recall  f1-score   support</text>
-    <text x="90" y="110" class="text-output">           0       0.91      0.89      0.90      1240</text>
-    <text x="90" y="130" class="text-output">           1       0.88      0.91      0.89      1180</text>
-    <text x="90" y="150" class="text-output">    accuracy                           0.90      2420</text>
-    <text x="90" y="170" class="text-output">   macro avg       0.90      0.90      0.90      2420</text>
-    <text x="90" y="190" class="text-output">weighted avg       0.90      0.90      0.90      2420</text>
+    <rect x="70" y="90" width="890" height="40" fill="transparent"/>
+    <text x="90" y="115" class="text-output">['logreg_improved_model.pkl']</text>
   </g>
   
   <!-- Code Cell 3 (Visualizations) -->
-  <g transform="translate(20, 480)">
-    <text x="5" y="20" class="text-code" fill="#0066cc">In [14]:</text>
-    <rect x="70" y="0" width="890" height="100" class="cell code-bg"/>
-    <rect x="70" y="0" width="890" height="100" class="cell" fill="transparent"/>
+  <g transform="translate(20, 420)">
+    <text x="5" y="20" class="text-code" fill="#0066cc">In [44]:</text>
+    <rect x="70" y="0" width="890" height="120" class="cell code-bg"/>
+    <rect x="70" y="0" width="890" height="120" class="cell" fill="transparent"/>
     
     <text x="90" y="25" class="text-code">
-      <tspan class="comment"># Plot Confusion Matrix</tspan>
+      <tspan class="comment"># Generate Word Cloud for NLP analysis</tspan>
     </text>
     <text x="90" y="45" class="text-code">
-      sns.heatmap(confusion_matrix(y_test, y_pred), annot=<tspan class="keyword">True</tspan>, fmt=<tspan class="string">'d'</tspan>, cmap=<tspan class="string">'Blues'</tspan>)
+      <tspan class="keyword">from</tspan> wordcloud <tspan class="keyword">import</tspan> WordCloud
     </text>
     <text x="90" y="65" class="text-code">
-      plt.title(<tspan class="string">'Logistic Regression Confusion Matrix'</tspan>)
+      text_data = <tspan class="string">" "</tspan>.join(df_train[<tspan class="string">'text'</tspan>])
     </text>
     <text x="90" y="85" class="text-code">
-      plt.show()
+      wordcloud = WordCloud(width=800, height=400, background_color=<tspan class="string">'white'</tspan>).generate(text_data)
+    </text>
+    <text x="90" y="105" class="text-code">
+      plt.imshow(wordcloud, interpolation=<tspan class="string">'bilinear'</tspan>)
     </text>
   </g>
 </svg>

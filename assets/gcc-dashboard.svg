@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
   <defs>
     <style>
-      .bg { fill: #0d1117; }
-      .sidebar { fill: #161b22; stroke: #30363d; stroke-width: 1; }
-      .card { fill: #1c2128; rx: 8; stroke: #30363d; stroke-width: 1; }
-      .text-primary { fill: #c9d1d9; font-family: -apple-system, sans-serif; }
-      .text-muted { fill: #8b949e; font-family: -apple-system, sans-serif; }
-      .text-accent { fill: #58a6ff; font-family: -apple-system, sans-serif; }
-      .badge-critical { fill: #f85149; rx: 4; }
-      .badge-major { fill: #d29922; rx: 4; }
-      .badge-bg { fill: #238636; rx: 4; }
+      .bg { fill: #1c1c1c; }
+      .sidebar { fill: #242424; stroke: #404040; stroke-width: 1; }
+      .card { fill: #2c2c2c; rx: 8; stroke: #404040; stroke-width: 1; }
+      .text-primary { fill: #daddd8; font-family: 'Inter', sans-serif; }
+      .text-muted { fill: #64748B; font-family: 'Inter', sans-serif; }
+      .text-accent { fill: #3B82F6; font-family: 'Inter', sans-serif; }
+      .badge-critical { fill: #EF4444; rx: 4; }
+      .badge-major { fill: #F59E0B; rx: 4; }
+      .badge-bg { fill: #22C55E; rx: 4; }
     </style>
   </defs>
   
@@ -18,7 +18,7 @@
   <!-- Sidebar -->
   <rect x="0" y="0" width="220" height="600" class="sidebar"/>
   <text x="24" y="40" class="text-primary" font-size="20" font-weight="bold" letter-spacing="1">GCC Ops</text>
-  <rect x="20" y="60" width="180" height="36" class="card" fill="#1f6feb" fill-opacity="0.1" stroke="#1f6feb"/>
+  <rect x="20" y="60" width="180" height="36" class="card" fill="rgba(59,130,246,0.1)" stroke="#3B82F6"/>
   <text x="40" y="84" class="text-accent" font-size="14" font-weight="600">Dashboard</text>
   <text x="40" y="124" class="text-muted" font-size="14">Alerts</text>
   <text x="40" y="164" class="text-muted" font-size="14">Incidents</text>
@@ -36,13 +36,13 @@
   <rect x="260" y="100" width="220" height="110" class="card"/>
   <text x="280" y="130" class="text-muted" font-size="13">SLA Compliance</text>
   <text x="280" y="170" class="text-primary" font-size="32" font-weight="bold">98.4%</text>
-  <text x="280" y="190" fill="#3fb950" font-size="12" font-family="-apple-system, sans-serif">+1.2% from last week</text>
+  <text x="280" y="190" fill="#22C55E" font-size="12" font-family="'Inter', sans-serif">+1.2% from last week</text>
 
   <rect x="500" y="100" width="220" height="110" class="card"/>
   <text x="520" y="130" class="text-muted" font-size="13">Active Incidents (P1/P2)</text>
   <text x="520" y="170" class="text-primary" font-size="32" font-weight="bold">3</text>
   <rect x="550" y="147" width="30" height="24" class="badge-critical"/>
-  <text x="557" y="163" fill="#fff" font-size="12" font-weight="bold" font-family="sans-serif">P1</text>
+  <text x="557" y="163" fill="#ffffff" font-size="12" font-weight="bold" font-family="'Inter', sans-serif">P1</text>
   
   <rect x="740" y="100" width="220" height="110" class="card"/>
   <text x="760" y="130" class="text-muted" font-size="13">Active Handovers</text>
@@ -53,25 +53,25 @@
   <rect x="260" y="240" width="460" height="320" class="card"/>
   <text x="280" y="275" class="text-primary" font-size="16" font-weight="600">Incident Volume (24h)</text>
   <!-- Chart grid -->
-  <path d="M 280 320 L 680 320 M 280 370 L 680 370 M 280 420 L 680 420 M 280 470 L 680 470" stroke="#30363d" stroke-width="1" stroke-dasharray="4"/>
+  <path d="M 280 320 L 680 320 M 280 370 L 680 370 M 280 420 L 680 420 M 280 470 L 680 470" stroke="#404040" stroke-width="1" stroke-dasharray="4"/>
   <!-- Chart Line -->
-  <path d="M 280 450 Q 320 400 360 420 T 440 340 T 520 290 T 600 380 T 680 310" fill="none" stroke="#58a6ff" stroke-width="3"/>
+  <path d="M 280 450 Q 320 400 360 420 T 440 340 T 520 290 T 600 380 T 680 310" fill="none" stroke="#3B82F6" stroke-width="3"/>
   <!-- Area under line -->
-  <path d="M 280 450 Q 320 400 360 420 T 440 340 T 520 290 T 600 380 T 680 310 L 680 500 L 280 500 Z" fill="#58a6ff" fill-opacity="0.1"/>
+  <path d="M 280 450 Q 320 400 360 420 T 440 340 T 520 290 T 600 380 T 680 310 L 680 500 L 280 500 Z" fill="#3B82F6" fill-opacity="0.1"/>
 
   <!-- Active Alerts List -->
   <rect x="740" y="240" width="220" height="320" class="card"/>
   <text x="760" y="275" class="text-primary" font-size="16" font-weight="600">Recent Alerts</text>
   
-  <rect x="760" y="300" width="8" height="8" rx="4" fill="#f85149"/>
+  <rect x="760" y="300" width="8" height="8" rx="4" fill="#EF4444"/>
   <text x="780" y="308" class="text-primary" font-size="12" font-weight="bold">Node EU-West Down</text>
   <text x="780" y="324" class="text-muted" font-size="11">2 mins ago</text>
 
-  <rect x="760" y="350" width="8" height="8" rx="4" fill="#d29922"/>
+  <rect x="760" y="350" width="8" height="8" rx="4" fill="#F59E0B"/>
   <text x="780" y="358" class="text-primary" font-size="12" font-weight="bold">High CPU DB-04</text>
   <text x="780" y="374" class="text-muted" font-size="11">15 mins ago</text>
 
-  <rect x="760" y="400" width="8" height="8" rx="4" fill="#d29922"/>
+  <rect x="760" y="400" width="8" height="8" rx="4" fill="#F59E0B"/>
   <text x="780" y="408" class="text-primary" font-size="12" font-weight="bold">API Latency Spike</text>
   <text x="780" y="424" class="text-muted" font-size="11">42 mins ago</text>
 </svg>
