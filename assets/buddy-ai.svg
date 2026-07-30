@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #000000; }
+      .window { fill: #1e1e1e; rx: 12; stroke: #333333; stroke-width: 1; }
+      .header { fill: #252526; stroke: #333333; stroke-width: 1; }
+      .text-title { fill: #ffffff; font-family: -apple-system, sans-serif; font-size: 14px; font-weight: 500; }
+      .text-muted { fill: #858585; font-family: -apple-system, sans-serif; font-size: 12px; }
+      .text-content { fill: #cccccc; font-family: 'Consolas', monospace; font-size: 13px; }
+      .mode-btn { fill: #2d2d2d; rx: 4; stroke: #3e3e42; }
+      .mode-btn-active { fill: #007acc; rx: 4; }
+      .input-box { fill: #1e1e1e; rx: 4; stroke: #3c3c3c; stroke-width: 1; }
+      .result-box { fill: #1e1e1e; rx: 4; stroke: #3c3c3c; stroke-width: 1; border-left: 3px solid #007acc; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="600" class="bg"/>
+
+  <!-- Main Floating Assistant Window -->
+  <g transform="translate(250, 40)">
+    <rect width="500" height="520" class="window"/>
+    
+    <!-- Header -->
+    <path d="M 0 12 Q 0 0 12 0 L 488 0 Q 500 0 500 12 L 500 40 L 0 40 Z" class="header"/>
+    <rect x="16" y="12" width="16" height="16" fill="#007acc" rx="4"/>
+    <text x="44" y="25" class="text-title">Buddy AI</text>
+    <text x="110" y="25" class="text-muted">qwen2.5:3b</text>
+    
+    <text x="400" y="25" class="text-muted">🟢 Ollama ready</text>
+    <text x="480" y="25" fill="#858585" font-family="sans-serif">✕</text>
+    
+    <!-- Input Section -->
+    <text x="20" y="70" class="text-muted">📋 Selected text</text>
+    <rect x="20" y="85" width="460" height="80" class="input-box"/>
+    <text x="32" y="110" class="text-content">function calculateYield(passed, failed) {</text>
+    <text x="32" y="130" class="text-content">  return passed / (passed + failed);</text>
+    <text x="32" y="150" class="text-content">}</text>
+
+    <rect x="20" y="175" width="460" height="32" fill="#007acc" rx="4"/>
+    <text x="230" y="196" fill="#ffffff" font-size="13" font-family="-apple-system, sans-serif">📸 Capture Screen</text>
+
+    <!-- Modes Grid -->
+    <text x="20" y="240" class="text-muted">Choose a mode</text>
+    
+    <rect x="20" y="255" width="145" height="28" class="mode-btn"/>
+    <text x="55" y="274" fill="#cccccc" font-size="12" font-family="sans-serif">🚀 Enhance Prompt</text>
+    
+    <rect x="175" y="255" width="145" height="28" class="mode-btn"/>
+    <text x="220" y="274" fill="#cccccc" font-size="12" font-family="sans-serif">✨ Improve Text</text>
+    
+    <rect x="330" y="255" width="150" height="28" class="mode-btn-active"/>
+    <text x="375" y="274" fill="#ffffff" font-size="12" font-family="sans-serif">📝 Fix Grammar</text>
+
+    <rect x="20" y="295" width="145" height="28" class="mode-btn"/>
+    <text x="50" y="314" fill="#cccccc" font-size="12" font-family="sans-serif">💼 Make Professional</text>
+
+    <!-- Result Section -->
+    <text x="20" y="355" class="text-muted">✨ Result</text>
+    <text x="360" y="355" class="text-muted">📋 Copy</text>
+    <text x="415" y="355" class="text-muted">⇄ Replace</text>
+    
+    <rect x="20" y="370" width="460" height="130" class="result-box"/>
+    <!-- Simulated split output -->
+    <text x="32" y="395" class="text-muted">Solution</text>
+    <text x="32" y="420" class="text-content" fill="#9cdcfe">export const</text>
+    <text x="120" y="420" class="text-content" fill="#dcdcaa">calculateYield</text>
+    <text x="230" y="420" class="text-content" fill="#cccccc">= (passed:</text>
+    <text x="310" y="420" class="text-content" fill="#4ec9b0">number</text>
+    <text x="360" y="420" class="text-content" fill="#cccccc">, failed:</text>
+    <text x="430" y="420" class="text-content" fill="#4ec9b0">number</text>
+    <text x="32" y="440" class="text-content" fill="#cccccc">):</text>
+    <text x="55" y="440" class="text-content" fill="#4ec9b0">number</text>
+    <text x="110" y="440" class="text-content" fill="#569cd6">=></text>
+    <text x="135" y="440" class="text-content" fill="#cccccc">{</text>
+    <text x="32" y="460" class="text-content" fill="#cccccc">  return passed / (passed + failed);</text>
+    <text x="32" y="480" class="text-content" fill="#cccccc">}</text>
+
+  </g>
+</svg>

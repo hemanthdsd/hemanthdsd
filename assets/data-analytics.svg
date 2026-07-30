@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #f0f0f0; }
+      .panel { fill: #ffffff; stroke: #d0d0d0; stroke-width: 1; }
+      .header { fill: #e0e0e0; stroke: #d0d0d0; stroke-width: 1; }
+      .text-title { fill: #333333; font-family: -apple-system, sans-serif; font-size: 13px; font-weight: bold; }
+      .text-code { fill: #2b91af; font-family: 'Consolas', monospace; font-size: 13px; }
+      .text-comment { fill: #008000; font-family: 'Consolas', monospace; font-size: 13px; }
+      .text-output { fill: #333333; font-family: 'Consolas', monospace; font-size: 12px; }
+      .axis-line { stroke: #333333; stroke-width: 1; }
+      .scatter-pt { fill: rgba(0, 102, 204, 0.4); stroke: #0066cc; stroke-width: 1; }
+      .reg-line { stroke: #cc0000; stroke-width: 2; }
+      
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #1e1e1e; }
+        .panel { fill: #252526; stroke: #3e3e42; }
+        .header { fill: #2d2d30; stroke: #3e3e42; }
+        .text-title { fill: #cccccc; }
+        .text-code { fill: #4ec9b0; }
+        .text-comment { fill: #608b4e; }
+        .text-output { fill: #d4d4d4; }
+        .axis-line { stroke: #cccccc; }
+        .scatter-pt { fill: rgba(86, 156, 214, 0.4); stroke: #569cd6; }
+        .reg-line { fill: none; stroke: #f44336; stroke-width: 2; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1000" height="600" class="bg"/>
+
+  <!-- Top Left: Source Code -->
+  <g transform="translate(10, 10)">
+    <rect width="480" height="340" class="panel"/>
+    <rect width="480" height="25" class="header"/>
+    <text x="10" y="17" class="text-title">analysis.R *</text>
+    
+    <text x="10" y="50" class="text-comment"># Multiple Regression Analysis: Usability &amp; Workload</text>
+    <text x="10" y="70" class="text-code">model &lt;- lm(UsabilityScore ~ TaskLoadIndex + Age, data=df)</text>
+    <text x="10" y="90" class="text-code">summary(model)</text>
+    <text x="10" y="110" class="text-comment"># Generate Scatter Plot with Regression Line</text>
+    <text x="10" y="130" class="text-code">library(ggplot2)</text>
+    <text x="10" y="150" class="text-code">ggplot(df, aes(x=TaskLoadIndex, y=UsabilityScore)) +</text>
+    <text x="10" y="170" class="text-code">  geom_point(alpha=0.6, color="blue") +</text>
+    <text x="10" y="190" class="text-code">  geom_smooth(method="lm", color="red") +</text>
+    <text x="10" y="210" class="text-code">  theme_minimal() +</text>
+    <text x="10" y="230" class="text-code">  labs(title="Impact of Workload on Usability")</text>
+  </g>
+
+  <!-- Bottom Left: Console Output -->
+  <g transform="translate(10, 360)">
+    <rect width="480" height="230" class="panel"/>
+    <rect width="480" height="25" class="header"/>
+    <text x="10" y="17" class="text-title">Console</text>
+
+    <text x="10" y="50" class="text-output">Call:</text>
+    <text x="10" y="65" class="text-output">lm(formula = UsabilityScore ~ TaskLoadIndex + Age, data = df)</text>
+    
+    <text x="10" y="95" class="text-output">Residuals:</text>
+    <text x="10" y="110" class="text-output">    Min      1Q  Median      3Q     Max </text>
+    <text x="10" y="125" class="text-output">-12.435  -3.210   0.450   3.820  14.210 </text>
+    
+    <text x="10" y="155" class="text-output">Coefficients:</text>
+    <text x="10" y="170" class="text-output">              Estimate Std. Error t value Pr(&gt;|t|)    </text>
+    <text x="10" y="185" class="text-output">(Intercept)   85.2410     2.1450   39.74  &lt; 2e-16 ***</text>
+    <text x="10" y="200" class="text-output">TaskLoadIndex -0.4821     0.0542   -8.89 3.12e-14 ***</text>
+  </g>
+
+  <!-- Right: Plots Pane -->
+  <g transform="translate(500, 10)">
+    <rect width="490" height="580" class="panel"/>
+    <rect width="490" height="25" class="header"/>
+    <text x="10" y="17" class="text-title">Plots</text>
+    
+    <text x="245" y="70" class="text-title" font-size="16" text-anchor="middle">Impact of Workload on Usability</text>
+    
+    <!-- Plot Area -->
+    <g transform="translate(60, 100)">
+      <!-- Grid -->
+      <path d="M 0 50 L 380 50 M 0 150 L 380 150 M 0 250 L 380 250 M 0 350 L 380 350" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4"/>
+      <!-- Axes -->
+      <path d="M 0 400 L 400 400" class="axis-line"/>
+      <path d="M 0 0 L 0 400" class="axis-line"/>
+      
+      <!-- Axis Labels -->
+      <text x="-40" y="200" class="text-title" transform="rotate(-90, -40, 200)" text-anchor="middle">UsabilityScore (SUS)</text>
+      <text x="200" y="440" class="text-title" text-anchor="middle">TaskLoadIndex (NASA-TLX)</text>
+      
+      <!-- Scatter Points -->
+      <circle cx="50" cy="80" r="5" class="scatter-pt"/>
+      <circle cx="80" cy="110" r="5" class="scatter-pt"/>
+      <circle cx="120" cy="140" r="5" class="scatter-pt"/>
+      <circle cx="150" cy="180" r="5" class="scatter-pt"/>
+      <circle cx="200" cy="190" r="5" class="scatter-pt"/>
+      <circle cx="250" cy="240" r="5" class="scatter-pt"/>
+      <circle cx="280" cy="270" r="5" class="scatter-pt"/>
+      <circle cx="320" cy="320" r="5" class="scatter-pt"/>
+      <circle cx="350" cy="360" r="5" class="scatter-pt"/>
+      
+      <circle cx="100" cy="90" r="5" class="scatter-pt"/>
+      <circle cx="160" cy="150" r="5" class="scatter-pt"/>
+      <circle cx="220" cy="250" r="5" class="scatter-pt"/>
+      <circle cx="300" cy="280" r="5" class="scatter-pt"/>
+      <circle cx="360" cy="330" r="5" class="scatter-pt"/>
+
+      <circle cx="70" cy="130" r="5" class="scatter-pt"/>
+      <circle cx="130" cy="170" r="5" class="scatter-pt"/>
+      <circle cx="180" cy="210" r="5" class="scatter-pt"/>
+      <circle cx="260" cy="260" r="5" class="scatter-pt"/>
+      <circle cx="340" cy="310" r="5" class="scatter-pt"/>
+      
+      <!-- Regression Line -->
+      <path d="M 20 50 L 380 380" class="reg-line"/>
+      <!-- Confidence Interval Shading -->
+      <path d="M 20 40 L 380 350 L 380 410 L 20 60 Z" fill="#999999" fill-opacity="0.2"/>
+    </g>
+  </g>
+</svg>

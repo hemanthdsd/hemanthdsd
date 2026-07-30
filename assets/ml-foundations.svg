@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #f8f9fa; }
+      .cell { fill: #ffffff; stroke: #dee2e6; stroke-width: 1; rx: 4; }
+      .code-bg { fill: #f8f9fa; }
+      .text-code { font-family: 'Consolas', monospace; font-size: 13px; }
+      .text-output { font-family: 'Consolas', monospace; font-size: 12px; fill: #495057; }
+      .text-md { font-family: -apple-system, sans-serif; font-size: 15px; fill: #212529; }
+      .keyword { fill: #0000ff; font-weight: bold; }
+      .string { fill: #a31515; }
+      .comment { fill: #008000; }
+      
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #0d1117; }
+        .cell { fill: #161b22; stroke: #30363d; }
+        .code-bg { fill: #0d1117; }
+        .text-output { fill: #8b949e; }
+        .text-md { fill: #c9d1d9; }
+        .keyword { fill: #ff7b72; }
+        .string { fill: #a5d6ff; }
+        .comment { fill: #8b949e; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1000" height="600" class="bg"/>
+
+  <!-- Toolbar -->
+  <rect x="0" y="0" width="1000" height="40" fill="#e9ecef" stroke="#dee2e6"/>
+  <text x="20" y="25" font-family="-apple-system, sans-serif" font-weight="bold" fill="#495057">Jupyter</text>
+  <text x="100" y="25" font-family="-apple-system, sans-serif" fill="#495057">machine_learning_pipeline.ipynb</text>
+
+  <!-- Markdown Cell -->
+  <g transform="translate(20, 60)">
+    <rect width="960" height="40" class="cell" fill="transparent" stroke="none"/>
+    <text x="20" y="25" class="text-md"><b>Model Evaluation:</b> Logistic Regression vs. Random Forest Classifier</text>
+  </g>
+
+  <!-- Code Cell 1 -->
+  <g transform="translate(20, 110)">
+    <text x="5" y="20" class="text-code" fill="#0066cc">In [12]:</text>
+    <rect x="70" y="0" width="890" height="120" class="cell code-bg"/>
+    <rect x="70" y="0" width="890" height="120" class="cell" fill="transparent"/>
+    
+    <text x="90" y="25" class="text-code">
+      <tspan class="keyword">from</tspan> sklearn.metrics <tspan class="keyword">import</tspan> classification_report, confusion_matrix
+    </text>
+    <text x="90" y="45" class="text-code">
+      <tspan class="keyword">from</tspan> sklearn.linear_model <tspan class="keyword">import</tspan> LogisticRegression
+    </text>
+    <text x="90" y="65" class="text-code">
+      <tspan class="comment"># Fit Logistic Regression on TF-IDF Vectors</tspan>
+    </text>
+    <text x="90" y="85" class="text-code">
+      lr = LogisticRegression(max_iter=1000)
+    </text>
+    <text x="90" y="105" class="text-code">
+      lr.fit(X_train_tfidf, y_train)
+    </text>
+  </g>
+
+  <!-- Code Cell 2 -->
+  <g transform="translate(20, 250)">
+    <text x="5" y="20" class="text-code" fill="#0066cc">In [13]:</text>
+    <rect x="70" y="0" width="890" height="60" class="cell code-bg"/>
+    <rect x="70" y="0" width="890" height="60" class="cell" fill="transparent"/>
+    
+    <text x="90" y="25" class="text-code">
+      y_pred = lr.predict(X_test_tfidf)
+    </text>
+    <text x="90" y="45" class="text-code">
+      <tspan class="keyword">print</tspan>(classification_report(y_test, y_pred))
+    </text>
+
+    <!-- Output block -->
+    <rect x="70" y="70" width="890" height="150" fill="transparent"/>
+    <text x="90" y="90" class="text-output">              precision    recall  f1-score   support</text>
+    <text x="90" y="110" class="text-output">           0       0.91      0.89      0.90      1240</text>
+    <text x="90" y="130" class="text-output">           1       0.88      0.91      0.89      1180</text>
+    <text x="90" y="150" class="text-output">    accuracy                           0.90      2420</text>
+    <text x="90" y="170" class="text-output">   macro avg       0.90      0.90      0.90      2420</text>
+    <text x="90" y="190" class="text-output">weighted avg       0.90      0.90      0.90      2420</text>
+  </g>
+  
+  <!-- Code Cell 3 (Visualizations) -->
+  <g transform="translate(20, 480)">
+    <text x="5" y="20" class="text-code" fill="#0066cc">In [14]:</text>
+    <rect x="70" y="0" width="890" height="100" class="cell code-bg"/>
+    <rect x="70" y="0" width="890" height="100" class="cell" fill="transparent"/>
+    
+    <text x="90" y="25" class="text-code">
+      <tspan class="comment"># Plot Confusion Matrix</tspan>
+    </text>
+    <text x="90" y="45" class="text-code">
+      sns.heatmap(confusion_matrix(y_test, y_pred), annot=<tspan class="keyword">True</tspan>, fmt=<tspan class="string">'d'</tspan>, cmap=<tspan class="string">'Blues'</tspan>)
+    </text>
+    <text x="90" y="65" class="text-code">
+      plt.title(<tspan class="string">'Logistic Regression Confusion Matrix'</tspan>)
+    </text>
+    <text x="90" y="85" class="text-code">
+      plt.show()
+    </text>
+  </g>
+</svg>

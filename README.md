@@ -14,7 +14,7 @@
 An AI-assisted manufacturing deviation and yield-intelligence platform for controlled and regulated environments.
 <br><br>
 <a href="https://github.com/hemanthdsd/opsinsight-ai">
-  <img src="assets/opsinsight.jpg" alt="OpsInsight AI Platform" width="100%" style="border-radius: 8px;">
+  <img src="assets/opsinsight.svg" alt="OpsInsight AI Platform" width="100%" style="border-radius: 8px;">
 </a>
 <br><br>
 <code>Angular 18</code> · <code>NestJS</code> · <code>PostgreSQL</code> · <code>Gemini</code> · <code>pgvector</code><br>
@@ -26,7 +26,7 @@ An AI-assisted manufacturing deviation and yield-intelligence platform for contr
 A local-first Windows writing and vision assistant powered by private Ollama inference.
 <br><br>
 <a href="https://github.com/hemanthdsd/buddy-ai">
-  <img src="assets/buddy-ai.jpg" alt="Buddy AI Interface" width="100%" style="border-radius: 8px;">
+  <img src="assets/buddy-ai.svg" alt="Buddy AI Interface" width="100%" style="border-radius: 8px;">
 </a>
 <br><br>
 <code>Electron</code> · <code>React</code> · <code>TypeScript</code> · <code>Ollama</code><br>
@@ -38,7 +38,7 @@ A local-first Windows writing and vision assistant powered by private Ollama inf
 An applied simulation exploring responsible-AI auditing, governance, fairness and risk.
 <br><br>
 <a href="https://github.com/hemanthdsd/AI-ethics-auditing-simulation">
-  <img src="assets/ai-ethics.jpg" alt="AI Ethics Simulation" width="100%" style="border-radius: 8px;">
+  <img src="assets/ai-ethics.svg" alt="AI Ethics Simulation" width="100%" style="border-radius: 8px;">
 </a>
 <br><br>
 <code>Python</code> · <code>Simulation</code> · <code>Ethics</code><br>
@@ -50,7 +50,7 @@ An applied simulation exploring responsible-AI auditing, governance, fairness an
 A machine-learning workflow covering exploratory analysis, logistic regression, NLP and model evaluation.
 <br><br>
 <a href="https://github.com/hemanthdsd/machine-learning-foundations-project">
-  <img src="assets/ml-foundations.jpg" alt="ML Foundations Analysis" width="100%" style="border-radius: 8px;">
+  <img src="assets/ml-foundations.svg" alt="ML Foundations Analysis" width="100%" style="border-radius: 8px;">
 </a>
 <br><br>
 <code>Python</code> · <code>pandas</code> · <code>scikit-learn</code> · <code>NLTK</code><br>
@@ -62,7 +62,7 @@ A machine-learning workflow covering exploratory analysis, logistic regression, 
 Statistical research and visual analysis covering usability, workload and advertising effectiveness.
 <br><br>
 <a href="https://github.com/hemanthdsd/Qantitative-Data-Analytics-">
-  <img src="assets/data-analytics.jpg" alt="Data Analytics Charts" width="100%" style="border-radius: 8px;">
+  <img src="assets/data-analytics.svg" alt="Data Analytics Charts" width="100%" style="border-radius: 8px;">
 </a>
 <br><br>
 <code>R</code> · <code>RStudio</code> · <code>Regression</code> · <code>Hypothesis testing</code><br>
@@ -74,7 +74,7 @@ Statistical research and visual analysis covering usability, workload and advert
 An interactive data visualization and metrics dashboard for streamlined business analytics.
 <br><br>
 <a href="https://github.com/hemanthdsd/Gcc-dashboard">
-  <img src="assets/gcc-dashboard.jpg" alt="GCC Dashboard Interface" width="100%" style="border-radius: 8px;">
+  <img src="assets/gcc-dashboard.svg" alt="GCC Dashboard Interface" width="100%" style="border-radius: 8px;">
 </a>
 <br><br>
 <code>JavaScript</code> · <code>Dashboard</code> · <code>Metrics</code><br>

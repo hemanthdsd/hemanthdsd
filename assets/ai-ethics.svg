@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .window-chrome { fill: #323233; }
+      .grid-line { stroke: #333333; stroke-width: 1; }
+      .text-title { fill: #cccccc; font-family: monospace; font-size: 14px; }
+      .text-log { fill: #00ff00; font-family: monospace; font-size: 12px; }
+      .text-alert { fill: #ff3333; font-family: monospace; font-size: 12px; font-weight: bold; }
+      .text-info { fill: #00ccff; font-family: monospace; font-size: 12px; }
+      .car { fill: #007acc; }
+      .pedestrian { fill: #ff9900; }
+      .barrier { fill: #ff3333; }
+      .sensor-cone { fill: rgba(0, 204, 255, 0.15); stroke: #00ccff; stroke-width: 1; stroke-dasharray: 4; }
+      .panel { fill: #252526; stroke: #3e3e42; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="600" class="bg"/>
+  
+  <!-- Window Chrome -->
+  <rect x="0" y="0" width="1000" height="30" class="window-chrome"/>
+  <circle cx="20" cy="15" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="15" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="15" r="6" fill="#27c93f"/>
+  <text x="400" y="20" class="text-title">ai_ethics_simulation.py - Pygame Window</text>
+
+  <!-- Simulation Grid -->
+  <g transform="translate(20, 50)">
+    <rect width="600" height="520" fill="#111111" stroke="#333333"/>
+    <!-- Grid lines -->
+    <path d="M 100 0 L 100 520 M 200 0 L 200 520 M 300 0 L 300 520 M 400 0 L 400 520 M 500 0 L 500 520" class="grid-line"/>
+    <path d="M 0 100 L 600 100 M 0 200 L 600 200 M 0 300 L 600 300 M 0 400 L 600 400 M 0 500 L 600 500" class="grid-line"/>
+    
+    <!-- Road lines -->
+    <path d="M 300 0 L 300 520" stroke="#ffff00" stroke-width="2" stroke-dasharray="20, 20"/>
+    <path d="M 150 0 L 150 520" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 450 0 L 450 520" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Car (Autonomous Vehicle) -->
+    <rect x="275" y="380" width="50" height="100" rx="4" class="car"/>
+    
+    <!-- Sensor Cone -->
+    <path d="M 300 380 L 100 150 L 500 150 Z" class="sensor-cone"/>
+
+    <!-- Obstacles / Entities -->
+    <rect x="260" y="200" width="80" height="20" class="barrier"/>
+    <circle cx="380" cy="220" r="12" class="pedestrian"/>
+    <circle cx="180" cy="280" r="12" class="pedestrian"/>
+    
+    <!-- Trajectory Paths -->
+    <path d="M 300 380 Q 300 300 180 200" fill="none" stroke="#ff3333" stroke-width="2" stroke-dasharray="5,5"/> <!-- Swerve Left: Hits Pedestrian -->
+    <path d="M 300 380 Q 300 300 420 200" fill="none" stroke="#ff3333" stroke-width="2" stroke-dasharray="5,5"/> <!-- Swerve Right: Hits Pedestrian -->
+    <path d="M 300 380 L 300 220" fill="none" stroke="#00ff00" stroke-width="2" stroke-dasharray="5,5"/> <!-- Brake Straight: Hits Barrier -->
+  </g>
+
+  <!-- Metrics / Decision Panel -->
+  <g transform="translate(640, 50)">
+    <rect width="340" height="520" class="panel"/>
+    
+    <text x="20" y="30" class="text-title" font-weight="bold">AUDIT LOG &amp; DECISION MATRIX</text>
+    <path d="M 20 40 L 320 40" stroke="#333333"/>
+    
+    <text x="20" y="70" class="text-info">[STATE] Environment: Urban_Intersection</text>
+    <text x="20" y="90" class="text-info">[STATE] Velocity: 45 km/h</text>
+    <text x="20" y="110" class="text-info">[STATE] Weather: Clear</text>
+    
+    <text x="20" y="150" class="text-alert">! OBSTACLE DETECTED !</text>
+    <text x="20" y="170" class="text-info">Type: Static Barrier (Lane Center)</text>
+    <text x="20" y="190" class="text-info">Distance: 45m | TTC: 3.6s</text>
+    
+    <text x="20" y="230" class="text-title">EVALUATING TRAJECTORIES...</text>
+    
+    <!-- Matrix Table -->
+    <rect x="20" y="250" width="300" height="150" fill="#111111" stroke="#333333"/>
+    <text x="30" y="275" class="text-log">T-1 (Brake): </text>
+    <text x="150" y="275" class="text-alert">Impact (Barrier)</text>
+    <text x="280" y="275" class="text-info">R:0.4</text>
+    
+    <text x="30" y="315" class="text-log">T-2 (Swerve L): </text>
+    <text x="150" y="315" class="text-alert">Impact (Ped_1)</text>
+    <text x="280" y="315" class="text-alert">R:0.9</text>
+
+    <text x="30" y="355" class="text-log">T-3 (Swerve R): </text>
+    <text x="150" y="355" class="text-alert">Impact (Ped_2)</text>
+    <text x="280" y="355" class="text-alert">R:0.9</text>
+    
+    <text x="20" y="440" class="text-info">>>> SELECTING OPTIMAL POLICY</text>
+    <text x="20" y="460" class="text-info">>>> MINIMIZE_HARM_OBJ = T-1</text>
+    <text x="20" y="480" class="text-log">>>> EXECUTING HARD BRAKING</text>
+  </g>
+</svg>
