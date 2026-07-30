@@ -1,106 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
   <defs>
+    <!-- Dark Vignette Gradient (Netflix Style) -->
+    <linearGradient id="ottGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#05080c" stop-opacity="1" />
+      <stop offset="40%" stop-color="#05080c" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#05080c" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#05080c" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Subdued UI Colors for Background -->
     <style>
-      .bg { fill: #f8f9fa; }
-      .cell { fill: #ffffff; stroke: #dee2e6; stroke-width: 1; rx: 4; }
-      .code-bg { fill: #f8f9fa; }
-      .text-code { font-family: 'Consolas', monospace; font-size: 13px; }
-      .text-output { font-family: 'Consolas', monospace; font-size: 12px; fill: #495057; }
-      .text-md { font-family: -apple-system, sans-serif; font-size: 15px; fill: #212529; }
-      .keyword { fill: #0000ff; font-weight: bold; }
-      .string { fill: #a31515; }
-      .comment { fill: #008000; }
+      .bg-base { fill: #0d1117; }
+      .bg-cell { fill: #161b22; stroke: #30363d; stroke-width: 1; rx: 8; }
+      .text-ui-code { fill: #c9d1d9; font-family: 'Consolas', monospace; font-size: 16px; }
+      .text-ui-kw { fill: #ff7b72; font-family: 'Consolas', monospace; font-size: 16px; font-weight: bold; }
+      .text-ui-str { fill: #a5d6ff; font-family: 'Consolas', monospace; font-size: 16px; }
       
-      @media (prefers-color-scheme: dark) {
-        .bg { fill: #0d1117; }
-        .cell { fill: #161b22; stroke: #30363d; }
-        .code-bg { fill: #0d1117; }
-        .text-output { fill: #8b949e; }
-        .text-md { fill: #c9d1d9; }
-        .keyword { fill: #ff7b72; }
-        .string { fill: #a5d6ff; }
-        .comment { fill: #8b949e; }
-      }
+      .title { fill: #ffffff; font-family: 'Inter', -apple-system, sans-serif; font-size: 72px; font-weight: 900; letter-spacing: -1px; }
+      .match { fill: #4ade80; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 800; }
+      .tags { fill: #a1a1aa; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; }
+      .desc { fill: #d4d4d8; font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 400; line-height: 1.5; }
+      
+      .btn-play { fill: #ffffff; rx: 8; }
+      .btn-text { fill: #000000; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; }
+      .btn-secondary { fill: rgba(255, 255, 255, 0.2); rx: 8; }
+      .btn-text-sec { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; }
     </style>
   </defs>
 
-  <rect width="1000" height="600" class="bg"/>
+  <!-- Base Background -->
+  <rect width="1280" height="720" class="bg-base"/>
 
-  <!-- Toolbar -->
-  <rect x="0" y="0" width="1000" height="40" fill="#e9ecef" stroke="#dee2e6"/>
-  <text x="20" y="25" font-family="-apple-system, sans-serif" font-weight="bold" fill="#495057">Jupyter</text>
-  <text x="100" y="25" font-family="-apple-system, sans-serif" fill="#495057">23202425_Machine_learning_foundations_project.ipynb</text>
-
-  <!-- Markdown Cell -->
-  <g transform="translate(20, 60)">
-    <rect width="960" height="40" class="cell" fill="transparent" stroke="none"/>
-    <text x="20" y="25" class="text-md"><b>IS41070:</b> Training the Logistic Regression Model &amp; Saving Artifacts</text>
-  </g>
-
-  <!-- Code Cell 1 -->
-  <g transform="translate(20, 110)">
-    <text x="5" y="20" class="text-code" fill="#0066cc">In [42]:</text>
-    <rect x="70" y="0" width="890" height="120" class="cell code-bg"/>
-    <rect x="70" y="0" width="890" height="120" class="cell" fill="transparent"/>
+  <!-- Background UI Layer (The "Movie Scene" offset to the right/top) -->
+  <g transform="translate(600, -20) scale(1.2) rotate(3)">
     
-    <text x="90" y="25" class="text-code">
-      <tspan class="keyword">import</tspan> pandas <tspan class="keyword">as</tspan> pd
-    </text>
-    <text x="90" y="45" class="text-code">
-      <tspan class="keyword">from</tspan> sklearn.linear_model <tspan class="keyword">import</tspan> LogisticRegression
-    </text>
-    <text x="90" y="65" class="text-code">
-      <tspan class="keyword">import</tspan> joblib
-    </text>
-    <text x="90" y="85" class="text-code">
-      <tspan class="comment"># Load datasets</tspan>
-    </text>
-    <text x="90" y="105" class="text-code">
-      df_train = pd.read_csv(<tspan class="string">'train.csv'</tspan>)
-    </text>
+    <text x="50" y="80" fill="#c9d1d9" font-family="'Inter', sans-serif" font-size="20" font-weight="700">machine_learning_foundations.ipynb</text>
+    
+    <!-- Code Cell 1 -->
+    <text x="20" y="140" fill="#58a6ff" font-family="'Consolas', monospace" font-size="14">In [42]:</text>
+    <rect x="90" y="115" width="550" height="130" class="bg-cell"/>
+    <text x="110" y="145" class="text-ui-code"><tspan class="text-ui-kw">import</tspan> pandas <tspan class="text-ui-kw">as</tspan> pd</text>
+    <text x="110" y="175" class="text-ui-code"><tspan class="text-ui-kw">from</tspan> sklearn.linear_model <tspan class="text-ui-kw">import</tspan> LogisticRegression</text>
+    <text x="110" y="205" class="text-ui-code"><tspan class="text-ui-kw">import</tspan> joblib</text>
+    <text x="110" y="235" class="text-ui-code">df_train = pd.read_csv(<tspan class="text-ui-str">'train.csv'</tspan>)</text>
+    
+    <!-- Code Cell 2 -->
+    <text x="20" y="295" fill="#58a6ff" font-family="'Consolas', monospace" font-size="14">In [43]:</text>
+    <rect x="90" y="270" width="550" height="100" class="bg-cell"/>
+    <text x="110" y="300" class="text-ui-code">lr_model = LogisticRegression(max_iter=1000)</text>
+    <text x="110" y="330" class="text-ui-code">lr_model.fit(X_train_tfidf, y_train)</text>
+    <text x="110" y="360" class="text-ui-code">joblib.dump(lr_model, <tspan class="text-ui-str">'logreg_improved_model.pkl'</tspan>)</text>
+
+    <!-- Output -->
+    <text x="110" y="410" fill="#8b949e" font-family="'Consolas', monospace" font-size="14">['logreg_improved_model.pkl']</text>
+
+    <!-- Code Cell 3 -->
+    <text x="20" y="465" fill="#58a6ff" font-family="'Consolas', monospace" font-size="14">In [44]:</text>
+    <rect x="90" y="440" width="550" height="130" class="bg-cell"/>
+    <text x="110" y="470" class="text-ui-code"><tspan class="text-ui-kw">from</tspan> wordcloud <tspan class="text-ui-kw">import</tspan> WordCloud</text>
+    <text x="110" y="500" class="text-ui-code">text_data = <tspan class="text-ui-str">" "</tspan>.join(df_train[<tspan class="text-ui-str">'text'</tspan>])</text>
+    <text x="110" y="530" class="text-ui-code">wordcloud = WordCloud(width=800, height=400)</text>
+    <text x="110" y="560" class="text-ui-code">plt.imshow(wordcloud, interpolation=<tspan class="text-ui-str">'bilinear'</tspan>)</text>
   </g>
 
-  <!-- Code Cell 2 -->
-  <g transform="translate(20, 250)">
-    <text x="5" y="20" class="text-code" fill="#0066cc">In [43]:</text>
-    <rect x="70" y="0" width="890" height="80" class="cell code-bg"/>
-    <rect x="70" y="0" width="890" height="80" class="cell" fill="transparent"/>
-    
-    <text x="90" y="25" class="text-code">
-      lr_model = LogisticRegression(max_iter=1000)
-    </text>
-    <text x="90" y="45" class="text-code">
-      lr_model.fit(X_train_tfidf, y_train)
-    </text>
-    <text x="90" y="65" class="text-code">
-      joblib.dump(lr_model, <tspan class="string">'logreg_improved_model.pkl'</tspan>)
-    </text>
+  <!-- OTT Gradient Overlay (The Vignette) -->
+  <rect width="1280" height="720" fill="url(#ottGradient)"/>
 
-    <!-- Output block -->
-    <rect x="70" y="90" width="890" height="40" fill="transparent"/>
-    <text x="90" y="115" class="text-output">['logreg_improved_model.pkl']</text>
-  </g>
-  
-  <!-- Code Cell 3 (Visualizations) -->
-  <g transform="translate(20, 420)">
-    <text x="5" y="20" class="text-code" fill="#0066cc">In [44]:</text>
-    <rect x="70" y="0" width="890" height="120" class="cell code-bg"/>
-    <rect x="70" y="0" width="890" height="120" class="cell" fill="transparent"/>
+  <!-- OTT Foreground Metadata (Bottom Left Anchor) -->
+  <g transform="translate(80, 420)">
     
-    <text x="90" y="25" class="text-code">
-      <tspan class="comment"># Generate Word Cloud for NLP analysis</tspan>
-    </text>
-    <text x="90" y="45" class="text-code">
-      <tspan class="keyword">from</tspan> wordcloud <tspan class="keyword">import</tspan> WordCloud
-    </text>
-    <text x="90" y="65" class="text-code">
-      text_data = <tspan class="string">" "</tspan>.join(df_train[<tspan class="string">'text'</tspan>])
-    </text>
-    <text x="90" y="85" class="text-code">
-      wordcloud = WordCloud(width=800, height=400, background_color=<tspan class="string">'white'</tspan>).generate(text_data)
-    </text>
-    <text x="90" y="105" class="text-code">
-      plt.imshow(wordcloud, interpolation=<tspan class="string">'bilinear'</tspan>)
-    </text>
+    <!-- Badges / Tags -->
+    <text x="0" y="0" class="match">98% Match</text>
+    <text x="120" y="0" class="tags">2024</text>
+    <rect x="180" y="-16" width="30" height="22" fill="none" stroke="#a1a1aa" stroke-width="1" rx="4"/>
+    <text x="188" y="-1" fill="#a1a1aa" font-family="'Inter', sans-serif" font-size="12" font-weight="700">R&amp;D</text>
+    <text x="230" y="0" class="tags">Python • pandas • scikit-learn</text>
+
+    <!-- Title -->
+    <text x="0" y="70" class="title">ML Foundations</text>
+
+    <!-- Description -->
+    <text x="0" y="120" class="desc">A machine-learning workflow covering exploratory analysis,</text>
+    <text x="0" y="150" class="desc">logistic regression, NLP classification, and model evaluation.</text>
+
+    <!-- Action Buttons -->
+    <rect x="0" y="190" width="200" height="56" class="btn-play"/>
+    <path d="M 40 208 L 40 228 L 56 218 Z" fill="#000000"/>
+    <text x="70" y="225" class="btn-text">View Project</text>
+
+    <rect x="220" y="190" width="200" height="56" class="btn-secondary"/>
+    <circle cx="250" cy="218" r="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 250 213 L 250 223 M 245 218 L 255 218" stroke="#ffffff" stroke-width="2"/>
+    <text x="280" y="225" class="btn-text-sec">Source Code</text>
+
   </g>
+
 </svg>

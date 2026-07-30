@@ -1,77 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
   <defs>
+    <!-- Dark Vignette Gradient (Netflix Style) -->
+    <linearGradient id="ottGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0a" stop-opacity="1" />
+      <stop offset="40%" stop-color="#0a0a0a" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#0a0a0a" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Subdued UI Colors for Background -->
     <style>
-      .bg { fill: #1c1c1c; }
-      .sidebar { fill: #242424; stroke: #404040; stroke-width: 1; }
-      .card { fill: #2c2c2c; rx: 8; stroke: #404040; stroke-width: 1; }
-      .text-primary { fill: #daddd8; font-family: 'Inter', sans-serif; }
-      .text-muted { fill: #64748B; font-family: 'Inter', sans-serif; }
-      .text-accent { fill: #3B82F6; font-family: 'Inter', sans-serif; }
-      .badge-critical { fill: #EF4444; rx: 4; }
-      .badge-major { fill: #F59E0B; rx: 4; }
-      .badge-bg { fill: #22C55E; rx: 4; }
+      .bg-base { fill: #1c1c1c; }
+      .bg-card { fill: #2c2c2c; stroke: #404040; stroke-width: 1; rx: 8; }
+      .text-ui-dark { fill: #daddd8; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; }
+      .text-ui-val { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 700; }
+      
+      .title { fill: #ffffff; font-family: 'Inter', -apple-system, sans-serif; font-size: 72px; font-weight: 900; letter-spacing: -1px; }
+      .match { fill: #4ade80; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 800; }
+      .tags { fill: #a1a1aa; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; }
+      .desc { fill: #d4d4d8; font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 400; line-height: 1.5; }
+      
+      .btn-play { fill: #ffffff; rx: 8; }
+      .btn-text { fill: #000000; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; }
+      .btn-secondary { fill: rgba(255, 255, 255, 0.2); rx: 8; }
+      .btn-text-sec { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; }
     </style>
   </defs>
-  
-  <rect width="1000" height="600" class="bg"/>
-  
-  <!-- Sidebar -->
-  <rect x="0" y="0" width="220" height="600" class="sidebar"/>
-  <text x="24" y="40" class="text-primary" font-size="20" font-weight="bold" letter-spacing="1">GCC Ops</text>
-  <rect x="20" y="60" width="180" height="36" class="card" fill="rgba(59,130,246,0.1)" stroke="#3B82F6"/>
-  <text x="40" y="84" class="text-accent" font-size="14" font-weight="600">Dashboard</text>
-  <text x="40" y="124" class="text-muted" font-size="14">Alerts</text>
-  <text x="40" y="164" class="text-muted" font-size="14">Incidents</text>
-  <text x="40" y="204" class="text-muted" font-size="14">Requests</text>
-  <text x="40" y="244" class="text-muted" font-size="14">Handovers</text>
-  <text x="40" y="284" class="text-muted" font-size="14">Customers</text>
-  <text x="40" y="324" class="text-muted" font-size="14">Audit Log</text>
-  <text x="40" y="364" class="text-muted" font-size="14">Simulator</text>
 
-  <!-- Main Content -->
-  <text x="260" y="45" class="text-primary" font-size="24" font-weight="600">Executive Overview</text>
-  <text x="260" y="70" class="text-muted" font-size="14">Real-time metrics and SLAs across all global command centers.</text>
+  <!-- Base Background -->
+  <rect width="1280" height="720" class="bg-base"/>
 
-  <!-- SLA KPI Row -->
-  <rect x="260" y="100" width="220" height="110" class="card"/>
-  <text x="280" y="130" class="text-muted" font-size="13">SLA Compliance</text>
-  <text x="280" y="170" class="text-primary" font-size="32" font-weight="bold">98.4%</text>
-  <text x="280" y="190" fill="#22C55E" font-size="12" font-family="'Inter', sans-serif">+1.2% from last week</text>
+  <!-- Background UI Layer (The "Movie Scene" offset to the right/top) -->
+  <g transform="translate(600, 50) scale(1.1) rotate(2)">
+    
+    <!-- Dashboard Header -->
+    <text x="50" y="80" fill="#ffffff" font-family="'Inter', sans-serif" font-size="28" font-weight="700">GCC Operations Center</text>
+    <rect x="50" y="100" width="800" height="1" fill="#404040" />
 
-  <rect x="500" y="100" width="220" height="110" class="card"/>
-  <text x="520" y="130" class="text-muted" font-size="13">Active Incidents (P1/P2)</text>
-  <text x="520" y="170" class="text-primary" font-size="32" font-weight="bold">3</text>
-  <rect x="550" y="147" width="30" height="24" class="badge-critical"/>
-  <text x="557" y="163" fill="#ffffff" font-size="12" font-weight="bold" font-family="'Inter', sans-serif">P1</text>
-  
-  <rect x="740" y="100" width="220" height="110" class="card"/>
-  <text x="760" y="130" class="text-muted" font-size="13">Active Handovers</text>
-  <text x="760" y="170" class="text-primary" font-size="32" font-weight="bold">12</text>
-  <text x="760" y="190" class="text-muted" font-size="12">EMEA → AMER shift</text>
+    <!-- KPI Grid -->
+    <rect x="50" y="140" width="240" height="120" class="bg-card"/>
+    <text x="75" y="180" class="text-ui-dark" fill="#64748B">SLA Compliance</text>
+    <text x="75" y="230" class="text-ui-val">98.4%</text>
 
-  <!-- Charts Area -->
-  <rect x="260" y="240" width="460" height="320" class="card"/>
-  <text x="280" y="275" class="text-primary" font-size="16" font-weight="600">Incident Volume (24h)</text>
-  <!-- Chart grid -->
-  <path d="M 280 320 L 680 320 M 280 370 L 680 370 M 280 420 L 680 420 M 280 470 L 680 470" stroke="#404040" stroke-width="1" stroke-dasharray="4"/>
-  <!-- Chart Line -->
-  <path d="M 280 450 Q 320 400 360 420 T 440 340 T 520 290 T 600 380 T 680 310" fill="none" stroke="#3B82F6" stroke-width="3"/>
-  <!-- Area under line -->
-  <path d="M 280 450 Q 320 400 360 420 T 440 340 T 520 290 T 600 380 T 680 310 L 680 500 L 280 500 Z" fill="#3B82F6" fill-opacity="0.1"/>
+    <rect x="310" y="140" width="240" height="120" class="bg-card"/>
+    <text x="335" y="180" class="text-ui-dark" fill="#64748B">Active Incidents (P1)</text>
+    <text x="335" y="230" class="text-ui-val">3</text>
+    <rect x="380" y="200" width="40" height="30" fill="#EF4444" rx="4"/>
 
-  <!-- Active Alerts List -->
-  <rect x="740" y="240" width="220" height="320" class="card"/>
-  <text x="760" y="275" class="text-primary" font-size="16" font-weight="600">Recent Alerts</text>
-  
-  <rect x="760" y="300" width="8" height="8" rx="4" fill="#EF4444"/>
-  <text x="780" y="308" class="text-primary" font-size="12" font-weight="bold">Node EU-West Down</text>
-  <text x="780" y="324" class="text-muted" font-size="11">2 mins ago</text>
+    <rect x="570" y="140" width="240" height="120" class="bg-card"/>
+    <text x="595" y="180" class="text-ui-dark" fill="#64748B">Handovers</text>
+    <text x="595" y="230" class="text-ui-val">12</text>
 
-  <rect x="760" y="350" width="8" height="8" rx="4" fill="#F59E0B"/>
-  <text x="780" y="358" class="text-primary" font-size="12" font-weight="bold">High CPU DB-04</text>
-  <text x="780" y="374" class="text-muted" font-size="11">15 mins ago</text>
+    <!-- Main Chart -->
+    <rect x="50" y="280" width="500" height="300" class="bg-card"/>
+    <text x="75" y="320" class="text-ui-dark">Incident Volume (24h)</text>
+    <path d="M 75 350 L 525 350 M 75 420 L 525 420 M 75 490 L 525 490" stroke="#404040" stroke-dasharray="4"/>
+    <path d="M 75 520 Q 150 400 250 450 T 400 350 T 525 380" fill="none" stroke="#3B82F6" stroke-width="4"/>
+    
+    <!-- Alerts List -->
+    <rect x="570" y="280" width="240" height="300" class="bg-card"/>
+    <text x="595" y="320" class="text-ui-dark">Live Alerts</text>
+    
+    <rect x="595" y="350" width="12" height="12" rx="6" fill="#EF4444"/>
+    <text x="620" y="360" fill="#daddd8" font-family="'Inter', sans-serif" font-weight="700">Node EU-West Down</text>
 
-  <rect x="760" y="400" width="8" height="8" rx="4" fill="#F59E0B"/>
-  <text x="780" y="408" class="text-primary" font-size="12" font-weight="bold">API Latency Spike</text>
-  <text x="780" y="424" class="text-muted" font-size="11">42 mins ago</text>
+    <rect x="595" y="400" width="12" height="12" rx="6" fill="#F59E0B"/>
+    <text x="620" y="410" fill="#daddd8" font-family="'Inter', sans-serif" font-weight="700">High CPU DB-04</text>
+  </g>
+
+  <!-- OTT Gradient Overlay (The Vignette) -->
+  <rect width="1280" height="720" fill="url(#ottGradient)"/>
+
+  <!-- OTT Foreground Metadata (Bottom Left Anchor) -->
+  <g transform="translate(80, 420)">
+    
+    <!-- Badges / Tags -->
+    <text x="0" y="0" class="match">96% Match</text>
+    <text x="120" y="0" class="tags">2023</text>
+    <rect x="180" y="-16" width="40" height="22" fill="none" stroke="#a1a1aa" stroke-width="1" rx="4"/>
+    <text x="188" y="-1" fill="#a1a1aa" font-family="'Inter', sans-serif" font-size="12" font-weight="700">APP</text>
+    <text x="240" y="0" class="tags">HTML5 • Vanilla CSS • JavaScript</text>
+
+    <!-- Title -->
+    <text x="0" y="70" class="title">GCC Dashboard</text>
+
+    <!-- Description -->
+    <text x="0" y="120" class="desc">A high-performance operational metrics dashboard</text>
+    <text x="0" y="150" class="desc">built for Global Command Center incident tracking.</text>
+
+    <!-- Action Buttons -->
+    <rect x="0" y="190" width="200" height="56" class="btn-play"/>
+    <path d="M 40 208 L 40 228 L 56 218 Z" fill="#000000"/>
+    <text x="70" y="225" class="btn-text">View Project</text>
+
+    <rect x="220" y="190" width="200" height="56" class="btn-secondary"/>
+    <circle cx="250" cy="218" r="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 250 213 L 250 223 M 245 218 L 255 218" stroke="#ffffff" stroke-width="2"/>
+    <text x="280" y="225" class="btn-text-sec">Source Code</text>
+
+  </g>
+
 </svg>

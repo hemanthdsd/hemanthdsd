@@ -1,93 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
   <defs>
+    <!-- Dark Vignette Gradient (Netflix Style) -->
+    <linearGradient id="ottGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050505" stop-opacity="1" />
+      <stop offset="40%" stop-color="#050505" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#050505" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#050505" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Subdued UI Colors for Background -->
     <style>
-      .bg { fill: #f0f0f0; }
-      .panel { fill: #ffffff; stroke: #d0d0d0; stroke-width: 1; }
-      .header { fill: #e0e0e0; stroke: #d0d0d0; stroke-width: 1; }
-      .text-title { fill: #333333; font-family: -apple-system, sans-serif; font-size: 13px; font-weight: bold; }
-      .text-code { fill: #2b91af; font-family: 'Consolas', monospace; font-size: 13px; }
-      .text-comment { fill: #008000; font-family: 'Consolas', monospace; font-size: 13px; }
-      .text-output { fill: #333333; font-family: 'Consolas', monospace; font-size: 12px; }
-      .axis-line { stroke: #333333; stroke-width: 1; }
-      .scatter-pt { fill: rgba(0, 102, 204, 0.4); stroke: #0066cc; stroke-width: 1; }
-      .reg-line { stroke: #cc0000; stroke-width: 2; }
+      .bg-base { fill: #1e1e1e; }
+      .bg-panel { fill: #252526; stroke: #3e3e42; stroke-width: 1; rx: 8; }
+      .text-ui-code { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 16px; }
+      .text-ui-comment { fill: #608b4e; font-family: 'Consolas', monospace; font-size: 16px; }
+      .text-ui-out { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 14px; }
+      .axis-line { stroke: #cccccc; stroke-width: 1; }
+      .scatter-pt { fill: rgba(86, 156, 214, 0.4); stroke: #569cd6; stroke-width: 1; }
       
-      @media (prefers-color-scheme: dark) {
-        .bg { fill: #1e1e1e; }
-        .panel { fill: #252526; stroke: #3e3e42; }
-        .header { fill: #2d2d30; stroke: #3e3e42; }
-        .text-title { fill: #cccccc; }
-        .text-code { fill: #4ec9b0; }
-        .text-comment { fill: #608b4e; }
-        .text-output { fill: #d4d4d4; }
-        .axis-line { stroke: #cccccc; }
-        .scatter-pt { fill: rgba(86, 156, 214, 0.4); stroke: #569cd6; }
-        .reg-line { fill: none; stroke: #f44336; stroke-width: 2; }
-      }
+      .title { fill: #ffffff; font-family: 'Inter', -apple-system, sans-serif; font-size: 72px; font-weight: 900; letter-spacing: -1px; }
+      .match { fill: #4ade80; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 800; }
+      .tags { fill: #a1a1aa; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; }
+      .desc { fill: #d4d4d8; font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 400; line-height: 1.5; }
+      
+      .btn-play { fill: #ffffff; rx: 8; }
+      .btn-text { fill: #000000; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; }
+      .btn-secondary { fill: rgba(255, 255, 255, 0.2); rx: 8; }
+      .btn-text-sec { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; }
     </style>
   </defs>
 
-  <rect width="1000" height="600" class="bg"/>
+  <!-- Base Background -->
+  <rect width="1280" height="720" class="bg-base"/>
 
-  <!-- Top Left: Source Code -->
-  <g transform="translate(10, 10)">
-    <rect width="480" height="340" class="panel"/>
-    <rect width="480" height="25" class="header"/>
-    <text x="10" y="17" class="text-title">Assignment_DSD.R *</text>
+  <!-- Background UI Layer (The "Movie Scene" offset to the right/top) -->
+  <g transform="translate(500, 20) scale(1.1) rotate(2)">
     
-    <text x="10" y="50" class="text-comment"># Objective: Analyze Usability vs Workload in Voice UIs</text>
-    <text x="10" y="70" class="text-code">df &lt;- read.csv("SusRtlx.csv")</text>
-    <text x="10" y="90" class="text-code">cor.test(df$SUS, df$RTLX)</text>
-    <text x="10" y="110" class="text-comment"># Generate Scatter Plot (Positive Correlation)</text>
-    <text x="10" y="130" class="text-code">library(ggplot2)</text>
-    <text x="10" y="150" class="text-code">ggplot(df, aes(x=RTLX, y=SUS)) +</text>
-    <text x="10" y="170" class="text-code">  geom_point(alpha=0.6, color="blue") +</text>
-    <text x="10" y="190" class="text-code">  geom_smooth(method="lm", color="red") +</text>
-    <text x="10" y="210" class="text-code">  theme_minimal() +</text>
-    <text x="10" y="230" class="text-code">  labs(title="Correlation: Workload vs Usability")</text>
-  </g>
+    <!-- Code Editor -->
+    <rect x="0" y="0" width="500" height="250" class="bg-panel"/>
+    <text x="20" y="40" class="text-ui-comment"># Analyze Usability vs Workload in Voice UIs</text>
+    <text x="20" y="70" class="text-ui-code">df &lt;- read.csv("SusRtlx.csv")</text>
+    <text x="20" y="100" class="text-ui-code">cor.test(df$SUS, df$RTLX)</text>
+    <text x="20" y="130" class="text-ui-comment"># Generate Scatter Plot (Positive Correlation)</text>
+    <text x="20" y="160" class="text-ui-code">ggplot(df, aes(x=RTLX, y=SUS)) +</text>
+    <text x="20" y="190" class="text-ui-code">  geom_point(alpha=0.6, color="blue") +</text>
+    <text x="20" y="220" class="text-ui-code">  geom_smooth(method="lm", color="red")</text>
 
-  <!-- Bottom Left: Console Output -->
-  <g transform="translate(10, 360)">
-    <rect width="480" height="230" class="panel"/>
-    <rect width="480" height="25" class="header"/>
-    <text x="10" y="17" class="text-title">Console</text>
+    <!-- Console Output -->
+    <rect x="0" y="280" width="500" height="300" class="bg-panel"/>
+    <text x="20" y="320" class="text-ui-out">&gt; cor.test(df$SUS, df$RTLX)</text>
+    <text x="20" y="350" class="text-ui-out">	Pearson's product-moment correlation</text>
+    <text x="20" y="390" class="text-ui-out">data:  df$SUS and df$RTLX</text>
+    <text x="20" y="410" class="text-ui-out">t = 8.421, df = 98, p-value &lt; 2.2e-16</text>
+    <text x="20" y="460" class="text-ui-out">sample estimates:</text>
+    <text x="20" y="480" class="text-ui-out">      cor </text>
+    <text x="20" y="500" class="text-ui-out" font-weight="bold">   0.6899 </text>
+    <text x="20" y="540" fill="#f44336" font-family="'Consolas', monospace" font-size="14"># Unexpected finding: Usability correlates with Workload</text>
 
-    <text x="10" y="50" class="text-output">&gt; cor.test(df$SUS, df$RTLX)</text>
-    <text x="10" y="75" class="text-output">	Pearson's product-moment correlation</text>
-    
-    <text x="10" y="105" class="text-output">data:  df$SUS and df$RTLX</text>
-    <text x="10" y="120" class="text-output">t = 8.421, df = 98, p-value &lt; 2.2e-16</text>
-    <text x="10" y="135" class="text-output">alternative hypothesis: true correlation is not equal to 0</text>
-    
-    <text x="10" y="165" class="text-output">95 percent confidence interval:</text>
-    <text x="10" y="180" class="text-output"> 0.55124  0.78432</text>
-    <text x="10" y="210" class="text-output">sample estimates:</text>
-    <text x="10" y="225" class="text-output">      cor </text>
-    <text x="10" y="240" class="text-output" font-weight="bold">   0.6899 </text>
-  </g>
-
-  <!-- Right: Plots Pane -->
-  <g transform="translate(500, 10)">
-    <rect width="490" height="580" class="panel"/>
-    <rect width="490" height="25" class="header"/>
-    <text x="10" y="17" class="text-title">Plots</text>
-    
-    <text x="245" y="70" class="text-title" font-size="16" text-anchor="middle">Correlation: Workload vs Usability (Unexpected)</text>
-    
     <!-- Plot Area -->
-    <g transform="translate(60, 100)">
-      <!-- Grid -->
-      <path d="M 0 50 L 380 50 M 0 150 L 380 150 M 0 250 L 380 250 M 0 350 L 380 350" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4"/>
+    <rect x="530" y="0" width="400" height="580" class="bg-panel"/>
+    <text x="730" y="40" fill="#cccccc" font-family="'Inter', sans-serif" font-size="16" font-weight="700" text-anchor="middle">SUS vs RTLX Correlation</text>
+    
+    <g transform="translate(580, 80)">
       <!-- Axes -->
-      <path d="M 0 400 L 400 400" class="axis-line"/>
+      <path d="M 0 400 L 300 400" class="axis-line"/>
       <path d="M 0 0 L 0 400" class="axis-line"/>
       
-      <!-- Axis Labels -->
-      <text x="-40" y="200" class="text-title" transform="rotate(-90, -40, 200)" text-anchor="middle">SUS (System Usability Scale)</text>
-      <text x="200" y="440" class="text-title" text-anchor="middle">RTLX (NASA Task Load Index)</text>
-      
-      <!-- Scatter Points (Positive Correlation trend this time) -->
+      <!-- Scatter Points -->
       <circle cx="50" cy="350" r="5" class="scatter-pt"/>
       <circle cx="80" cy="320" r="5" class="scatter-pt"/>
       <circle cx="120" cy="280" r="5" class="scatter-pt"/>
@@ -95,25 +74,47 @@
       <circle cx="200" cy="210" r="5" class="scatter-pt"/>
       <circle cx="250" cy="180" r="5" class="scatter-pt"/>
       <circle cx="280" cy="150" r="5" class="scatter-pt"/>
-      <circle cx="320" cy="100" r="5" class="scatter-pt"/>
-      <circle cx="350" cy="60" r="5" class="scatter-pt"/>
       
       <circle cx="100" cy="340" r="5" class="scatter-pt"/>
       <circle cx="160" cy="270" r="5" class="scatter-pt"/>
       <circle cx="220" cy="200" r="5" class="scatter-pt"/>
-      <circle cx="300" cy="140" r="5" class="scatter-pt"/>
-      <circle cx="360" cy="80" r="5" class="scatter-pt"/>
-
-      <circle cx="70" cy="300" r="5" class="scatter-pt"/>
-      <circle cx="130" cy="250" r="5" class="scatter-pt"/>
-      <circle cx="180" cy="230" r="5" class="scatter-pt"/>
-      <circle cx="260" cy="160" r="5" class="scatter-pt"/>
-      <circle cx="340" cy="110" r="5" class="scatter-pt"/>
       
-      <!-- Regression Line (Positive) -->
-      <path d="M 20 380 L 380 50" class="reg-line"/>
-      <!-- Confidence Interval Shading -->
-      <path d="M 20 390 L 380 80 L 380 20 L 20 370 Z" fill="#999999" fill-opacity="0.2"/>
+      <!-- Regression Line -->
+      <path d="M 20 380 L 280 120" fill="none" stroke="#f44336" stroke-width="3"/>
     </g>
+
   </g>
+
+  <!-- OTT Gradient Overlay (The Vignette) -->
+  <rect width="1280" height="720" fill="url(#ottGradient)"/>
+
+  <!-- OTT Foreground Metadata (Bottom Left Anchor) -->
+  <g transform="translate(80, 420)">
+    
+    <!-- Badges / Tags -->
+    <text x="0" y="0" class="match">95% Match</text>
+    <text x="120" y="0" class="tags">2022</text>
+    <rect x="180" y="-16" width="30" height="22" fill="none" stroke="#a1a1aa" stroke-width="1" rx="4"/>
+    <text x="188" y="-1" fill="#a1a1aa" font-family="'Inter', sans-serif" font-size="12" font-weight="700">R&amp;D</text>
+    <text x="230" y="0" class="tags">R • RStudio • Hypothesis testing</text>
+
+    <!-- Title -->
+    <text x="0" y="70" class="title">Data Analytics</text>
+
+    <!-- Description -->
+    <text x="0" y="120" class="desc">Statistical research and visual analysis covering usability,</text>
+    <text x="0" y="150" class="desc">workload, and advertising campaign effectiveness.</text>
+
+    <!-- Action Buttons -->
+    <rect x="0" y="190" width="200" height="56" class="btn-play"/>
+    <path d="M 40 208 L 40 228 L 56 218 Z" fill="#000000"/>
+    <text x="70" y="225" class="btn-text">View Project</text>
+
+    <rect x="220" y="190" width="200" height="56" class="btn-secondary"/>
+    <circle cx="250" cy="218" r="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <path d="M 250 213 L 250 223 M 245 218 L 255 218" stroke="#ffffff" stroke-width="2"/>
+    <text x="280" y="225" class="btn-text-sec">Source Code</text>
+
+  </g>
+
 </svg>
