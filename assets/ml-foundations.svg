@@ -1,68 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
-<style>
-  .bg { fill: transparent; }
-  .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
-  .text-bold { font-weight: 600; }
-  .accent-blue { stroke: #0969da; fill: none; }
-  .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.15; }
-  .fill-purple { fill: #8250df; opacity: 0.15; }
-  .accent-green { stroke: #1a7f37; }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450">
+  <defs>
+    <filter id="paper-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1" />
+    </filter>
+  </defs>
+  <style>
+    .card-bg { fill: transparent; }
+    .layer { filter: url(#paper-shadow); fill: #ffffff; }
+    .layer-accent { filter: url(#paper-shadow); fill: #f0f6fc; }
+    .text-title { fill: #1f2328; font-family: -apple-system, sans-serif; font-size: 28px; font-weight: 700; }
+    .text-desc { fill: #656d76; font-family: -apple-system, sans-serif; font-size: 16px; }
+    .text-tag { fill: #0969da; font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 600; }
+    .tag-bg { fill: #ddf4ff; rx: 4; }
+    
+    @media (prefers-color-scheme: dark) {
+      .layer { fill: #161b22; }
+      .layer-accent { fill: #21262d; }
+      .text-title { fill: #e6edf3; }
+      .text-desc { fill: #8d96a0; }
+      .text-tag { fill: #58a6ff; }
+      .tag-bg { fill: #1f364d; }
+    }
+  </style>
   
-  @media (prefers-color-scheme: dark) {
-    .border { stroke: #30363d; }
-    .text-primary { fill: #c9d1d9; }
-    .text-secondary { fill: #8b949e; }
-    .accent-blue { stroke: #58a6ff; }
-    .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.2; }
-    .fill-purple { fill: #bc8cff; opacity: 0.2; }
-    .accent-green { stroke: #2ea043; }
-  }
-</style>
-<rect width="100%" height="100%" class="bg" />
-
-<!-- Confusion Matrix -->
-<text x="150" y="50" text-anchor="middle" class="text-primary text-bold">Confusion Matrix</text>
-<rect x="50" y="70" width="200" height="200" class="border" />
-<line x1="150" y1="70" x2="150" y2="270" class="border" />
-<line x1="50" y1="170" x2="250" y2="170" class="border" />
-<!-- TP -->
-<rect x="50" y="70" width="100" height="100" class="fill-blue" />
-<text x="100" y="125" text-anchor="middle" class="text-primary text-bold">TP</text>
-<!-- FP -->
-<text x="200" y="125" text-anchor="middle" class="text-primary text-bold">FP</text>
-<!-- FN -->
-<text x="100" y="225" text-anchor="middle" class="text-primary text-bold">FN</text>
-<!-- TN -->
-<rect x="150" y="170" width="100" height="100" class="fill-blue" />
-<text x="200" y="225" text-anchor="middle" class="text-primary text-bold">TN</text>
-
-<!-- ROC Curve -->
-<text x="450" y="50" text-anchor="middle" class="text-primary text-bold">ROC Curve</text>
-<polyline points="350,270 350,70" class="border" />
-<polyline points="350,270 550,270" class="border" />
-<line x1="350" y1="270" x2="550" y2="70" class="border" stroke-dasharray="5,5" />
-<path d="M 350 270 Q 370 120 450 90 T 550 70" class="accent-purple" stroke-width="2" />
-<text x="450" y="290" text-anchor="middle" class="text-secondary">False Positive Rate</text>
-<text x="330" y="170" text-anchor="middle" class="text-secondary" transform="rotate(-90 330 170)">True Positive Rate</text>
-
-<!-- NLP Tokens -->
-<text x="750" y="50" text-anchor="middle" class="text-primary text-bold">NLP Tokens</text>
-
-<rect x="610" y="100" width="80" height="40" rx="4" class="border" />
-<text x="650" y="125" text-anchor="middle" class="text-primary">"analyzing"</text>
-
-<line x1="690" y1="120" x2="710" y2="120" class="border" />
-
-<rect x="710" y="100" width="80" height="40" rx="4" class="border" />
-<text x="750" y="125" text-anchor="middle" class="text-primary">"model"</text>
-
-<line x1="790" y1="120" x2="810" y2="120" class="border" />
-
-<rect x="810" y="100" width="90" height="40" rx="4" class="border" />
-<text x="855" y="125" text-anchor="middle" class="text-primary">"performance"</text>
-
+  <!-- Base Card -->
+  <rect class="layer" x="20" y="20" width="860" height="410" rx="16" />
+  
+  <!-- Content -->
+  <g transform="translate(60, 60)">
+    <text class="text-title" x="0" y="30">Machine Learning Foundations</text>
+    <text class="text-desc" x="0" y="70">ML workflow covering exploratory analysis,</text>
+    <text class="text-desc" x="0" y="95">regression, and NLP evaluation.</text>
+    
+    <!-- Tags -->
+    <g transform="translate(0, 140)">
+      <rect class="tag-bg" x="0" y="0" width="60" height="26" />
+      <text class="text-tag" x="30" y="17" text-anchor="middle">Python</text>
+      
+      <rect class="tag-bg" x="70" y="0" width="65" height="26" />
+      <text class="text-tag" x="102.5" y="17" text-anchor="middle">pandas</text>
+      
+      <rect class="tag-bg" x="145" y="0" width="90" height="26" />
+      <text class="text-tag" x="190" y="17" text-anchor="middle">scikit-learn</text>
+      
+      <rect class="tag-bg" x="245" y="0" width="50" height="26" />
+      <text class="text-tag" x="270" y="17" text-anchor="middle">NLTK</text>
+    </g>
+  </g>
+  
+  <!-- Diorama Art -->
+  <g transform="translate(450, 40)">
+    <!-- Dashboard Board -->
+    <rect class="layer-accent" x="0" y="0" width="370" height="350" rx="12" />
+    
+    <!-- Confusion Matrix -->
+    <g transform="translate(20, 20)">
+      <rect class="layer" x="0" y="0" width="150" height="150" rx="8" />
+      <!-- Inner cells -->
+      <rect class="layer-accent" x="15" y="15" width="55" height="55" rx="4" />
+      <rect class="layer" x="80" y="15" width="55" height="55" rx="4" />
+      <rect class="layer" x="15" y="80" width="55" height="55" rx="4" />
+      <rect class="layer-accent" x="80" y="80" width="55" height="55" rx="4" />
+      <circle fill="#0969da" cx="42.5" cy="42.5" r="10" opacity="0.6"/>
+      <circle fill="#0969da" cx="107.5" cy="107.5" r="15" opacity="0.8"/>
+    </g>
+    
+    <!-- ROC Curve -->
+    <g transform="translate(190, 20)">
+      <rect class="layer" x="0" y="0" width="160" height="150" rx="8" />
+      <!-- Grid lines -->
+      <line x1="20" y1="130" x2="140" y2="130" stroke="#8d96a0" stroke-width="2" />
+      <line x1="20" y1="20" x2="20" y2="130" stroke="#8d96a0" stroke-width="2" />
+      <line x1="20" y1="130" x2="140" y2="20" stroke="#8d96a0" stroke-width="2" stroke-dasharray="4,4" opacity="0.5"/>
+      <!-- Curve line -->
+      <path d="M 20 130 Q 30 50 140 20" fill="none" stroke="#2da44e" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="140" cy="20" r="5" fill="#2da44e"/>
+    </g>
+    
+    <!-- NLP Tokens -->
+    <g transform="translate(20, 190)">
+      <rect class="layer" x="0" y="0" width="330" height="140" rx="8" />
+      <!-- Sentences -->
+      <rect class="layer-accent" x="20" y="20" width="180" height="30" rx="15" />
+      <rect class="layer-accent" x="210" y="20" width="100" height="30" rx="15" />
+      
+      <!-- Token blocks -->
+      <rect class="layer-accent" x="20" y="70" width="60" height="40" rx="6" />
+      <rect class="layer" x="90" y="70" width="80" height="40" rx="6" />
+      <rect class="layer-accent" x="180" y="70" width="50" height="40" rx="6" />
+      <rect class="layer" x="240" y="70" width="70" height="40" rx="6" />
+      
+      <circle cx="50" cy="90" r="8" fill="#d4a72c" opacity="0.8"/>
+      <circle cx="130" cy="90" r="8" fill="#bf3989" opacity="0.8"/>
+      <circle cx="205" cy="90" r="8" fill="#0969da" opacity="0.8"/>
+      <circle cx="275" cy="90" r="8" fill="#2da44e" opacity="0.8"/>
+    </g>
+  </g>
 </svg>

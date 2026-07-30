@@ -1,70 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
-<style>
-  .bg { fill: transparent; }
-  .bg-panel { fill: #ffffff; }
-  .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .border-dashed { stroke: #d0d7de; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
-  .text-bold { font-weight: 600; }
-  .accent-blue { stroke: #0969da; fill: none; }
-  .accent-blue-dashed { stroke: #0969da; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
-  .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.15; }
-  .fill-purple { fill: #8250df; opacity: 0.15; }
-  .accent-red { stroke: #cf222e; fill: none; }
-  .fill-red { fill: #cf222e; opacity: 0.15; }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <filter id="paper-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1" />
+    </filter>
+  </defs>
+  <style>
+    .card-bg { fill: transparent; }
+    .layer { filter: url(#paper-shadow); fill: #ffffff; }
+    .layer-accent { filter: url(#paper-shadow); fill: #f0f6fc; }
+    .text-title { fill: #1f2328; font-family: -apple-system, sans-serif; font-size: 28px; font-weight: 700; }
+    .text-desc { fill: #656d76; font-family: -apple-system, sans-serif; font-size: 16px; }
+    .text-tag { fill: #0969da; font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 600; }
+    .tag-bg { fill: #ddf4ff; rx: 4; }
+    
+    @media (prefers-color-scheme: dark) {
+      .layer { fill: #161b22; }
+      .layer-accent { fill: #21262d; }
+      .text-title { fill: #e6edf3; }
+      .text-desc { fill: #8d96a0; }
+      .text-tag { fill: #58a6ff; }
+      .tag-bg { fill: #1f364d; }
+    }
+  </style>
+
+  <!-- Background container -->
+  <rect x="0" y="0" width="900" height="450" class="card-bg" />
   
-  @media (prefers-color-scheme: dark) {
-    .bg-panel { fill: #0d1117; }
-    .border { stroke: #30363d; }
-    .border-dashed { stroke: #30363d; }
-    .text-primary { fill: #c9d1d9; }
-    .text-secondary { fill: #8b949e; }
-    .accent-blue { stroke: #58a6ff; }
-    .accent-blue-dashed { stroke: #58a6ff; }
-    .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.2; }
-    .fill-purple { fill: #bc8cff; opacity: 0.2; }
-    .accent-red { stroke: #ff7b72; }
-    .fill-red { fill: #ff7b72; opacity: 0.2; }
-  }
-</style>
+  <!-- Main Card Layer -->
+  <rect x="20" y="20" width="860" height="410" rx="16" class="layer" />
 
-<!-- Background IDE/Browser window (dashed/lower opacity) -->
-<rect x="50" y="20" width="800" height="310" rx="8" class="border-dashed" />
-<line x1="50" y1="60" x2="850" y2="60" class="border-dashed" />
-<!-- Fake code lines in IDE -->
-<rect x="80" y="90" width="300" height="8" rx="4" class="border-dashed" />
-<rect x="100" y="115" width="250" height="8" rx="4" class="border-dashed" />
-<rect x="100" y="140" width="350" height="8" rx="4" class="border-dashed" />
-<rect x="100" y="165" width="200" height="8" rx="4" class="border-dashed" />
-<rect x="80" y="190" width="150" height="8" rx="4" class="border-dashed" />
+  <!-- Text Content -->
+  <text x="60" y="100" class="text-title">Buddy AI</text>
+  <text x="60" y="140" class="text-desc">Local-first Windows writing and vision assistant</text>
+  <text x="60" y="165" class="text-desc">powered by private Ollama inference.</text>
 
-<!-- Screen Capture Overlay (distinct dashed selection over part of the IDE) -->
-<rect x="70" y="80" width="400" height="130" class="accent-blue-dashed fill-blue" />
-<text x="80" y="230" class="text-secondary accent-blue" style="stroke: none;">Captured Area</text>
+  <!-- Tags -->
+  <g transform="translate(60, 195)">
+    <rect x="0" y="0" width="70" height="24" class="tag-bg"/>
+    <text x="35" y="16" text-anchor="middle" class="text-tag">Electron</text>
+    
+    <rect x="80" y="0" width="55" height="24" class="tag-bg"/>
+    <text x="107.5" y="16" text-anchor="middle" class="text-tag">React</text>
+    
+    <rect x="145" y="0" width="85" height="24" class="tag-bg"/>
+    <text x="187.5" y="16" text-anchor="middle" class="text-tag">TypeScript</text>
+    
+    <rect x="240" y="0" width="60" height="24" class="tag-bg"/>
+    <text x="270" y="16" text-anchor="middle" class="text-tag">Ollama</text>
+  </g>
 
-<!-- Floating Assistant Panel -->
-<rect x="550" y="50" width="270" height="260" rx="8" class="border bg-panel" style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));" />
+  <!-- Paper Diorama Art -->
+  <g transform="translate(480, 50)">
+    <!-- Base IDE Window -->
+    <rect x="0" y="20" width="340" height="270" rx="8" class="layer-accent" />
+    
+    <!-- IDE Header -->
+    <rect x="0" y="20" width="340" height="30" rx="8" class="layer" />
+    <circle cx="15" cy="35" r="4" fill="#ff5f56" />
+    <circle cx="30" cy="35" r="4" fill="#ffbd2e" />
+    <circle cx="45" cy="35" r="4" fill="#27c93f" />
 
-<!-- Assistant Header -->
-<text x="570" y="85" class="text-primary text-bold" font-size="16">Buddy AI (Ollama Local)</text>
-<line x1="550" y1="100" x2="820" y2="100" class="border" />
+    <!-- IDE Code Lines -->
+    <rect x="20" y="70" width="120" height="8" rx="4" class="layer" />
+    <rect x="20" y="90" width="200" height="8" rx="4" class="layer" />
+    <rect x="40" y="110" width="180" height="8" rx="4" class="layer" />
+    <rect x="40" y="130" width="150" height="8" rx="4" class="layer" />
+    <rect x="20" y="150" width="80" height="8" rx="4" class="layer" />
 
-<!-- Chat Bubble -->
-<rect x="570" y="120" width="220" height="80" rx="8" class="border" />
-
-<text x="585" y="145" class="text-secondary">Analyzing selection...</text>
-<text x="585" y="170" class="text-primary">"Improving grammar..."</text>
-<rect x="585" y="180" width="150" height="4" rx="2" class="fill-blue" />
-<rect x="585" y="180" width="80" height="4" rx="2" class="accent-blue" style="fill: #0969da;" />
-
-<!-- Action Buttons -->
-<rect x="570" y="260" width="105" height="30" rx="4" class="border" />
-<text x="590" y="280" class="text-secondary">Regenerate</text>
-
-<rect x="685" y="260" width="105" height="30" rx="4" class="border" />
-<text x="710" y="280" class="text-secondary">Apply</text>
-
+    <!-- Floating Assistant Box (Overlaid) -->
+    <rect x="100" y="110" width="260" height="170" rx="12" class="layer" />
+    
+    <!-- Assistant Header -->
+    <circle cx="135" cy="140" r="16" class="layer-accent" />
+    <rect x="165" y="135" width="140" height="10" rx="4" class="layer-accent" />
+    
+    <!-- Screen Capture Mini-view -->
+    <rect x="120" y="170" width="220" height="90" rx="6" class="layer-accent" />
+    
+    <!-- Capture Elements within mini-view -->
+    <polygon points="140,240 180,190 220,230 270,180 320,250" fill="#ddf4ff" filter="url(#paper-shadow)" />
+    <rect x="140" y="180" width="40" height="40" rx="20" fill="#ffcccb" filter="url(#paper-shadow)" />
+  </g>
 </svg>

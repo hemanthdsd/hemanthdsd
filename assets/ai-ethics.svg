@@ -1,58 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
-<style>
-  .bg { fill: transparent; }
-  .border { stroke: #d0d7de; stroke-width: 1; fill: none; }
-  .text-primary { fill: #24292f; font-family: -apple-system, sans-serif; font-size: 14px; }
-  .text-secondary { fill: #57606a; font-family: -apple-system, sans-serif; font-size: 12px; }
-  .text-bold { font-weight: 600; }
-  .accent-blue { stroke: #0969da; fill: none; }
-  .accent-purple { stroke: #8250df; fill: none; }
-  .fill-blue { fill: #0969da; opacity: 0.15; }
-  .fill-purple { fill: #8250df; opacity: 0.15; }
-  .accent-green { stroke: #1a7f37; }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <filter id="paper-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1" />
+    </filter>
+  </defs>
+  <style>
+    .card-bg { fill: transparent; }
+    .layer { filter: url(#paper-shadow); fill: #ffffff; }
+    .layer-accent { filter: url(#paper-shadow); fill: #f0f6fc; }
+    .text-title { fill: #1f2328; font-family: -apple-system, sans-serif; font-size: 28px; font-weight: 700; }
+    .text-desc { fill: #656d76; font-family: -apple-system, sans-serif; font-size: 16px; }
+    .text-tag { fill: #0969da; font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 600; }
+    .tag-bg { fill: #ddf4ff; rx: 4; }
+    
+    @media (prefers-color-scheme: dark) {
+      .layer { fill: #161b22; }
+      .layer-accent { fill: #21262d; }
+      .text-title { fill: #e6edf3; }
+      .text-desc { fill: #8d96a0; }
+      .text-tag { fill: #58a6ff; }
+      .tag-bg { fill: #1f364d; }
+    }
+  </style>
+
+  <!-- Background container -->
+  <rect x="0" y="0" width="900" height="450" class="card-bg" />
   
-  @media (prefers-color-scheme: dark) {
-    .border { stroke: #30363d; }
-    .text-primary { fill: #c9d1d9; }
-    .text-secondary { fill: #8b949e; }
-    .accent-blue { stroke: #58a6ff; }
-    .accent-purple { stroke: #bc8cff; }
-    .fill-blue { fill: #58a6ff; opacity: 0.2; }
-    .fill-purple { fill: #bc8cff; opacity: 0.2; }
-    .accent-green { stroke: #2ea043; }
-  }
-</style>
-<rect width="100%" height="100%" class="bg" />
+  <!-- Main Card Layer -->
+  <rect x="20" y="20" width="860" height="410" rx="16" class="layer" />
 
-<!-- Central Box -->
-<rect x="350" y="20" width="200" height="50" rx="4" class="border" />
-<text x="450" y="50" text-anchor="middle" class="text-primary text-bold">Autonomous Decision Engine</text>
+  <!-- Text Content -->
+  <text x="60" y="100" class="text-title">AI Ethics Auditing Simulation</text>
+  <text x="60" y="140" class="text-desc">Applied simulation exploring responsible-AI auditing, fairness, and risk.</text>
 
-<!-- Marker for arrows -->
-<defs>
-  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-    <path d="M 0 0 L 10 5 L 0 10 z" class="border" fill="#d0d7de"/>
-  </marker>
-</defs>
+  <!-- Tags -->
+  <g transform="translate(60, 170)">
+    <rect x="0" y="0" width="60" height="24" class="tag-bg"/>
+    <text x="30" y="16" text-anchor="middle" class="text-tag">Python</text>
+    
+    <rect x="70" y="0" width="85" height="24" class="tag-bg"/>
+    <text x="112.5" y="16" text-anchor="middle" class="text-tag">Simulation</text>
+    
+    <rect x="165" y="0" width="55" height="24" class="tag-bg"/>
+    <text x="192.5" y="16" text-anchor="middle" class="text-tag">Ethics</text>
+  </g>
 
-<!-- Arrows -->
-<path d="M 450 70 L 250 120" class="border" marker-end="url(#arrow)" />
-<path d="M 450 70 L 650 120" class="border" marker-end="url(#arrow)" />
+  <!-- Paper Diorama Art -->
+  <g transform="translate(480, 50)">
+    <!-- Base Layer -->
+    <rect x="0" y="20" width="360" height="300" rx="12" class="layer-accent" />
+    
+    <!-- Decision Tree Paths (Layered Paper Lines) -->
+    <path d="M 180 260 L 180 180" fill="none" stroke="#ffffff" stroke-width="20" filter="url(#paper-shadow)" />
+    <path d="M 180 180 L 80 80" fill="none" stroke="#ffffff" stroke-width="20" filter="url(#paper-shadow)" />
+    <path d="M 180 180 L 280 80" fill="none" stroke="#ffffff" stroke-width="20" filter="url(#paper-shadow)" />
 
-<!-- Option A -->
-<rect x="150" y="120" width="200" height="50" rx="4" class="border" />
-<text x="250" y="150" text-anchor="middle" class="text-primary">Option A: Veer Left (Pedestrians)</text>
+    <!-- Decision Nodes -->
+    <circle cx="180" cy="180" r="16" class="layer" />
+    <circle cx="80" cy="80" r="16" class="layer" />
+    <circle cx="280" cy="80" r="16" class="layer" />
 
-<!-- Option B -->
-<rect x="550" y="120" width="200" height="50" rx="4" class="border" />
-<text x="650" y="150" text-anchor="middle" class="text-primary">Option B: Veer Right (Barrier)</text>
+    <!-- Car Cutout -->
+    <rect x="160" y="220" width="40" height="60" rx="8" class="layer" />
+    <!-- Car details -->
+    <rect x="165" y="230" width="30" height="15" rx="4" class="layer-accent" />
+    <rect x="165" y="260" width="30" height="10" rx="4" class="layer-accent" />
 
-<!-- Scorecard Table -->
-<rect x="250" y="200" width="400" height="80" rx="4" class="border" />
-<line x1="250" y1="230" x2="650" y2="230" class="border" />
-<line x1="450" y1="230" x2="450" y2="280" class="border" />
-<text x="450" y="220" text-anchor="middle" class="text-primary text-bold">Fairness &amp; Risk Scorecard</text>
-<text x="350" y="260" text-anchor="middle" class="text-primary">Risk Score: 0.85</text>
-<text x="550" y="260" text-anchor="middle" class="text-primary">Bias Penalty: 12%</text>
+    <!-- Scorecard Left (Risk Assessment) -->
+    <rect x="20" y="30" width="120" height="100" rx="8" class="layer" />
+    <rect x="30" y="45" width="80" height="8" rx="4" class="layer-accent" />
+    <rect x="30" y="65" width="60" height="8" rx="4" class="layer-accent" />
+    <!-- Red tinted bar indicating higher risk factor -->
+    <rect x="30" y="85" width="100" height="10" rx="4" fill="#ffcccb" filter="url(#paper-shadow)" />
+    <rect x="30" y="105" width="70" height="8" rx="4" class="layer-accent" />
 
+    <!-- Scorecard Right (Fairness Assessment) -->
+    <rect x="220" y="30" width="120" height="100" rx="8" class="layer" />
+    <rect x="230" y="45" width="80" height="8" rx="4" class="layer-accent" />
+    <rect x="230" y="65" width="60" height="8" rx="4" class="layer-accent" />
+    <!-- Green tinted bar indicating positive fairness outcome -->
+    <rect x="230" y="85" width="100" height="10" rx="4" fill="#d4edda" filter="url(#paper-shadow)" />
+    <rect x="230" y="105" width="70" height="8" rx="4" class="layer-accent" />
+  </g>
 </svg>
