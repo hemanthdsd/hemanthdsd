@@ -76,7 +76,7 @@
     
     <!-- Badges / Tags -->
     <text x="0" y="0" class="match">96% Match</text>
-    <text x="120" y="0" class="tags">2023</text>
+    <text x="120" y="0" class="tags">2026</text>
     <rect x="180" y="-16" width="40" height="22" fill="none" stroke="#a1a1aa" stroke-width="1" rx="4"/>
     <text x="188" y="-1" fill="#a1a1aa" font-family="'Inter', sans-serif" font-size="12" font-weight="700">APP</text>
     <text x="240" y="0" class="tags">HTML5 • Vanilla CSS • JavaScript</text>
